@@ -122,45 +122,9 @@ This isn't just a random pattern generator. It's a purpose-built research tool d
 
 ---
 
-## 🔬 How It Works 🔬
-
-1.  **Baseline (Main Process):**
-    * On start, the fuzzer runs all models in a consistent **CPU-only** environment to establish a "ground truth" for every image in `./input_images/`.
-    * It stores the location, confidence, and landmarks for the primary face (for both face models) and the total person count (for YOLO).
-
-2.  **Worker Pool (Parallel):**
-    * A persistent `multiprocessing.Pool` is created (one worker per core by default).
-    * Each worker process initializes its *own* instance of all three models (InsightFace-L, InsightFace-S, YOLOv8-ORT) and loads all art/texture assets into its own cache.
-
-3.  **Test Generation (Main Process):**
-    * The main process enters an infinite loop (an "epoch").
-    * For each image, it generates `STOCHASTIC_TESTS_PER_BATCH` (e.g., 1000) new test "recipes."
-    * A percentage of these are "evolved" from the `PRIORITY_TESTS` list (mutations/crossovers).
-    * The rest are new random combinations of 1-3 pattern layers.
-
-4.  **Execution (Worker Process):**
-    * The list of test cases is distributed to the worker pool.
-    * For each test case, a worker:
-        1.  Loads the original image and mask from its cache.
-        2.  Generates the multi-layer pattern based on the recipe (e.g., `perlin_noise` + `saliency_eye_attack`).
-        3.  Applies the pattern to the masked area.
-        4.  Runs all three models on the modified image.
-        5.  Returns the results (face counts, locations, confidence) to the main process.
-
-5.  **Result Processing (Main Process):**
-    * The main process receives results as they are completed.
-    * It compares the test result against the pre-calculated baseline.
-    * **If Anomaly:** The main process saves the image, the pattern swatch, the high-res PNG (if enabled), and the `recipe.json`. It then adds this successful recipe to the `PRIORITY_TESTS` dictionary.
-    * **If No Anomaly:** The result is discarded.
-
-6.  **Loop:**
-    * At the end of an epoch, the fuzzer starts a new one, now using the *updated* `PRIORITY_TESTS` list to generate even more effective "evolved" patterns.
-
----
-
 ## 🎨 The Adversarial Patterns 🎨
 
-The fuzzer selects from a diverse library of over 30 pattern generators, including:
+The fuzzer selects from a diverse library of pattern generators, including:
 
 * **Geometric & Noise:**
     * `simple_shapes`
