@@ -55,7 +55,7 @@ To illustrate this process, here's a glimpse into the fuzzer at work. The fuzzer
   <img src="./images/fuzzer-working.png" alt="Fuzzer Working" width="1024">
 </p>
 
-Each image below represents a unique adversarial pattern generated and then applied to a facial region, ready for testing against advanced recognition models. These are just a few of the thousands the system evaluates to find those elusive "failure patterns." *(Note: This sample is only a fraction of our input models and while some show analysis anomalies; it does not include any bypass techniques.)*
+Each image below represents a unique adversarial pattern generated and then applied to a facial region, ready for testing against advanced recognition models. These are just a few of the hundreds of thousands the system evaluates per epoch to find those elusive "failure patterns." *(Note: This sample is only a fraction of our input models and while some show analysis anomalies; it does not include any bypass techniques.)*
 
 <table align="center" style="border-collapse:collapse; border-spacing:0; padding:0; margin:0;">
   <tr>
