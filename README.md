@@ -12,8 +12,14 @@ Real fabrics that fight facial recognition. Join the first scientific effort to 
 
 Join the first scientific effort to build reproducible, testable adversarial textiles and open source software that gives privacy back to people.
 <p align="center">
-  <img src="./images/kickstarter-logo-green.png" alt="Back us on Kickstarter" style="max-width:100%;height:auto;border-radius:8px;">
-  [Back us on Kickstarter](YOUR_KICKSTARTER_URL) (Limited early rewards and prototype swatches available)
+  <a href="https://www.kickstarter.com/projects/hevnsnt/1029985405" target="_blank">
+    <img src="./images/kickstarter-logo-green.png" alt="Back us on Kickstarter" width="300">
+  </a>
+</p>
+
+<p align="center">
+  <b><a href="https://www.kickstarter.com/projects/hevnsnt/1029985405">Back us on Kickstarter</a></b><br>
+  <i>Limited early rewards and prototype swatches available</i>
 </p>
 
 
