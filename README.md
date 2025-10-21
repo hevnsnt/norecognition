@@ -2,7 +2,7 @@
 [![Python Version](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Real fabrics that fight facial recognition. Join the first scientific effort to build reproducible, testable adversarial textiles and open-source software that gives privacy back to people.
+Real fabrics that fight facial recognition. Join the first scientific effort to build reproducible, testable adversarial textiles returns privacy back to people.
 
 <p align="center">
   <img src="./images/nonrecognition_banner.png" alt="Adversarial Fabrics on Kickstarter" style="max-width:100%;height:auto;border-radius:8px;">
