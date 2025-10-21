@@ -4,6 +4,16 @@
 
 Real fabrics that fight facial recognition. Join the first scientific effort to build reproducible, testable adversarial textiles and open-source software that gives privacy back to people.
 
+<p align="center">
+  <img src="./images/kickstarter_banner.png" alt="Adversarial Fabrics on Kickstarter" style="max-width:100%;height:auto;border-radius:8px;">
+</p>
+
+# Real fabrics that fight facial recognition
+
+Join the first scientific effort to build reproducible, testable adversarial textiles and open source software that gives privacy back to people.
+
+[Back us on Kickstarter](YOUR_KICKSTARTER_URL) • Limited early rewards and prototype swatches available
+
 ## The Mission
 
 I am a hacker. I see computers and technology differently. For years I have explored how machines perceive us, diving into computer vision. This fast growing field decides who is seen, who is tracked, and who is recognized, with serious and often unsettling consequences for privacy.
