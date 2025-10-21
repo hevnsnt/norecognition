@@ -25,7 +25,7 @@ Join the first scientific effort to build reproducible, testable adversarial tex
 
 ## The Mission
 
-I am a hacker. I see computers and technology differently. For years I have explored how machines perceive us, diving into computer vision. This fast growing field decides who is seen, who is tracked, and who is recognized, with serious and often unsettling consequences for privacy.
+I am a hacker. I see computers and technology differently. For years, I have been interested in the topic of how machines interpret the world and how they interpret us. My work in computer vision explores how algorithms decide who is seen, who is tracked, and who is recognized, with serious and often unsettling consequences for personal privacy.
 
 I believe physical fabrics can be engineered to confuse facial recognition systems. I built a reproducible, science driven process to design those fabrics, and I test them rigorously across multiple models and real world conditions so the results are practical and repeatable. My goal is simple: to build a wardrobe that protects my privacy — and yours.
 
