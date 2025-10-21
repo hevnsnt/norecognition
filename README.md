@@ -23,13 +23,13 @@ Join the first scientific effort to build reproducible, testable adversarial tex
 </p>
 
 
-## The Mission
+# The Mission
 
 I am a hacker. I see computers and technology differently. For years I have explored how machines perceive us, diving into computer vision. This fast growing field decides who is seen, who is tracked, and who is recognized, with serious and often unsettling consequences for privacy.
 
 I believe physical fabrics can be engineered to confuse facial recognition systems. I built a reproducible, science driven process to design those fabrics, and I test them rigorously across multiple models and real world conditions so the results are practical and repeatable. My goal is simple: to build a wardrobe that protects my privacy — and yours.
 
-### Wait, Hasn't This Been Done Before?
+## Wait, Hasn't This Been Done Before?
 
 Recently, an interesting concept of hope emerged from the artistic: so-called "adversarial patterns." These brilliant prints and garments held the promise of disrupting machine vision, causing detectors to miss a person entirely. They were fascinating, hopeful, and truly captivating. You might have seen some incredible projects in this space, such as [capable.design](https://capable.design/), [adversarialfashion.com](https://adversarialfashion.com/), and of course Adam Harvey’s work at [adam.harvey.studio](https://adam.harvey.studio/).
 
@@ -39,7 +39,7 @@ It’s important to clarify, however, that much of the existing adversarial clot
 
 Our project builds on this foundational work, incorporating similar adversarial techniques alongside principles from projects like CV Dazzle and Hyperface. Our goal is to leverage these insights to specifically fool the most advanced Facial Recognition systems currently in use.
 
-### I Believe We Can Do Better.
+## I Believe We Can Do Better.
 
 I’m [Bill Swearingen](https://about.me/billswearingen). Having spent decades in security uncovering how complex systems fail, I’ve learned how to think differently and exploit technology’s true weak points. I’m the founder of [**SecKC**](https://seckc.org), the world’s largest monthly hacker meetup, and have spoken at major security conferences including [**BlackHat**](https://blackhat.com), [**Shmoocon**](https://en.wikipedia.org/wiki/ShmooCon) and [**DEF CON**](https://defcon.org). That experience drives my latest project, **nonRecognition** — an effort to transform intriguing privacy concepts into robust, repeatable, and verifiable solutions. This isn’t a stunt; it’s a focused, year-long research program asking a hard question: *Can physical fabrics truly defeat state-of-the-art facial recognition in real-world conditions?* Our mission is to uncover the how and the why, and to equip citizens, designers, and researchers with the open tools needed to understand and navigate these critical privacy frontiers.
 
@@ -122,45 +122,9 @@ This isn't just a random pattern generator. It's a purpose-built research tool d
 
 ---
 
-## 🔬 How It Works 🔬
-
-1.  **Baseline (Main Process):**
-    * On start, the fuzzer runs all models in a consistent **CPU-only** environment to establish a "ground truth" for every image in `./input_images/`.
-    * It stores the location, confidence, and landmarks for the primary face (for both face models) and the total person count (for YOLO).
-
-2.  **Worker Pool (Parallel):**
-    * A persistent `multiprocessing.Pool` is created (one worker per core by default).
-    * Each worker process initializes its *own* instance of all three models (InsightFace-L, InsightFace-S, YOLOv8-ORT) and loads all art/texture assets into its own cache.
-
-3.  **Test Generation (Main Process):**
-    * The main process enters an infinite loop (an "epoch").
-    * For each image, it generates `STOCHASTIC_TESTS_PER_BATCH` (e.g., 1000) new test "recipes."
-    * A percentage of these are "evolved" from the `PRIORITY_TESTS` list (mutations/crossovers).
-    * The rest are new random combinations of 1-3 pattern layers.
-
-4.  **Execution (Worker Process):**
-    * The list of test cases is distributed to the worker pool.
-    * For each test case, a worker:
-        1.  Loads the original image and mask from its cache.
-        2.  Generates the multi-layer pattern based on the recipe (e.g., `perlin_noise` + `saliency_eye_attack`).
-        3.  Applies the pattern to the masked area.
-        4.  Runs all three models on the modified image.
-        5.  Returns the results (face counts, locations, confidence) to the main process.
-
-5.  **Result Processing (Main Process):**
-    * The main process receives results as they are completed.
-    * It compares the test result against the pre-calculated baseline.
-    * **If Anomaly:** The main process saves the image, the pattern swatch, the high-res PNG (if enabled), and the `recipe.json`. It then adds this successful recipe to the `PRIORITY_TESTS` dictionary.
-    * **If No Anomaly:** The result is discarded.
-
-6.  **Loop:**
-    * At the end of an epoch, the fuzzer starts a new one, now using the *updated* `PRIORITY_TESTS` list to generate even more effective "evolved" patterns.
-
----
-
 ## 🎨 The Adversarial Patterns 🎨
 
-The fuzzer selects from a diverse library of over 30 pattern generators, including:
+The fuzzer selects from a diverse library of pattern generators, including:
 
 * **Geometric & Noise:**
     * `simple_shapes`
@@ -182,12 +146,12 @@ The fuzzer selects from a diverse library of over 30 pattern generators, includi
     * `landmark_noise` (applies noise/blur *only* to key points)
     * `swapped_landmarks` (pastes the mouth over the eye, etc.)
 * **Camouflage & Texture:**
-    * `camouflage` (uses textures from the `./textures` dir)
+    * `camouflage` (uses textures derived from nature such as grass, trees, bricks, wood, etc.)
     * `repeating_texture_object`
     * `warped_face` (uses a full face as a warped texture)
 * **Structural & Dazzle:**
     * `hyperface_like` (high-contrast blocky pattern)
-    * `dazzle_camouflage`
+    * `dazzle_camouflage`(Uses CV Dazzle-like patterns)
     * `interference_lines` (Moire-like patterns)
     * `3d_wireframe` (projects 3D cubes)
 * **Glitch & Sensor Attacks:**
@@ -197,6 +161,7 @@ The fuzzer selects from a diverse library of over 30 pattern generators, includi
     * `selective_blur`
     * `ir_led_attack` (simulates IR glare/bloom)
     * `pixel_sort_glitch`
+    * `hyperface` (Uses hyperface-like patterns)
 * **Other:**
     * `random_text`
     * `qr_code`
