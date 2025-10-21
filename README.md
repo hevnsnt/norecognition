@@ -30,7 +30,10 @@ To answer this, we're building two critical components:
 2.  **Develop Adversarial Textiles:** Physically printed materials, produced and tested at scale, specifically optimized to confound the most advanced facial recognition models, not just rudimentary detectors.
 
 To illustrate this process, here's a glimpse into our fuzzer at work. Each image below represents a unique adversarial pattern generated and then applied to a facial region, ready for testing against advanced recognition models. These are just a few of the thousands our system evaluates to find those elusive "failure patterns."
-
+<h2 align="center">Fuzzer in Action</h2>
+<p align="center">
+  <img src="./images/fuzzer-working.png" alt="Fuzzer Working" width="600">
+</p>
 
 ---
 
