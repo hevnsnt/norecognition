@@ -98,7 +98,7 @@ This isn't just a random pattern generator. It's a purpose-built research tool d
     * **Saliency Attacks:** Patterns that mimic features AI models are trained to find, like `saliency_eye_attack` (stamping dozens of eyes) or `recursive_face_tile` (tiling the user's own face) to confuse the model's bounding-box and non-maximum suppression (NMS) logic.
 
 * **Built for Scale and Research:**
-    * **Massively Parallel:** Uses Python's `multiprocessing` to run tests across all available CPU cores.
+    * **Massively Parallel:** Uses Python's `multiprocessing` to run tests across all available GPU (or CPU) cores.
     * **Reproducible:** Saves the exact `recipe.json` and a high-resolution 300 DPI (`.png`) swatch for every successful anomaly, allowing for physical printing and real-world validation.
     * **Stateful:** Can be stopped (Ctrl+C) and resumed (`--resume`) at any time, preserving all learned priority tests.
 
