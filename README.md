@@ -51,7 +51,7 @@ To answer this, we're building two critical components:
 To illustrate this process, here's a glimpse into our fuzzer at work. Each image below represents a unique adversarial pattern generated and then applied to a facial region, ready for testing against advanced recognition models. These are just a few of the thousands our system evaluates to find those elusive "failure patterns."
 <h2 align="center">Fuzzer in Action</h2>
 <p align="center">
-  <img src="./images/fuzzer-working.png" alt="Fuzzer Working" width="600">
+  <img src="./images/fuzzer-working.png" alt="Fuzzer Working" width="800">
 </p>
 
 The fuzzer automatically tests facial recognition resilience by taking baseline images, generating and overlaying diverse adversarial patterns, then running them through multiple detection and recognition models to identify failures or anomalies. These results feed into evolutionary mutation routines for future epochs, refining how patterns evolve to reveal weaknesses in recognition systems. Here is a small sample of the generated adversarial images produced during testing. Each pattern was evolved and evaluated across multiple facial recognition models to measure detection failures and guide future mutation strategies. (Note: this represents only a fraction of the full input model set.)
