@@ -5,7 +5,7 @@
 Real fabrics that fight facial recognition. Join the first scientific effort to build reproducible, testable adversarial textiles and open-source software that gives privacy back to people.
 
 <p align="center">
-  <img src="./images/kickstarter_banner.png" alt="Adversarial Fabrics on Kickstarter" style="max-width:100%;height:auto;border-radius:8px;">
+  <img src="./images/nonrecognition_banner.png" alt="Adversarial Fabrics on Kickstarter" style="max-width:100%;height:auto;border-radius:8px;">
 </p>
 
 # Real fabrics that fight facial recognition
