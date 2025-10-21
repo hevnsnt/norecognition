@@ -41,7 +41,7 @@ Our project builds on this foundational work, incorporating similar adversarial 
 
 ### I Believe We Can Do Better.
 
-I'm Bill Swearingen. Having spent decades in security, exposing how complex systems fail, from DEF CON to founding SecKC, I know what it takes to find true vulnerabilities. That's why I'm launching **nonRecognition**: to elevate intriguing privacy concepts into robust, repeatable, and verifiable solutions. This isn't a stunt; it's a committed, year-long research program tackling a fundamental question: Can physical fabrics truly defeat state-of-the-art facial recognition in the chaos of the real world? Our mission is to uncover the *how* and *why*, and to equip citizens, designers, and researchers with the open tools needed to understand these critical privacy battles.
+I'm [Bill Swearingen](https://about.me/billswearingen). Having spent decades in security, exposing how complex systems fail, from DEF CON to founding SecKC, I know what it takes to find true vulnerabilities. That's why I'm launching **nonRecognition**: to elevate intriguing privacy concepts into robust, repeatable, and verifiable solutions. This isn't a stunt; it's a committed, year-long research program tackling a fundamental question: Can physical fabrics truly defeat state-of-the-art facial recognition in the chaos of the real world? Our mission is to uncover the *how* and *why*, and to equip citizens, designers, and researchers with the open tools needed to understand these critical privacy battles.
 
 To answer this, we're building two critical components:
 
