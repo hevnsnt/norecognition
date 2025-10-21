@@ -119,7 +119,7 @@ This isn't just a random pattern generator. It's a purpose-built research tool d
     -   Optionally saves a **3600x3600px 300 DPI** print-ready `.png` swatch for physical fabric production (`--save-hires-patterns`).
 -   **GPU/NPU Auto-Detection:** Automatically utilizes NVIDIA CUDA or Apple CoreML for InsightFace models if available, falling back gracefully to CPU.
 -   **Stateful Fuzzing:** Saves progress on each Epoch or exit (Ctrl+C) and resumes with the `--resume` flag.
--   **Robust Caching:** Uses per-worker LRU caching for all image assets (`textures`, `tpdne_images`, `abstract_art`) to maximize speed.
+-   **Robust Caching:** Uses per-worker LRU caching for all image assets to maximize speed, and be memory respectful.
 
 ---
 
