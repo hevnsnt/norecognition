@@ -48,8 +48,9 @@ To answer this, **nonRecogition** is focused on two critical components:
 1.  **A Custom Fuzzer and Testing Suite:** I have built a Powerful fuzzer designed to generate, test, and analyze an infinite amount of adversarial designs against numerous recognition systems. This allows me to quantify results, iterate scientifically, and discover truly effective patterns.
 2.  **Develop Adversarial Textiles:** Physically printed materials, produced and tested in real-life conditions, specifically optimized to confound the most advanced facial recognition models, not just rudimentary detectors.
 
-To illustrate this process, here's a glimpse into the fuzzer at work. Each image below represents a unique adversarial pattern generated and then applied to a facial region, ready for testing against advanced recognition models. These are just a few of the thousands the system evaluates to find those elusive "failure patterns."
+---
 <h2 align="center">Fuzzer in Action</h2>
+To illustrate this process, here's a glimpse into the fuzzer at work. Each image below represents a unique adversarial pattern generated and then applied to a facial region, ready for testing against advanced recognition models. These are just a few of the thousands the system evaluates to find those elusive "failure patterns."
 <p align="center">
   <img src="./images/fuzzer-working.png" alt="Fuzzer Working" width="800">
 </p>
