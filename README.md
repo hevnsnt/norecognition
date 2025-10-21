@@ -113,7 +113,7 @@ This isn't just a random pattern generator. It's a purpose-built research tool d
     -   `FACE_LOW_CONF`: The primary face was found, but its confidence score dropped below a critical threshold (a "near-miss").
     -   `PERSON`: The YOLOv8 model detected more or fewer people than the baseline.
 -   **Massive Pattern Library:** Includes a growing list of **unique pattern generators** (see list below) designed to attack different parts of the vision pipeline, from low-level filters (noise, gradients) to high-level feature extractors (eyes, faces, text).
--   **Multi-Layering:** Combines up to 3 different pattern types with variable blending into a single complex test case.
+-   **Multi-Layering:** Combines up to 3 different pattern types (base, mid, and top layers) with variable blending into a single complex test case.
 -   **Reproducible Outputs:**
     -   Saves anomalous images to `./anomaly/`.
     -   Saves the exact `recipe.json` for each anomaly to `./anomaly_patterns/`.
