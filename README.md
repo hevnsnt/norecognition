@@ -54,7 +54,7 @@ To illustrate this process, here's a glimpse into our fuzzer at work. Each image
   <img src="./images/fuzzer-working.png" alt="Fuzzer Working" width="800">
 </p>
 
-The fuzzer automatically tests facial recognition resilience by taking baseline images, generating and overlaying diverse adversarial patterns, then running them through multiple detection and recognition models to identify failures or anomalies. These results feed into evolutionary mutation routines for future epochs, refining how patterns evolve to reveal weaknesses in recognition systems. Here is a small sample of the generated adversarial images produced during testing. Each pattern was evolved and evaluated across multiple facial recognition models to measure detection failures and guide future mutation strategies. (Note: this represents only a fraction of the full input model set.)
+The fuzzer automatically tests facial recognition resilience by taking baseline images, generating and overlaying diverse adversarial patterns, then running them through multiple detection and recognition models to identify failures or anomalies. These results feed into evolutionary mutation routines for future epochs, refining how patterns evolve to reveal weaknesses in recognition systems. Here is a small sample of the generated adversarial images produced during testing. Each pattern was evolved and evaluated across multiple facial recognition models to measure detection failures and guide future mutation strategies. *(Note: this represents only a fraction of the full input model set.)*
 
 <table align="center" style="border-collapse:collapse; border-spacing:0; padding:0; margin:0;">
   <tr>
