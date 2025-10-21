@@ -6,9 +6,9 @@ Real fabrics that fight facial recognition. Join the first scientific effort to 
 
 ## The Mission
 
-I am a hacker. I see computers and technology differently. For years, I’ve explored how machines perceive us, delving deep into the world of computer vision. This exploding field of innovation dictates who is seen, who is tracked, and who is ultimately recognized, carrying profound, often unsettling, implications for our privacy.
+I am a hacker. I see computers and technology differently. For years I have explored how machines perceive us, diving into computer vision. This fast growing field decides who is seen, who is tracked, and who is recognized, with serious and often unsettling consequences for privacy.
 
-We’re building physical fabrics and tooling that deliberately confound facial-recognition systems, scientifically tested, reproducible, and designed for real-world use.
+I believe physical fabrics can be engineered to confuse facial recognition systems. I built a reproducible, science driven process to design those fabrics, and I test them rigorously across multiple models and real world conditions so the results are practical and repeatable. My goal is simple: to build a wardrobe that protects my privacy — and yours.
 
 ### Wait, Hasn't This Been Done Before?
 
