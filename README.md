@@ -45,7 +45,7 @@ I’m [Bill Swearingen](https://about.me/billswearingen). Having spent decades i
 
 To answer this, we're building two critical components:
 
-1.  **A Custom Fuzzer and Testing Suite:** This repository. Powerful, open-source software designed to generate, test, and analyze thousands of adversarial designs against numerous recognition systems. This allows us to quantify results, iterate scientifically, and discover truly effective patterns.
+1.  **A Custom Fuzzer and Testing Suite:** I have built a Powerful fuzzer designed to generate, test, and analyze thousands of adversarial designs against numerous recognition systems. This allows me to quantify results, iterate scientifically, and discover truly effective patterns.
 2.  **Develop Adversarial Textiles:** Physically printed materials, produced and tested at scale, specifically optimized to confound the most advanced facial recognition models, not just rudimentary detectors.
 
 To illustrate this process, here's a glimpse into the fuzzer at work. Each image below represents a unique adversarial pattern generated and then applied to a facial region, ready for testing against advanced recognition models. These are just a few of the thousands the system evaluates to find those elusive "failure patterns."
