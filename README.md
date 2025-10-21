@@ -182,12 +182,12 @@ The fuzzer selects from a diverse library of over 30 pattern generators, includi
     * `landmark_noise` (applies noise/blur *only* to key points)
     * `swapped_landmarks` (pastes the mouth over the eye, etc.)
 * **Camouflage & Texture:**
-    * `camouflage` (uses textures from the `./textures` dir)
+    * `camouflage` (uses textures based from nature)
     * `repeating_texture_object`
     * `warped_face` (uses a full face as a warped texture)
 * **Structural & Dazzle:**
-    * `hyperface_like` (high-contrast blocky pattern)
-    * `dazzle_camouflage`
+    * `hyperface_like` (high-contrast hyperface-like blocky pattern)
+    * `dazzle_camouflage`(CV Dazzle-like pattern)
     * `interference_lines` (Moire-like patterns)
     * `3d_wireframe` (projects 3D cubes)
 * **Glitch & Sensor Attacks:**
@@ -200,7 +200,7 @@ The fuzzer selects from a diverse library of over 30 pattern generators, includi
 * **Other:**
     * `random_text`
     * `qr_code`
-    * `pop_art_collage`
+    * `pop_art_collage` (uses patterns based on pop-art style faces)
     * `blackout_patches`
 
 ---
