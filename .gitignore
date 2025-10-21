@@ -1,3 +1,18 @@
+#MacOS Crap
+# =====================
+# OS Files (macOS)
+# =====================
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+.DiskUtility
+.fseventsd
+**/.DS_Store
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
