@@ -119,14 +119,14 @@ This isn't just a random pattern generator. It's a purpose-built research tool d
     -   Saves the exact `recipe.json` for each anomaly to `./anomaly_patterns/`.
     -   Optionally saves a **3600x3600px 300 DPI** print-ready `.png` swatch for physical fabric production (`--save-hires-patterns`).
 -   **GPU/NPU Auto-Detection:** Automatically utilizes NVIDIA CUDA or Apple CoreML for InsightFace models if available, falling back gracefully to CPU.
--   **Stateful Fuzzing:** Saves progress to `fuzzer_state.pkl` on exit (Ctrl+C) and resumes with the `--resume` flag.
+-   **Stateful Fuzzing:** Saves progress on each Epoch or exit (Ctrl+C) and resumes with the `--resume` flag.
 -   **Robust Caching:** Uses per-worker LRU caching for all image assets (`textures`, `tpdne_images`, `abstract_art`) to maximize speed.
 
 ---
 
 ## 🎨 The Adversarial Patterns 🎨
 
-The fuzzer selects from a diverse library of pattern generators, including:
+The fuzzer selects from a diverse library of pattern generators. This list continues to expand but it includes:
 
 * **Geometric & Noise:**
     * `simple_shapes`
