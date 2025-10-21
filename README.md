@@ -125,7 +125,7 @@ This isn't just a random pattern generator. It's a purpose-built research tool d
 
 ## 🎨 The Adversarial Patterns 🎨
 
-The fuzzer selects from a diverse library of pattern generators. This list continues to expand but it includes:
+The fuzzer selects from a diverse library of pattern generators. This list continues to expand but it currently includes:
 
 * **Geometric & Noise:**
     * `simple_shapes`
