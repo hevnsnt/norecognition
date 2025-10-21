@@ -12,7 +12,7 @@ Real fabrics that fight facial recognition. Join the first scientific effort to 
 
 Join the first scientific effort to build reproducible, testable adversarial textiles and open source software that gives privacy back to people.
 
-[Back us on Kickstarter](YOUR_KICKSTARTER_URL) • Limited early rewards and prototype swatches available
+[Back us on Kickstarter](YOUR_KICKSTARTER_URL) (Limited early rewards and prototype swatches available)
 
 ## The Mission
 
@@ -198,51 +198,13 @@ The fuzzer selects from a diverse library of over 30 pattern generators, includi
 
 ## 🛠️ Setup and Installation 🛠️
 
-1.  **Clone the Repository**
-    ```bash
-    git clone [https://github.com/your-username/nonRecognition.git](https://github.com/your-username/nonRecognition.git)
-    cd nonRecognition
-    ```
+This repository currently contains research artifacts and documentation related to the Adversarial Fabric Fuzzer project.
+The core fuzzer code, model integrations, and data generation routines are not publicly released at this stage.
 
-2.  **Create a Virtual Environment** (Recommended)
-    ```bash
-    python3 -m venv venv
-    source venv/bin/activate
-    ```
+At this time, the fuzzer is used privately for controlled testing and scientific evaluation of adversarial patterns against multiple facial recognition frameworks. Future releases may include:
+	•	Public datasets of anonymized fuzzing results and failure statistics
+	•	Non-sensitive components of the testing pipeline for academic replication
+	•	Reproducible metrics and visualization tools for analyzing detection anomalies
 
-3.  **Install Python Libraries**
-    Install all dependencies from the `requirements.txt` file.
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-4.  **Install ONNXRuntime (CPU vs. GPU)**
-
-    * **For NVIDIA GPU Acceleration:** (Massive speedup)
-        First, uninstall the base version, then install the GPU version.
-        ```bash
-        pip uninstall onnxruntime
-        pip install onnxruntime-gpu
-        ```
-    * **For Apple Silicon (M1/M2/M3):**
-        The `insightface` library will automatically attempt to use the `CoreMLExecutionProvider`. No extra steps are needed.
-    * **For CPU-Only:**
-        The default `onnxruntime` installed by `requirements.txt` is all you need.
-
-5.  **Download Models**
-    The `insightface` and `ultralytics` libraries will automatically download their required models on the first run.
-
-6.  **Populate Asset Directories**
-    The fuzzer relies on source images to create its patterns.
-    * `./input_images/`: Add your source images. **They must contain a bright green area** (default: HSV `[35, 70, 40]` to `[85, 255, 255]`) for the fuzzer to target.
-    * `./tpdne_images/`: Add images of faces (e.g., from thispersondoesnotexist.com). The fuzzer will auto-detect and index features (eyes, noses, mouths) to use in the `feature_collage` pattern.
-    * `./textures/`: Add sub-folders of textures (e.g., `./textures/animal/leopard.png`, `./textures/fabric/denim.png`). These are used by `camouflage` and `repeating_texture_object`.
-    * `./abstract_art/`: Add transparent `.png` files of abstract line art for the `pop_art_collage` pattern.
-
----
-
-## 🚀 Usage 🚀
-
-Execute the script from your terminal.
-
-**Start a new session (using all CPU cores):**
+Until then, this repository will serve as a progress tracker for the project — including research updates, metrics summaries, and high-level implementation details.
+If you’re interested in contributing to the open-source release or following the research, please watch this repository for updates or support the project on Kickstarter.
