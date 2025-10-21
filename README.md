@@ -37,7 +37,7 @@ These initiatives are truly groundbreaking and deserve immense credit. They push
 
 Many early efforts in adversarial fashion focused on older “person detection” systems such as the classic [**HAAR Cascade**](https://en.wikipedia.org/wiki/Haar-like_feature) models. Those designs worked well against simpler algorithms, but modern facial recognition has advanced far beyond them. We are not criticizing those projects; they were groundbreaking and gave us a strong foundation to build on. In fact, they were a tremendous starting point for this project. We are, quite literally, standing on their shoulders; they are giants who paved the way. My work continues that evolution, bringing those early ideas into a new generation of adversarial textiles made for today’s much more advanced detection systems.
 
-This project builds on this foundational work, incorporating similar adversarial techniques alongside principles from projects like CV Dazzle and Hyperface. My goal is to leverage these insights to specifically fool the most advanced Facial Recognition systems currently in use.
+This project builds on the previous foundational work, incorporating similar adversarial techniques alongside principles from projects like CV Dazzle and Hyperface. My goal is to leverage these insights to specifically fool the most advanced Facial Recognition systems currently in use.
 
 ### I Believe We Can Do Better.
 
