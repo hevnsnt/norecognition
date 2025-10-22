@@ -29,7 +29,7 @@ I believe physical fabrics can be engineered to confuse facial recognition syste
 
 ### Wait, Hasn't This Been Done Before?
 
-Recently, an interesting concept of hope emerged from the artistic: so-called "adversarial patterns." These brilliant prints and garments held the promise of disrupting machine vision, causing detectors to miss a person entirely. They were fascinating, hopeful, and truly captivating. You might have seen some incredible projects in this space, such as [capable.design](https://capable.design/), [adversarialfashion.com](https://adversarialfashion.com/), and of course I need to mention Adam Harvey’s amazing work at [adam.harvey.studio](https://adam.harvey.studio/).
+Recently, an interesting concept of hope emerged from the artistic community: so-called "adversarial patterns." These brilliant prints and garments held the promise of disrupting machine vision, causing detectors to miss a person entirely. They were fascinating, hopeful, and truly captivating. You might have seen some incredible projects in this space, such as [capable.design](https://capable.design/), [adversarialfashion.com](https://adversarialfashion.com/), and of course I need to mention Adam Harvey’s amazing work at [adam.harvey.studio](https://adam.harvey.studio/).
 
 These initiatives are truly groundbreaking and deserve immense credit. They pushed the boundaries of what was thought possible, inspiring many (including me!) to think differently about privacy in the age of machine vision. But, as with many pioneering prototypes, they were often fragile, effective only against the weakest detectors and under perfect studio conditions.
 
