@@ -2,7 +2,11 @@
 [![Python Version](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+<<<<<<< HEAD
 Real fabrics that fight facial recognition. Join the first scientific effort to build reproducible, testable adversarial textiles returns privacy back to people.
+=======
+Real fabrics that fight facial recognition. Join the first scientific effort to build reproducible, testable adversarial textiles that returns privacy back to people.
+>>>>>>> aa41f69d3a5310c389c860cd51e144690469f53f
 
 <p align="center">
   <img src="./images/nonrecognition_banner.png" alt="Adversarial Fabrics on Kickstarter" style="max-width:100%;height:auto;border-radius:8px;">
@@ -54,7 +58,7 @@ To illustrate this process, here's a glimpse into our fuzzer at work. Each image
   <img src="./images/fuzzer-working.png" alt="Fuzzer Working" width="800">
 </p>
 
-The fuzzer automatically tests facial recognition resilience by taking baseline images, generating and overlaying diverse adversarial patterns, then running them through multiple detection and recognition models to identify failures or anomalies. These results feed into evolutionary mutation routines for future epochs, refining how patterns evolve to reveal weaknesses in recognition systems. Here is a small sample of the generated adversarial images produced during testing. Each pattern was evolved and evaluated across multiple facial recognition models to measure detection failures and guide future mutation strategies. (Note: this represents only a fraction of the full input model set.)
+The fuzzer automatically tests facial recognition resilience by taking baseline images, generating and overlaying diverse adversarial patterns, then running them through multiple detection and recognition models to identify failures or anomalies. These results feed into evolutionary mutation routines for future epochs, refining how patterns evolve to reveal weaknesses in recognition systems. Here is a small sample of the generated adversarial images produced during testing. Each pattern was evolved and evaluated across multiple facial recognition models to measure detection failures and guide future mutation strategies. *(Note: this represents only a fraction of the full input model set.)*
 
 <table align="center" style="border-collapse:collapse; border-spacing:0; padding:0; margin:0;">
   <tr>
