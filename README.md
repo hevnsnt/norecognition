@@ -3,10 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
-# Real fabrics that fight facial recognition. Join the first scientific effort to build reproducible, testable adversarial textiles returns privacy back to people.
-=======
-Real fabrics that fight facial recognition. Join the first scientific effort to build reproducible, testable adversarial textiles that returns privacy back to people.
->>>>>>> aa41f69d3a5310c389c860cd51e144690469f53f
+Real fabrics that **fight** facial recognition. Join the first scientific effort to build reproducible, testable adversarial textiles returns privacy back to people.
 
 <p align="center">
   <img src="./images/nonrecognition_banner.png" alt="Adversarial Fabrics on Kickstarter" style="max-width:100%;height:auto;border-radius:8px;">
