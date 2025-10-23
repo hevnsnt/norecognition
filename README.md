@@ -164,15 +164,42 @@ The fuzzer selects from a diverse library of pattern generators. This list is co
     * `blackout_patches` (solid negative space)
 ---
 
-## 🛠️ Project Status 🛠️
+## 🛠️ Project Statistics and Reports 🛠️
 
-This repository currently contains research artifacts and documentation related to the Adversarial Fabric Fuzzer project.
-The core fuzzer code, model integrations, and data generation routines are not publicly released at this stage.
+This repository currently contains research artifacts and documentation related to the Adversarial Fabric Fuzzer project. The core fuzzer code, model integrations, and data generation routines are not publicly released at this stage.
 
-At this time, the fuzzer is used privately for controlled testing and scientific evaluation of adversarial patterns against multiple facial recognition frameworks. Future releases may include:
-	•	Public datasets of anonymized fuzzing results and failure statistics
-	•	Non-sensitive components of the testing pipeline for academic replication
-	•	Reproducible metrics and visualization tools for analyzing detection anomalies
+At this time, the fuzzer is used privately for controlled testing and scientific evaluation. This research is **SEVERELY resource-constrained**. The fuzzer is designed for massive parallelization, but is currently running on limited hardware, achieving a rate of ~535 tests per minute (as shown in the performance report below).
 
-Until then, this repository will serve as a progress tracker for the project — including research updates, metrics summaries, and high-level implementation details.
-If you’re interested in contributing to the open-source release or following the research, please watch this repository for updates or support the project on Kickstarter.
+To put this in perspective, a single modern data center machine like an NVIDIA DGX Station could run an estimated over 8,500 tests per minute—a 15x increase in research velocity. This would allow for discovering, evolving, and validating effective patterns exponentially faster.
+
+If you are interested in accelerating this research, please consider [supporting the project on Kickstarter](https://kickstarter.com).
+
+# Research Reporting
+
+To scientifically track progress and validate results, the fuzzer includes a powerful reporting suite that analyzes the entire history of the fuzzer's test runs. This allows us to move beyond single anecdotes and identify statistically significant trends.
+
+Here are recent reports generated:
+
+**1. Fuzzer Performance Report**
+![Epoch 1 Performance Report](./images/reports/epoch_1_performance_report.png)
+This chart tracks the fuzzer's raw throughput. It's our "speedometer," showing how many tests we can run per minute. The current average of ~535 tests/min is our baseline, which we are working to scale up dramatically.
+
+**2. Target Image Vulnerability**
+![Target Vulnerability Report](./images/reports/1_2_target_vulnerability_full_history.png)
+This report answers: "Which of our test images is the 'weakest' or most vulnerable target?" By tracking the total number of anomalies per image, we can identify which poses, lighting conditions, or facial structures are most easily confused by adversarial patterns.
+
+**3. Pattern Success Rate (The "Leaderboard")**
+![Pattern Success Rate Report](./images/reports/2_1_pattern_success_rate_full_history.png)
+This is the primary "leaderboard" for individual patterns. It calculates the raw success rate (Anomalies / Total Runs) for every pattern that has been run a significant number of times. This tells us which patterns, like tiled_logo and qr_code in this run, are the most effective "building blocks."
+
+**4. Synergistic Pattern Combinations**
+![Pattern Synergy Report](./images/reports/2_2_pattern_synergy_report_full_history.png)
+This report is where the genetic algorithm's power becomes visible. It answers: "Are combinations of patterns more effective than single patterns?" It looks for "synergy," where two or more patterns layered together (e.g., fft_noise+tiled_logo) have a much higher success rate than they would individually.
+
+**5. Top Specific Vulnerabilities**
+![Top 25 Vulnerabilities Report](./images/reports/1_3_top_vulnerabilities_by_image_and_recipe.png)
+This is the most granular report. It identifies the "golden" test cases: the exact pattern recipe on a specific image that failed most often. This shows us which vulnerabilities are highly repeatable and are the best candidates for physical printing and real-world testing.
+
+**6. Anomaly Type Distribution**
+![Anomaly Type Distribution Report](./images/reports/1_1_pattern_anomaly_type_distribution.png)
+This report analyzes how a pattern is "winning." Instead of just "it worked," it shows if a pattern is causing the AI to find extra people (EXTRA_PERSONS_DETECTED) or lose the person entirely (PERSON_LOST). This helps us understand what part of the AI's logic is being exploited.
