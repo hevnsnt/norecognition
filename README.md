@@ -170,7 +170,8 @@ This repository currently contains research artifacts and documentation related 
 
 At this time, the fuzzer is used privately for controlled testing and scientific evaluation. This research is **SEVERELY resource-constrained**. The fuzzer is designed for massive parallelization, but is currently running on limited hardware, achieving a rate of ~535 tests per minute (as shown in the performance report below).
 
-To put this in perspective, a single modern data center machine like an NVIDIA DGX Station could run an estimated over 8,500 tests per minute—a 15x increase in research velocity. This would allow for discovering, evolving, and validating effective patterns exponentially faster.
+To truly explore the vast landscape of adversarial patterns and evolve robust solutions, significantly more computational power is required. A dedicated AI workstation like the **NVIDIA DGX Spark** (featuring 4x A100 80GB GPUs) could potentially run an estimated **~24,000 tests per minute** (*representing a ~45x increase in research velocity*). 
+Running continuously for 3 months (approximated as 90 days) at the current rate, the fuzzer would complete approximately **69.3 million tests**. To complete that same number of tests, **a single DGX Spark would take only 2 days**. This acceleration is crucial for discovering, evolving, and validating effective patterns exponentially faster.
 
 If you are interested in accelerating this research, please consider [supporting the project on Kickstarter](https://kickstarter.com).
 
