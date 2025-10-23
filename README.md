@@ -181,25 +181,26 @@ To scientifically track progress and validate results, the fuzzer includes a pow
 Here are recent reports generated:
 
 **1. Fuzzer Performance Report**
-![Epoch 1 Performance Report](./images/reports/epoch_1_performance_report.png)
 This chart tracks the fuzzer's raw throughput. It's our "speedometer," showing how many tests we can run per minute. The current average of ~535 tests/min is our baseline, which we are working to scale up dramatically.
+![Epoch 1 Performance Report](./images/reports/epoch_1_performance_report.png)
 
 **2. Target Image Vulnerability**
-![Target Vulnerability Report](./images/reports/1_2_target_vulnerability_full_history.png)
 This report answers: "Which of our test images is the 'weakest' or most vulnerable target?" By tracking the total number of anomalies per image, we can identify which poses, lighting conditions, or facial structures are most easily confused by adversarial patterns.
+![Target Vulnerability Report](./images/reports/1_2_target_vulnerability_full_history.png)
 
 **3. Pattern Success Rate (The "Leaderboard")**
-![Pattern Success Rate Report](./images/reports/2_1_pattern_success_rate_full_history.png)
 This is the primary "leaderboard" for individual patterns. It calculates the raw success rate (Anomalies / Total Runs) for every pattern that has been run a significant number of times. This tells us which patterns, like tiled_logo and qr_code in this run, are the most effective "building blocks."
+![Pattern Success Rate Report](./images/reports/2_1_pattern_success_rate_full_history.png)
 
 **4. Synergistic Pattern Combinations**
-![Pattern Synergy Report](./images/reports/2_2_pattern_synergy_report_full_history.png)
 This report is where the genetic algorithm's power becomes visible. It answers: "Are combinations of patterns more effective than single patterns?" It looks for "synergy," where two or more patterns layered together (e.g., fft_noise+tiled_logo) have a much higher success rate than they would individually.
+![Pattern Synergy Report](./images/reports/2_2_pattern_synergy_report_full_history.png)
 
 **5. Top Specific Vulnerabilities**
-![Top 25 Vulnerabilities Report](./images/reports/1_3_top_vulnerabilities_by_image_and_recipe.png)
 This is the most granular report. It identifies the "golden" test cases: the exact pattern recipe on a specific image that failed most often. This shows us which vulnerabilities are highly repeatable and are the best candidates for physical printing and real-world testing.
+![Top 25 Vulnerabilities Report](./images/reports/1_3_top_vulnerabilities_by_image_and_recipe.png)
 
 **6. Anomaly Type Distribution**
-![Anomaly Type Distribution Report](./images/reports/1_1_pattern_anomaly_type_distribution.png)
 This report analyzes how a pattern is "winning." Instead of just "it worked," it shows if a pattern is causing the AI to find extra people (EXTRA_PERSONS_DETECTED) or lose the person entirely (PERSON_LOST). This helps us understand what part of the AI's logic is being exploited.
+![Anomaly Type Distribution Report](./images/reports/1_1_pattern_anomaly_type_distribution.png)
+
