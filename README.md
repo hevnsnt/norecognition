@@ -77,6 +77,7 @@ Each image below represents a unique adversarial pattern generated and then appl
 
 This isn't just a random pattern generator. It's a purpose-built research tool designed to find *robust* vulnerabilities in *modern* AI models.
 
+### ⚙️ Core Features ⚙️
 * **Hardware-Agnostic HPC:** The fuzzer's pattern engine is a "write-once, run-anywhere" system. It auto-detects the best available compute backend at runtime and uses optimized code paths for:
     * **NVIDIA CUDA** (via cuPy)
     * **Apple Silicon Metal** (via mlx)
@@ -96,47 +97,27 @@ This isn't just a random pattern generator. It's a purpose-built research tool d
     * This allows the fuzzer to "evolve" increasingly complex and effective patterns over time.
 
 * **Landmark-Aware "Surgical" Attacks:** The pattern library goes far beyond simple noise. It includes "surgical" attacks that target specific parts of the AI's "brain" by first finding the baseline facial landmarks:
-    * **adversarial_patch:** Places a small, high-contrast "sticker" on a key feature like the nose, cheek, or forehead.
-    * **landmark_noise:** Applies noise/blur only to the detected eyes, nose, and mouth.
-    * **dazzle_camouflage / hyperface_like:** Use landmark locations to draw disruptive lines through key features.
-    * **swapped_landmarks:** Pastes the mouth over the eye, etc.
-    * **saliency_eye_attack:** Stamps dozens of eyes to confuse the model's bounding-box and non-maximum suppression (NMS) logic.
+    * `adversarial_patch:` Places a small, high-contrast "sticker" on a key feature like the nose, cheek, or forehead.
+    * `landmark_noise:` Applies noise/blur only to the detected eyes, nose, and mouth.
+    * `dazzle_camouflage` / `hyperface_like:` Use landmark locations to draw disruptive lines through key features.
+    * `swapped_landmarks:` Pastes the mouth over the eye, etc.
+    * `saliency_eye_attack:` Stamps dozens of eyes to confuse the model's bounding-box and non-maximum suppression (NMS) logic.
 
-* **Built for Scale and Research:**
-    * **Massively Parallel:** Uses Python's `multiprocessing` to run tests across all available GPU (or CPU) cores.
-    * **Reproducible Outputs:** Saves the exact recipe.json and optionally a 3600x3600 300 DPI (.png) swatch for every successful anomaly, allowing for physical printing and real-world validation.
+* **Built for Scale and Research-Grade Reporting:**
+    * **Massively Parallel:** Uses Python's `multiprocessing` (with a robust spawn context) to run tests across all available CPU cores, managing the per-worker GPU/model resources.
+    * **Reproducible Outputs:** Saves the exact `recipe.json` and optionally a 3600x3600 300 DPI (.png) swatch for every successful anomaly, allowing for physical printing and real-world validation.
     * **Stateful:** Can be stopped (Ctrl+C) and resumed (--resume) at any time, preserving all learned priority tests.
     * **Advanced Reporting:** A dedicated plot_reports.py script analyzes the entire fuzzer history (.jsonl and .txt logs) to generate research-ready plots on:
-    	* **Pattern Success Rate:** (e.g., fractal_noise has a 5.2% anomaly rate over 10,000 runs).
-    	* **Pattern Synergy:** (e.g., dazzle+vortex is 3x more effective than either alone).
-    	* **Anomaly Type Distribution:** (e.g., hyperface causes FACE_LOW_CONF, while adversarial_patch causes FACE_ENSEMBLE).
+    	* **Pattern Success Rate:** (e.g., `fractal_noise` has a 5.2% anomaly rate over 10,000 runs).
+    	* **Pattern Synergy:** (e.g., `dazzle+vortex` is 3x more effective than either alone).
+    	* **Anomaly Type Distribution:** (e.g., `hyperface` causes `FACE_LOW_CONF`, while `adversarial_patch` causes `FACE_ENSEMBLE`).
     	*  **Priority Queue Growth:** (e.g., "Is the fuzzer still finding new vulnerabilities?").
-
----
-
-## ⚙️ Core Features ⚙️
-
--   **Ensemble Model Testing:** Validates against **InsightFace `buffalo_l`**, **InsightFace `buffalo_s`**, and **`YOLOv8n`** simultaneously.
--   **Genetic Algorithm:** Evolves new test cases from previously successful patterns using mutation and crossover.
--   **Advanced Anomaly Detection:** Detects more than just "no face found."
-    -   `FACE_ENSEMBLE`: The primary face was lost by *both* InsightFace models.
-    -   `FACE_LOW_CONF`: The primary face was found, but its confidence score dropped below a critical threshold (a "near-miss").
-    -   `PERSON`: The YOLOv8 model detected more or fewer people than the baseline.
--   **Massive Pattern Library:** Includes a growing list of **unique pattern generators** (see list below) designed to attack different parts of the vision pipeline, from low-level filters (noise, gradients) to high-level feature extractors (eyes, faces, text).
--   **Multi-Layering:** Combines up to 3 different pattern types (base, mid, and top layers) with variable blending into a single complex test case.
--   **Reproducible Outputs:**
-    -   Saves anomalous images to `./anomaly/`.
-    -   Saves the exact `recipe.json` for each anomaly to `./anomaly_patterns/`.
-    -   Optionally saves a **3600x3600px 300 DPI** print-ready `.png` swatch for physical fabric production (`--save-hires-patterns`).
--   **GPU/NPU Auto-Detection:** Automatically utilizes NVIDIA CUDA or Apple CoreML for InsightFace models if available, falling back gracefully to CPU.
--   **Stateful Fuzzing:** Saves progress on each Epoch or exit (Ctrl+C) and resumes with the `--resume` flag.
--   **Robust Caching:** Uses per-worker LRU caching for all image assets to maximize speed, and be memory respectful.
 
 ---
 
 ## 🎨 The Adversarial Patterns 🎨
 
-The fuzzer selects from a diverse library of pattern generators. This list continues to expand but it currently includes:
+The fuzzer selects from a diverse library of pattern generators. This list is constantly expanding.
 
 * **Geometric & Noise:**
     * `simple_shapes`
@@ -147,6 +128,7 @@ The fuzzer selects from a diverse library of pattern generators. This list conti
     * `gradient`
     * `op_art_chevrons`
     * `tiled_logo`
+    * `fft_noise`
 * **Feature-Based & Saliency:**
     * `feature_collage` (stamps random facial features)
     * `saliency_eye_attack` (densely stamps *only* eyes)
@@ -154,11 +136,13 @@ The fuzzer selects from a diverse library of pattern generators. This list conti
     * `ascii_face` (draws text-based faces)
     * `animal_print` (procedural leopard/jaguar spots)
     * `trypophobia` (clusters of small, high-contrast holes)
+    * `pop_art_collage` (line-art based facial features)
 * **Surgical & Landmark-Based:**
     * `landmark_noise` (applies noise/blur *only* to key points)
     * `swapped_landmarks` (pastes the mouth over the eye, etc.)
+    * `adversarial_patch` (places a small "sticker" on a key feature)
 * **Camouflage & Texture:**
-    * `camouflage` (uses textures based from nature)
+    * `camouflage` (uses textures derived from nature)
     * `repeating_texture_object`
     * `warped_face` (uses a full face as a warped texture)
 * **Structural & Dazzle:**
@@ -168,20 +152,19 @@ The fuzzer selects from a diverse library of pattern generators. This list conti
     * `3d_wireframe` (projects 3D cubes)
 * **Glitch & Sensor Attacks:**
     * `vortex` (twisting distortion)
+    * `optical_flow` (liquify-style warp)
     * `photonegative_patch`
     * `colorspace_jitter` (noise in Cr/Cb channels only)
     * `selective_blur`
-    * `ir_led_attack` (simulates IR glare/bloom)
     * `pixel_sort_glitch`
 * **Other:**
     * `random_text`
     * `qr_code`
-    * `pop_art_collage` (uses patterns based on pop-art style faces)
-    * `blackout_patches`
-
+    * `ir_led_attack` (simulates IR glare/bloom)
+    * `blackout_patches` (solid negative space)
 ---
 
-## 🛠️ Setup and Installation 🛠️
+## 🛠️ Project Status 🛠️
 
 This repository currently contains research artifacts and documentation related to the Adversarial Fabric Fuzzer project.
 The core fuzzer code, model integrations, and data generation routines are not publicly released at this stage.
