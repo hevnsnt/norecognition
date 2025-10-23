@@ -176,7 +176,7 @@ If you are interested in accelerating this research, please consider [supporting
 
 # Research Reporting
 
-To scientifically track progress and validate results, the fuzzer includes a powerful reporting suite that analyzes the entire history of the fuzzer's test runs. This allows us to move beyond single anecdotes and identify statistically significant trends.
+To scientifically track progress and validate results, the fuzzer includes a powerful reporting suite that analyzes the entire history of the fuzzer's test runs. This allows us to move beyond single anecdotes and identify statistically significant trends. *Note: I am still very early in the testing, and these reports were generated with very limited data (two epochs). These reports will be come much more relevant as the research continues.*
 
 Here are recent reports generated:
 
