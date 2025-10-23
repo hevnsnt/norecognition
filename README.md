@@ -104,8 +104,13 @@ This isn't just a random pattern generator. It's a purpose-built research tool d
 
 * **Built for Scale and Research:**
     * **Massively Parallel:** Uses Python's `multiprocessing` to run tests across all available GPU (or CPU) cores.
-    * **Reproducible:** Saves the exact `recipe.json` and a high-resolution 300 DPI (`.png`) swatch for every successful anomaly, allowing for physical printing and real-world validation.
-    * **Stateful:** Can be stopped (Ctrl+C) and resumed (`--resume`) at any time, preserving all learned priority tests.
+    * **Reproducible Outputs:** Saves the exact recipe.json and optionally a 3600x3600 300 DPI (.png) swatch for every successful anomaly, allowing for physical printing and real-world validation.
+    * **Stateful:** Can be stopped (Ctrl+C) and resumed (--resume) at any time, preserving all learned priority tests.
+    * **Advanced Reporting:** A dedicated plot_reports.py script analyzes the entire fuzzer history (.jsonl and .txt logs) to generate research-ready plots on:
+    	* **Pattern Success Rate:** (e.g., fractal_noise has a 5.2% anomaly rate over 10,000 runs).
+    	* **Pattern Synergy:** (e.g., dazzle+vortex is 3x more effective than either alone).
+    	* **Anomaly Type Distribution:** (e.g., hyperface causes FACE_LOW_CONF, while adversarial_patch causes FACE_ENSEMBLE).
+    	*  **Priority Queue Growth:** (e.g., "Is the fuzzer still finding new vulnerabilities?").
 
 ---
 
