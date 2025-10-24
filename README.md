@@ -9,6 +9,7 @@
 # Fabrics that FIGHT facial recognition
 
 Join the first scientific effort to build reproducible, testable adversarial textiles and open source software that gives privacy back to people.
+<!-- 
 <p align="center">
   <a href="https://www.kickstarter.com/projects/hevnsnt/1029985405" target="_blank">
     <img src="./images/kickstarter-logo-green.png" alt="Back us on Kickstarter" width="300">
@@ -19,7 +20,7 @@ Join the first scientific effort to build reproducible, testable adversarial tex
   <b><a href="https://www.kickstarter.com/projects/hevnsnt/1029985405">Back us on Kickstarter</a></b><br>
   <i>Limited early rewards and prototype swatches available</i>
 </p>
-
+-->
 
 ## The Mission
 
@@ -172,9 +173,9 @@ At this time, the fuzzer is used privately for controlled testing and scientific
 
 To truly explore the vast landscape of adversarial patterns and evolve robust solutions, significantly more computational power is required. A dedicated AI workstation like the **NVIDIA DGX Spark** (featuring 4x A100 80GB GPUs) could potentially run an estimated **~24,000 tests per minute** (*representing a ~45x increase in research velocity*). 
 Running continuously for 3 months (approximated as 90 days) at the current rate, the fuzzer would complete approximately **69.3 million tests**. To complete that same number of tests, **a single DGX Spark would take only 2 days**. This acceleration is crucial for discovering, evolving, and validating effective patterns exponentially faster.
-
+<!-- 
 If you are interested in accelerating this research, please consider [supporting the project on Kickstarter](https://kickstarter.com).
-
+-->
 # Research Reporting
 
 To scientifically track progress and validate results, the fuzzer includes a powerful reporting suite that analyzes the entire history of the fuzzer's test runs. This allows us to move beyond single anecdotes and identify statistically significant trends. *Note: I am still very early in the testing, and these reports were generated with very limited data (two epochs). These reports will be come much more relevant as the research continues.*
