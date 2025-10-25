@@ -51,7 +51,8 @@ To illustrate this process, here's a glimpse into the fuzzer at work. The fuzzer
 <p align="center">
   <img src="./images/v04_fuzzer_working.gif" alt="Fuzzer Working" width="1024">
 </p>
-As of v0.4, the fuzzer features a full-screen Terminal User Interface (TUI) for real-time analysis. This TUI provides live-updating panels for overall stats, epoch progress, a detailed anomaly log, and an in-terminal image preview of the most recent anomaly found. One thing to take note of, you can see the mutation and evolution engines working (increased anomalies) over each epoch!
+As of v0.4, the fuzzer features a full-screen Terminal User Interface (TUI) for real-time analysis. This TUI provides live-updating panels for overall stats, epoch progress, a detailed anomaly log, and an in-terminal image preview of the most recent anomaly found. *One thing to take note of, you can see the mutation and evolution engines working (increased anomalies) over each epoch!*
+
 
 Each image below represents a unique adversarial pattern generated and then applied to a facial region, ready for testing against advanced recognition models. These are just a few of the hundreds of thousands the system evaluates per epoch to find those elusive "failure patterns." *(Note: This sample is only a fraction of our input models and while some show analysis anomalies; it does not include any bypass techniques.)*
 
