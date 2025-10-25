@@ -47,7 +47,7 @@ To answer this, **nonRecogition** is focused on two critical components:
 
 ---
 <h2 align="center">Fuzzer in Action</h2>
-To illustrate this process, here's a glimpse into the fuzzer at work. The fuzzer automatically tests facial recognition resilience by taking baseline images, generating and overlaying diverse adversarial patterns, then running them through multiple detection and recognition models to identify failures or anomalies. These results feed into evolutionary mutation routines for future epochs, refining how patterns evolve to reveal weaknesses in recognition systems. 
+To illustrate this process, here's a glimpse into the fuzzer at work. The fuzzer automatically tests facial detection resilience by taking baseline images, generating and overlaying diverse adversarial patterns, then running them through multiple detection and recognition models to identify failures or anomalies. These results feed into evolutionary mutation routines for future epochs, refining how patterns evolve to reveal weaknesses in recognition systems. 
 <p align="center">
   <img src="./images/v04_fuzzer_working.gif" alt="Fuzzer Working" width="1024">
 </p>
