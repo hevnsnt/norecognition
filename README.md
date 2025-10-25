@@ -49,7 +49,7 @@ To answer this, **nonRecogition** is focused on two critical components:
 <h2 align="center">Fuzzer in Action</h2>
 To illustrate this process, here's a glimpse into the fuzzer at work. The fuzzer automatically tests facial recognition resilience by taking baseline images, generating and overlaying diverse adversarial patterns, then running them through multiple detection and recognition models to identify failures or anomalies. These results feed into evolutionary mutation routines for future epochs, refining how patterns evolve to reveal weaknesses in recognition systems. 
 <p align="center">
-  <img src="./images/v04_fuzzer-working.gif" alt="Fuzzer Working" width="1024">
+  <img src="./images/v04_fuzzer_working.gif" alt="Fuzzer Working" width="1024">
 </p>
 As of v0.4, the fuzzer features a full-screen Terminal User Interface (TUI) for real-time analysis. This TUI provides live-updating panels for overall stats, epoch progress, a detailed anomaly log, and an in-terminal image preview of the most recent anomaly found. One thing to take note of, you can see the mutation and evolution engines working (increased anomalies) over each epoch!
 
