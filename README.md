@@ -24,17 +24,17 @@ Join the first scientific effort to build reproducible, testable adversarial tex
 
 ## The Mission
 
-I am a hacker. I see computers and technology differently. For years, I have been interested in the topic of how machines interpret the world and how they interpret us. My work in computer vision in the past explored how algorithms decide who is seen, who is tracked, and who is recognized, with serious and often unsettling consequences for personal privacy.
+I'm a hacker. I see technology differently. For years, I've been fascinated by how machines interpret our world and us: how algorithms decide who is seen, tracked, and recognized, often with unsettling consequences for personal privacy.
 
-I believe physical fabrics can be engineered to confuse facial recognition systems. I built a reproducible, science driven process to design those fabrics, and I test them rigorously across multiple models and real world conditions so the results are practical and repeatable. My goal is simple: to build a wardrobe that protects my privacy — and yours.
+I believe we can engineer fabrics to confuse these systems. My goal is to build a **reproducible, science-driven process** to design and test these adversarial textiles. I test them rigorously against multiple models in real-world conditions to create a wardrobe that protects my privacy... and yours.
 
 ### Wait, Hasn't This Been Done Before?
 
-Recently, an interesting concept of hope emerged from the artistic community: so-called "adversarial patterns." These brilliant prints and garments held the promise of disrupting machine vision, causing detectors to miss a person entirely. They were fascinating, hopeful, and truly captivating. You might have seen some incredible projects in this space, such as [capable.design](https://capable.design/), [adversarialfashion.com](https://adversarialfashion.com/), and of course I need to mention Adam Harvey’s amazing work at [adam.harvey.studio](https://adam.harvey.studio/).
+Yes, and the early work was brilliant. Artistic "adversarial patterns" from projects like [capable.design](https://capable.design/), [adversarialfashion.com](https://adversarialfashion.com/), and Adam Harvey’s amazing work at [adam.harvey.studio](https://adam.harvey.studio/) were groundbreaking. They inspired me and proved something was possible.
 
-These initiatives are truly groundbreaking and deserve immense credit. They pushed the boundaries of what was thought possible, inspiring many (including me!) to think differently about privacy in the age of machine vision. But, as with many pioneering prototypes, they were often fragile, effective only against the weakest detectors and under perfect studio conditions.
+But, like many pioneering prototypes, they were often fragile. Many focused on older "person detection" systems (like classic [**HAAR Cascade**](https://medium.com/analytics-vidhya/haar-cascades-explained-38210e57970d) models) and were often only effective under perfect studio conditions. Modern facial recognition has advanced far beyond those simpler algorithms.
 
-Many early efforts in adversarial fashion focused on older “person detection” systems such as the classic [**HAAR Cascade**](https://medium.com/analytics-vidhya/haar-cascades-explained-38210e57970d) models. Those designs worked well against simpler algorithms, but modern facial recognition has advanced far beyond them. I am not criticizing those projects; they were groundbreaking and provides a strong foundation to build on. This project, quite literally, stands on their shoulders; they are the giants who paved the way. My work continues that evolution, bringing those early ideas into a new generation of adversarial textiles made for today’s much more advanced detection systems.
+This project stands on the shoulders of those giants. My work continues that evolution, bringing those early ideas into a new generation of textiles built for today’s much more advanced detection systems.
 
 ### I Believe We Can Do Better.
 
