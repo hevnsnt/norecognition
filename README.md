@@ -38,7 +38,7 @@ Many early efforts in adversarial fashion focused on older “person detection�
 
 ### I Believe We Can Do Better.
 
-I’m [Bill Swearingen](https://about.me/billswearingen). Having spent decades in security uncovering how complex systems fail, I’ve learned how to think differently and exploit technology’s true weak points. I’m the founder of [**SecKC**](https://seckc.org), the world’s largest monthly hacker meetup, and have spoken at major security conferences including [**BlackHat**](https://blackhat.com), [**Shmoocon**](https://en.wikipedia.org/wiki/ShmooCon) and [**DEF CON**](https://defcon.org). That experience drives my latest project, **nonRecognition** — an effort to transform intriguing privacy concepts into robust, repeatable, and verifiable solutions. My goal is to determine the mechanisms behind recognition failures and to provide citizens, advocates, and privacy-minded individuals with fashonable fabric solutions (from sustainable sources) that lower their visibility to facial recognition systems. This is a focused, research program asking a hard question: *Can physical fabrics truly defeat state-of-the-art facial recognition in real-world conditions?* 
+I’m [Bill Swearingen](https://about.me/billswearingen). Having spent decades in security uncovering how complex systems fail, I’ve learned how to think differently and exploit technology’s true weak points. I’m the founder of [**SecKC**](https://seckc.org), the world’s largest monthly hacker meetup, and have spoken at major security conferences including [**BlackHat**](https://blackhat.com), [**Shmoocon**](https://en.wikipedia.org/wiki/ShmooCon) and [**DEF CON**](https://defcon.org). That experience drives my latest project, **nonRecognition** — an effort to transform intriguing privacy concepts into robust, repeatable, and verifiable solutions. My goal is to determine the mechanisms behind recognition failures and to provide citizens, advocates, and privacy-minded individuals with fashionable fabric solutions (from sustainable sources) that lower their visibility to facial recognition systems. This is a focused, research program asking a hard question: *Can physical fabrics truly defeat state-of-the-art facial recognition in real-world conditions?* 
 
 To answer this, **nonRecogition** is focused on two critical components:
 
@@ -92,7 +92,7 @@ This isn't just a random pattern generator. It's a purpose-built research tool d
     * **InsightFace (`buffalo_l`):** A large, high-accuracy face detector.
     * **InsightFace (`buffalo_s`):** A smaller, faster face detector.
     * **YOLOv8n:** A modern, real-time object detector (used for person detection).
-    * An anomaly is only registered if it fools the models in a significant way (e.g., fooling *both* face models, or causing a *dramatic* drop in confidence).
+    * An anomaly is registered if it fools the models in a significant way (e.g., fooling *both* face models, or causing a *dramatic* drop in confidence).
 
 * **Genetic Algorithm for "Evolved" Patterns:** The fuzzer learns. When it finds a pattern that causes a failure (an "anomaly"), it saves that pattern's "recipe" to a `PRIORITY_TESTS` list. In the next epoch, it uses these successful recipes as parents for a **genetic algorithm**:
     * **Mutation:** It randomly adds, removes, or swaps pattern layers.
@@ -108,7 +108,7 @@ This isn't just a random pattern generator. It's a purpose-built research tool d
 
 * **Built for Scale and Research-Grade Reporting:**
     * **Massively Parallel:** Uses Python's `multiprocessing` (with a robust spawn context) to run tests across all available CPU cores, managing the per-worker GPU/model resources.
-    * **Reproducible Outputs:** Saves the exact `recipe.json` and optionally a 3600x3600 300 DPI (.png) swatch for every successful anomaly, allowing for physical printing and real-world validation.
+    * **Reproducible Outputs:** The fuzzer saves the exact recipe.json for every high-priority anomaly. A separate utility then uses this recipe to deterministically generate a 300-DPI, print-ready file for physical validation."
     * **Stateful:** Can be stopped (Ctrl+C) and resumed (--resume) at any time, preserving all learned priority tests.
     * **Advanced Reporting:** A dedicated plot_reports.py script analyzes the entire fuzzer history (.jsonl and .txt logs) to generate research-ready plots on:
     	* **Pattern Success Rate:** (*e.g., `fractal_noise` has a 5.2% anomaly rate over 10,000 runs*).
