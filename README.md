@@ -38,12 +38,14 @@ This project stands on the shoulders of those giants. My work continues that evo
 
 ### I Believe We Can Do Better.
 
-I’m [Bill Swearingen](https://about.me/billswearingen). Having spent decades in security uncovering how complex systems fail, I’ve learned how to think differently and exploit technology’s true weak points. I’m the founder of [**SecKC**](https://seckc.org), the world’s largest monthly hacker meetup, and have spoken at major security conferences including [**BlackHat**](https://blackhat.com), [**Shmoocon**](https://en.wikipedia.org/wiki/ShmooCon) and [**DEF CON**](https://defcon.org). That experience drives my latest project, **nonRecognition** — an effort to transform intriguing privacy concepts into robust, repeatable, and verifiable solutions. My goal is to determine the mechanisms behind recognition failures and to provide citizens, advocates, and privacy-minded individuals with fashionable fabric solutions (from sustainable sources) that lower their visibility to facial recognition systems. This is a focused, research program asking a hard question: *Can physical fabrics truly defeat state-of-the-art facial recognition in real-world conditions?* 
+I’m [Bill Swearingen](https://about.me/billswearingen). Having spent decades in security (co-founder of SecKC, speaker at [**BlackHat**](https://blackhat.com) & [**DEF CON**](https://defcon.org)) uncovering how complex systems fail, I’m applying that mindset to this problem.
 
-To answer this, **nonRecogition** is focused on two critical components:
+My project, **nonRecognition**, is a research-focused program to transform those intriguing concepts into **robust, repeatable, and verifiable solutions**. I am trying to answer one hard question: *Can physical fabrics truly defeat state-of-the-art facial recognition in real-world conditions?*
 
-1.  **A Custom Fuzzer and Testing Suite:** A high-performance, multi-process fuzzer designed to generate, test, and analyze an infinite amount of adversarial designs against an ensemble of modern recognition systems. This allows me to quantify results, iterate scientifically, and discover truly effective patterns.
-2.  **Develop Adversarial Textiles:** Physically printed materials, produced and tested in real-life conditions, specifically optimized to confound the most advanced facial recognition models, not just rudimentary detectors.
+To do this, **nonRecogition** is focused on two critical components:
+
+1.  **A Custom Fuzzer and Testing Suite:** A high-performance fuzzer to generate, test, and scientifically analyze an infinite number of designs against an ensemble of modern recognition systems.
+2.  **Develop Adversarial Textiles:** Physically printed, sustainable materials optimized to confound the most advanced facial recognition models (not just rudimentary detectors) and tested in real-life conditions.
 
 ---
 <h2 align="center">Fuzzer in Action</h2>
