@@ -38,7 +38,7 @@ This project stands on the shoulders of those giants. My work continues that evo
 
 ### I Believe We Can Do Better.
 
-I’m [Bill Swearingen](https://about.me/billswearingen). Having spent decades in security (co-founder of SecKC, speaker at [**BlackHat**](https://blackhat.com) & [**DEF CON**](https://defcon.org)) uncovering how complex systems fail, I’m applying that mindset to this problem.
+I’m [Bill Swearingen](https://about.me/billswearingen). Having spent decades in security (co-founder of [**SecKC**](https://seckc.org), speaker at [**BlackHat**](https://blackhat.com) & [**DEF CON**](https://defcon.org)) uncovering how complex systems fail, I’m applying that mindset to this problem.
 
 My project, **nonRecognition**, is a research-focused program to transform those intriguing concepts into **robust, repeatable, and verifiable solutions**. I am trying to answer one hard question: *Can physical fabrics truly defeat state-of-the-art facial recognition in real-world conditions?*
 
