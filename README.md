@@ -42,15 +42,16 @@ I’m [Bill Swearingen](https://about.me/billswearingen). Having spent decades i
 
 To answer this, **nonRecogition** is focused on two critical components:
 
-1.  **A Custom Fuzzer and Testing Suite:** I have built a Powerful fuzzer designed to generate, test, and analyze an infinite amount of adversarial designs against numerous recognition systems. This allows me to quantify results, iterate scientifically, and discover truly effective patterns.
+1.  **A Custom Fuzzer and Testing Suite:** A high-performance, multi-process fuzzer designed to generate, test, and analyze an infinite amount of adversarial designs against an ensemble of modern recognition systems. This allows me to quantify results, iterate scientifically, and discover truly effective patterns.
 2.  **Develop Adversarial Textiles:** Physically printed materials, produced and tested in real-life conditions, specifically optimized to confound the most advanced facial recognition models, not just rudimentary detectors.
 
 ---
 <h2 align="center">Fuzzer in Action</h2>
 To illustrate this process, here's a glimpse into the fuzzer at work. The fuzzer automatically tests facial recognition resilience by taking baseline images, generating and overlaying diverse adversarial patterns, then running them through multiple detection and recognition models to identify failures or anomalies. These results feed into evolutionary mutation routines for future epochs, refining how patterns evolve to reveal weaknesses in recognition systems. 
 <p align="center">
-  <img src="./images/fuzzer-working.png" alt="Fuzzer Working" width="1024">
+  <img src="./images/v04_fuzzer-working.png" alt="Fuzzer Working" width="1024">
 </p>
+As of v0.4, the fuzzer features a full-screen Terminal User Interface (TUI) for real-time analysis. This TUI provides live-updating panels for overall stats, epoch progress, a detailed anomaly log, and an in-terminal image preview of the most recent anomaly found. One thing to take note of, you can see the mutation and evolution engines working (increased anomalies) over each epoch!
 
 Each image below represents a unique adversarial pattern generated and then applied to a facial region, ready for testing against advanced recognition models. These are just a few of the hundreds of thousands the system evaluates per epoch to find those elusive "failure patterns." *(Note: This sample is only a fraction of our input models and while some show analysis anomalies; it does not include any bypass techniques.)*
 
@@ -178,24 +179,24 @@ If you are interested in accelerating this research, please consider [supporting
 -->
 # Research Reporting
 
-To scientifically track progress and validate results, the fuzzer includes a powerful reporting suite that analyzes the entire history of the fuzzer's test runs. This allows us to move beyond single anecdotes and identify statistically significant trends. *Note: I am still very early in the testing, and these reports were generated with very limited data (two epochs). These reports will be come much more relevant as the research continues.*
+To scientifically track progress and validate results, the fuzzer includes a powerful reporting suite that analyzes the entire history of the fuzzer's test runs. This moves our findings beyond single anecdotes to identify statistically significant trends. While the reporting suite is fully functional, our current focus is on scaling fuzzer throughput. The statistical relevance of these reports will grow as we launch longer, multi-epoch research campaigns.
 
 Here are recent reports generated:
 
 **1. Fuzzer Performance Report**
-This chart tracks the fuzzer's raw throughput. It's our "speedometer," showing how many tests we can run per minute. The current average of ~535 tests/min is our baseline, which we are working to scale up dramatically.
-![Epoch 1 Performance Report](./images/reports/epoch_1_performance_report.png)
+This chart tracks the fuzzer's raw throughput. It's our "speedometer," showing how many tests we can run per minute.
+![Epoch 2 Performance Report](./images/reports/epoch_2_performance_report.png)
 
 **2. Target Image Vulnerability**
 This report answers: "Which of our test images is the 'weakest' or most vulnerable target?" By tracking the total number of anomalies per image, we can identify which poses, lighting conditions, or facial structures are most easily confused by adversarial patterns.
 ![Target Vulnerability Report](./images/reports/1_2_target_vulnerability_full_history.png)
 
 **3. Pattern Success Rate (The "Leaderboard")**
-This is the primary "leaderboard" for individual patterns. It calculates the raw success rate (Anomalies / Total Runs) for every pattern that has been run a significant number of times. This tells us which patterns, like tiled_logo and qr_code in this run, are the most effective "building blocks."
+This is the primary "leaderboard" for individual patterns. It calculates the raw success rate (Anomalies / Total Runs) for every pattern that has been run a significant number of times. This tells us which patterns are the most effective "building blocks."
 ![Pattern Success Rate Report](./images/reports/2_1_pattern_success_rate_full_history.png)
 
 **4. Synergistic Pattern Combinations**
-This report is where the genetic algorithm's power becomes visible. It answers: "Are combinations of patterns more effective than single patterns?" It looks for "synergy," where two or more patterns layered together (e.g., fft_noise+tiled_logo) have a much higher success rate than they would individually.
+This report is where the genetic algorithm's power becomes visible. It answers: "Are combinations of patterns more effective than single patterns?" It looks for "synergy," where two or more patterns layered together (e.g., `fft_noise+tiled_logo`) have a much higher success rate than they would individually.
 ![Pattern Synergy Report](./images/reports/2_2_pattern_synergy_report_full_history.png)
 
 **5. Top Specific Vulnerabilities**
@@ -206,3 +207,18 @@ This is the most granular report. It identifies the "golden" test cases: the exa
 This report analyzes how a pattern is "winning." Instead of just "it worked," it shows if a pattern is causing the AI to find extra people (EXTRA_PERSONS_DETECTED) or lose the person entirely (PERSON_LOST). This helps us understand what part of the AI's logic is being exploited.
 ![Anomaly Type Distribution Report](./images/reports/1_1_pattern_anomaly_type_distribution.png)
 
+# 📜 Ethics and Intent
+My goal is simple: to build a wardrobe that protects my privacy — and yours. This project is a research tool for auditing computer vision systems. The goal is to discover and document vulnerabilities in detection models to help developers build more robust, fair, and secure systems. The adversarial patterns are a byproduct of this research, offered to the public to promote awareness and discussion about privacy in an age of ubiquitous surveillance.
+
+# 🗺️ Roadmap: v0.5 Proposals
+**Facial Recognition Matching Pipeline**
+  * **TODO:** Implement a 1:N matching pipeline (e.g., using ArcFace) to test if a pattern causes a misidentification (matching the wrong person) in addition to a detection failure.
+
+**Feature Enhancements**
+  * improve detection if state exists but user does not pass --resume
+  * Refactor Fuzz class
+  * Improve Log parsing to be less fragile
+  * Improve resolution of Anomaly Preview (yes I know it looks like Minecraft, I am resource constrained ok)
+**Expanded Evaluation Harness**
+* TODO: Add support for other common open-source detectors (e.g., MTCNN, RetinaFace from face_detection lib) to test the generality of found patterns.
+* TODO: Build a harness for testing against closed-source cloud APIs (e.g., Azure, AWS Rekognition) to audit commercial systems.
