@@ -222,6 +222,7 @@ My goal is simple: to build a wardrobe that protects my privacy — and yours. T
   * Refactor Fuzz class
   * Improve Log parsing to be less fragile
   * Improve resolution of Anomaly Preview (yes I know it looks like Minecraft, I am resource constrained ok)
-**Expanded Evaluation Harness**
+
+**Distant future expanded Evaluation Harness**
 * TODO: Add support for other common open-source detectors (e.g., MTCNN, RetinaFace from face_detection lib) to test the generality of found patterns.
 * TODO: Build a harness for testing against closed-source cloud APIs (e.g., Azure, AWS Rekognition) to audit commercial systems.
