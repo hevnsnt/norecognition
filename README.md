@@ -6,6 +6,7 @@
 <p align="center">
   <img src="./images/nonrecognition_banner.png" alt="Adversarial Fabrics on Kickstarter" style="max-width:100%;height:auto;border-radius:8px;">
 </p>
+Could the pattern on your scarf make you invisible to an AI camera? Could a headband prevent facial recognition? This project is a scientific search to find out. I wrote a powerful tool (a "fuzzer") to automatically generate and test millions of AI adversarial patterns, looking for designs that can confuse AI surveillance and give privacy back to people.
 
 # Fabrics that FIGHT facial recognition
 
