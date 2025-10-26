@@ -224,6 +224,8 @@ If you or your organization can provide access to the hardware or cloud credits 
 
 **Please reach out by emailing [bill@seckc.org].**
 
+<h2 id="research-reporting">Research Reporting</h2>
+
 Here are recent reports generated:
 
 **1. Fuzzer Performance Report**
