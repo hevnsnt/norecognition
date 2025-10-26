@@ -2,7 +2,7 @@
 
 ## The Persona Dataset: Our Scientific Baseline
 
-Early fuzzer versions (v0.1-v0.5) relied on randomized, synthetic images (like those from "This Person Does Not Exist"). While useful for broad discovery, this approach lacked scientific rigor. It was impossible to know if an anomaly was a true pattern vulnerability or just a flaw in that specific synthetic image.
+Early fuzzer versions (v0.1-v0.5) relied on randomized, synthetic images. While useful for broad discovery, this approach lacked scientific rigor. It was impossible to know if an anomaly was a true pattern vulnerability or just a flaw in that specific synthetic image.
 
 As of v0.6, the fuzzer moves to a fixed, high-quality, and diverse dataset of 6 personas. This change is the most critical step in moving from a simple generator to a scientific research tool.
 
