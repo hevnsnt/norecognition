@@ -125,8 +125,8 @@ We test each persona across three distinct campaigns to understand how a pattern
 ---
 We used Google Gemini (Nano Banana) to generate the test images using this prompt:
 
-I will be providing you a series of persona types. Each persona will have a name and some characteristics of that persona. I want you to generate a series of high-quality, photorealistic images for a computer vision research project.
-
+    I will be providing you a series of persona types. Each persona will have a name and some characteristics of that persona. 
+    I want you to generate a series of high-quality, photorealistic images for a computer vision research project.
 
     Core Image Requirements (Mandatory):
     Style: High-resolution, photorealistic "full body" photo. This should include the entire full body 
