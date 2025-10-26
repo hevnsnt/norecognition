@@ -31,7 +31,7 @@ All images used for training, baselining, and active fuzzing do not depict real 
 | :--- | :---: | :---: |
 | **Gary** | <img src="./images/personas/Gary_headshot.png" alt="Gary Headshot" width="150"> | <img src="./images/personas/Gary_profile.png" alt="Gary Profile" width="150"> |
 
-> Gary is a small business owner from Milwaukee who runs a network of convenience stores. A few months ago, a case of mistaken identity from a store’s security system flagged him as a shoplifter in a neighboring city. It took him weeks to clear his name.
+> Gary is a small business owner from Kansas City who runs a network of convenience stores. A few months ago, a case of mistaken identity from a store’s security system flagged him as a shoplifter in a neighboring city. It took him weeks to clear his name.
 > Now he’s volunteering in a community tech group that’s advocating for more transparency in commercial AI systems, especially those used in retail surveillance. He isn’t anti-technology — he just doesn’t want a camera deciding his reputation.
 
 ### Barry
