@@ -194,6 +194,7 @@ Running continuously for 3 months (approximated as 90 days) at the current rate,
 <!-- 
 If you are interested in accelerating this research, please consider [supporting the project on Kickstarter](https://kickstarter.com).
 -->
+
 # Research Reporting
 
 To scientifically track progress and validate results, the fuzzer includes a powerful reporting suite that analyzes the entire history of the fuzzer's test runs. This moves our findings beyond single anecdotes to identify statistically significant trends. While the reporting suite is fully functional, our current focus is on scaling fuzzer throughput. The statistical relevance of these reports will grow as we launch longer, multi-epoch research campaigns.
