@@ -34,7 +34,7 @@ Join the first scientific effort to build reproducible, testable adversarial tex
 - [Project Statistics and Reports](#project-statistics-and-reports)
 - [Research Reporting](#research-reporting)
 - [Ethics and Intent](#ethics-and-intent)
-- [Roadmap: v0.5 Proposals](#roadmap-v05-proposals)
+- [Future Roadmap](#roadmap-proposals)
 
 ## The Mission
 
