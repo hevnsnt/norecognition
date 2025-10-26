@@ -9,7 +9,7 @@ v0.6 will introduce a fixed, high-quality, and diverse dataset of 6 personas. Th
 ### Why a Fixed Dataset?
 
 * **Consistency:** We can test thousands of patterns against the *exact same* faces, providing a stable baseline for comparison.
-* **Reproducibility:** A successful anomaly against 'Gary' can be scientifically reproduced and validated by other researchers.
+* **Reproducibility:** A successful anomaly against *'Gary'* can be scientifically reproduced and validated by other researchers.
 * **Diversity:** The dataset includes varied descents, genders, and ages, allowing us to test for biases in how models fail.
 * **Controlled Scenarios:** Each persona has consistent, research-grade input images (e.g., frontal, profile) to test patterns under different, repeatable conditions.
 
