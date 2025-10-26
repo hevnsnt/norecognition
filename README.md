@@ -1,6 +1,9 @@
 # nonRecognition — Adversarial Fuzzer
 [![Status](https://img.shields.io/badge/status-research-orange.svg)]()
 [![Platform](https://img.shields.io/badge/platform-linux%20%7C%20macos%20%7C%20windows-lightgrey.svg)]()
+![Research](https://img.shields.io/badge/type-research-blue.svg)
+![AI Security](https://img.shields.io/badge/focus-AI%20security-red.svg)
+![Privacy](https://img.shields.io/badge/goal-privacy-green.svg)
 
 <p align="center">
   <img src="./images/nonrecognition_banner.png" alt="Adversarial Fabrics on Kickstarter" style="max-width:100%;height:auto;border-radius:8px;">
