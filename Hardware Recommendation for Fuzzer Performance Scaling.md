@@ -137,7 +137,7 @@ This approach recognizes that maximum performance is achieved when software is t
 
 ### **Hardware Analysis: The 2x DGX Spark Cluster**
 
-For a total cost of approximately **$8,000**, I can acquire two DGX Spark units. Each DGX Spark is a compact AI supercomputer powered by the NVIDIA GB10 Grace Blackwell Superchip.  
+For a total cost of approximately **$9,000**, I can acquire two DGX Spark units. Each DGX Spark is a compact AI supercomputer powered by the NVIDIA GB10 Grace Blackwell Superchip.  
 Key architectural advantages include:
 
 * **Unified Memory Architecture (UMA):** Each unit has 128GB of memory shared coherently between the CPU and GPU, eliminating the performance-killing need to copy data between separate memory pools.  
@@ -163,7 +163,7 @@ The data clearly shows that the path of software and hardware co-design is unequ
 
 | Solution | Hardware Cost | Refactoring Effort | Estimated Tests/Min | Time to 5B Tests (Hours) | Time to 5B Tests (Days) | Operating Cost (Electricity) | Total Cost to Complete 5B Tests |
 | :---- | :---- | :---- | :---- | :---- | :---- | :---- | :---- |
-| **2x DGX Spark Cluster** | \~$8,000 | Medium | **\~105,000** | **\~794** | **\~33** | \~$57 | **\~$8,057** |
+| **2x DGX Spark Cluster** | \~$9,000 | Medium | **\~105,000** | **\~794** | **\~33** | \~$57 | **\~$9,057** |
 | **On-Prem: 4x RTX 5070 Ti** | \~$8,000 | None | \~14,420 | \~5,776 | \~241 | \~$1,386 | **\~$9,386** |
 
 ### 
