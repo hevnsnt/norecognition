@@ -190,7 +190,7 @@ The fuzzer selects from a diverse library of pattern generators. This list is co
 
 <h2 id="call-for-help">⚠️ Call for help ⚠️</h2>
 
-This project's progress is **severely limited by computational resources**. We are actively seeking sponsors or partners who can provide access to high-performance GPU hardware. Our primary goal is to discover the **most effective adversarial patterns**, and we estimate this will require a deep, multi-month analysis to test at least 5 Billion `evolved` patterns. This level of rigorous testing is currently impossible, as it would require decades with our present hardware. We are actively seeking sponsors or partners who can provide access to high-performance GPUs to make this research feasible.
+This project's progress is **severely limited by computational resources**. Our primary goal is to discover the most effective adversarial patterns, which we estimate will require testing at least **5 Billion** *evolved* patterns. This level of rigorous testing *is currently impossible*, it would require decades with our present hardware. We are actively seeking sponsors or partners who can provide access to high-performance GPUs to make this research feasible.
 
 ### Current Status: 🐢 Slow & Steady
 
