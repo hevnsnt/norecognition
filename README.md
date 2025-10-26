@@ -25,6 +25,17 @@ Join the first scientific effort to build reproducible, testable adversarial tex
 </p>
 -->
 
+## Quick Links
+
+- [The Mission](#the-mission)
+- [Fuzzer in Action](#fuzzer-in-action)
+- [What Makes This Fuzzer Different?](#what-makes-this-fuzzer-different)
+- [The Adversarial Patterns](#the-adversarial-patterns)
+- [Project Statistics and Reports](#project-statistics-and-reports)
+- [Research Reporting](#research-reporting)
+- [Ethics and Intent](#ethics-and-intent)
+- [Roadmap: v0.5 Proposals](#roadmap-v05-proposals)
+
 ## The Mission
 
 I'm a hacker. I see technology differently. For years, I've been fascinated by how machines interpret our world and us: how algorithms decide who is seen, tracked, and recognized, often with unsettling consequences for personal privacy.
@@ -51,7 +62,7 @@ To do this, **nonRecogition** is focused on two critical components:
 2.  **Develop Adversarial Textiles:** Physically printed, sustainable materials optimized to confound the most advanced facial recognition models (not just rudimentary detectors) and tested in real-life conditions.
 
 ---
-<h2 align="center">Fuzzer in Action</h2>
+## Fuzzer in Action
 To illustrate this process, here's a glimpse into the fuzzer at work. The fuzzer automatically tests facial detection resilience by taking baseline images, generating and overlaying diverse adversarial patterns, then running them through multiple detection and recognition models to identify failures or anomalies. These results feed into evolutionary mutation routines for future epochs, refining how patterns evolve to reveal weaknesses in recognition systems. 
 <p align="center">
   <img src="./images/v04_fuzzer_working.gif" alt="Fuzzer Working" width="1024">
