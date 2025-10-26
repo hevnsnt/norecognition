@@ -212,7 +212,7 @@ This project's progress is **severely limited by computational resources**. We a
 * **Test Target:** 5 Billion tests
 * **Time to Target:** ~17.8 Years (*womp*)
 
-### Desired Status: 🚀 Full Throttle
+### Desired Status: Full Throttle 🚀🚀🚀
 
 * **Required Hardware:** 2x **NVIDIA DGX Spark** (or equivalent 4x A100 80GB)
 * **New Test Rate:** ~**48,000 tests/minute** (~90x increase)
