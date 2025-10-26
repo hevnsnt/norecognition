@@ -34,9 +34,8 @@
 - [Fuzzer in Action](#fuzzer-in-action)
 - [What Makes This Fuzzer Different?](#what-makes-this-fuzzer-different)
 - [The Adversarial Patterns](#the-adversarial-patterns)
-- [Project Statistics and Reports](#project-statistics-and-reports)
-- [Research Reporting](#research-reporting)
 - [Call for help](#call-for-help)
+- [Research Reporting](#research-reporting)
 - [Ethics and Intent](#ethics-and-intent)
 - [Future Roadmap](#roadmap-proposals)
 
@@ -189,16 +188,6 @@ The fuzzer selects from a diverse library of pattern generators. This list is co
     * `blackout_patches` (solid negative space)
 ---
 
-<h2 id="project-statistics-and-reports">🛠️ Project Statistics and Reports 🛠️</h2>
-
-This repository currently contains research artifacts and documentation related to the Adversarial Fabric Fuzzer project. The core fuzzer code, model integrations, and data generation routines are not publicly released at this stage.
-
-At this time, the fuzzer is used privately for controlled testing and scientific evaluation. This research is **SEVERELY resource-constrained**. The fuzzer is designed for massive parallelization, but is currently running on limited hardware, achieving a rate of ~535 tests per minute (as shown in the performance report below).
-
-<!-- 
-If you are interested in accelerating this research, please consider [supporting the project on Kickstarter](https://kickstarter.com).
--->
-
 <h2 id="call-for-help">⚠️ Call for help ⚠️</h2>
 
 This project's progress is **severely limited by computational resources**. We are actively seeking sponsors or partners who can provide access to high-performance GPU hardware. To conduct a deep, multi-month analysis, our next research goal is to run at least **5 Billion test `evolved` test patterns**. This level of rigorous testing is currently impossible, as it would require decades with our present hardware. We are actively seeking sponsors or partners who can provide access to high-performance GPUs to make this research feasible.
@@ -222,6 +211,8 @@ If you or your organization can provide access to the hardware or cloud credits 
 **Please reach out by emailing [bill@seckc.org].**
 
 <h2 id="research-reporting">Research Reporting</h2>
+
+This repository currently contains research artifacts and documentation related to the Adversarial Fabric Fuzzer project. The core fuzzer code, model integrations, and data generation routines are not publicly released at this stage. At this time, the fuzzer is used privately for controlled testing and scientific evaluation. This research is **SEVERELY resource-constrained**. The fuzzer is designed for massive parallelization, but is currently running on limited hardware, achieving a rate of ~535 tests per minute (as shown in the performance report below).
 
 To scientifically track progress and validate results, the fuzzer includes a powerful reporting suite that analyzes the entire history of the fuzzer's test runs. This moves our findings beyond single anecdotes to identify statistically significant trends. While the reporting suite is fully functional, our current focus is on scaling fuzzer throughput. The statistical relevance of these reports will grow as we launch longer, multi-epoch research campaigns.
 
