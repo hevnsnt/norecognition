@@ -8,7 +8,7 @@
   * Address the technical debt mentioned in the README's proposals.  
   * **Refactor the monolithic `Fuzz` class** in `classy_fuzz.py` into more logical, maintainable modules (e.g., `TUI_Manager`, `StateManager`, `WorkerPool_Manager`).  
   * **Improve the TUI `Anomaly Preview` resolution** (as noted in the README) to make real-time analysis more useful.  
-  * **Strengthen the `--resume` logic** to be more robust.  
+  * ~~**Strengthen the `--resume` logic** to be more robust.~~  [complete]
 * **Surgical Pattern Expansion:**  
   * Refine and expand the existing pattern library (`patterns.py`) with a focus on **landmark-aware "surgical" attacks**.  
   * Create more variants of `dazzle_camouflage` and `adversarial_patch` that specifically target different feature combinations (e.g., eye-to-nose, brow-to-cheek).  
