@@ -202,6 +202,8 @@ This project's progress is **severely limited by computational resources**. Our 
 * **Goal Test Rate:** ~**100,000 tests/minute** (~140x increase)
 * **Time to Target:** **~2 Months** 🎉YAY🎉
 
+Want to read more on our justification and decision matrix on testing hardware? [Hardware Recommendation for Fuzzer Performance Scaling.md](./Hardware%20Recommendation%20For%20Fuzzer%20Performance%20Scaling.md)
+
 ### Can You Help Us Bridge the Gap? 🤝
 
 If you or your organization can provide access to the hardware or cloud credits needed to unlock this project's potential, we would love to talk.
