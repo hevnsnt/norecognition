@@ -23,12 +23,20 @@ To ground our research, we've given each persona a backstory—a "why" they migh
 * **Role:** Small Business Owner
 * **Demographics:** Male, 40s, Northern European descent
 
+| Persona | Headshot (Frontal) | Profile (3/4) |
+| :--- | :---: | :---: |
+| **Gary** | <img src="./images/personas/Gary_headshot.png" alt="Gary Headshot" width="150"> | <img src="./images/personas/Gary_profile.png" alt="Gary Profile" width="150"> |
+
 > Gary is a small business owner from Milwaukee who runs a network of convenience stores. A few months ago, a case of mistaken identity from a store’s security system flagged him as a shoplifter in a neighboring city. It took him weeks to clear his name.
 > Now he’s volunteering in a community tech group that’s advocating for more transparency in commercial AI systems, especially those used in retail surveillance. He isn’t anti-technology — he just doesn’t want a camera deciding his reputation.
 
 ### Barry
 * **Role:** College Athlete & CS Major
 * **Demographics:** Male, Early 20s, West African heritage
+
+| Persona | Headshot (Frontal) | Profile (3/4) |
+| :--- | :---: | :---: |
+| **Barry** | <img src="./images/personas/Barry_headshot.png" alt="Barry Headshot" width="150"> | <img src="./images/personas/Barry_profile.png" alt="Barry Profile" width="150"> |
 
 > Barry is a college athlete and computer science major from Houston who’s fascinated by machine learning. He recently learned that some facial recognition models misidentify darker skin tones at much higher rates.
 > After seeing a friend wrongly stopped by campus security, Barry began contributing to an open-source project analyzing bias in vision systems. His interest isn’t rebellion — it’s about fairness in algorithms and making sure tech recognizes everyone equally.
@@ -37,12 +45,20 @@ To ground our research, we've given each persona a backstory—a "why" they migh
 * **Role:** Software Engineer
 * **Demographics:** Male, Early 30s, East Asian descent
 
+| Persona | Headshot (Frontal) | Profile (3/4) |
+| :--- | :---: | :---: |
+| **Larry** | <img src="./images/personas/Larry_headshot.png" alt="Larry Headshot" width="150"> | <img src="./images/personas/Larry_profile.png" alt="Larry Profile" width="150"> |
+
 > Larry is a software engineer working for a major cloud provider in Seattle. His company recently implemented face-based login for internal systems, and he’s uneasy about how much biometric data is being stored.
 > He started a quiet internal campaign to push for anonymization and local-only processing, arguing that convenience shouldn’t come at the cost of permanent biometric records. His concern is professional — and deeply personal — since he writes the code that others rely on.
 
 ### Carrie
 * **Role:** Photographer & Influencer
 * **Demographics:** Female, Mid-20s, Eastern European descent
+
+| Persona | Headshot (Frontal) | Profile (3/4) |
+| :--- | :---: | :---: |
+| **Carrie** | <img src="./images/personas/Carrie_headshot.png" alt="Carrie Headshot" width="150"> | <img src="./images/personas/Carrie_profile.png" alt="Carrie Profile" width="150"> |
 
 > Carrie is a photographer and social media influencer who lives in Denver. Her images are often scraped by AI companies for model training, and one day she stumbled upon a facial recognition dataset that included dozens of her selfies.
 > Now she speaks publicly about consent and digital likeness rights, explaining how easy it is for anyone’s face to become “training data.” Her interest isn’t paranoia — it’s protecting her own image from being used to teach systems she never agreed to train.
@@ -51,6 +67,10 @@ To ground our research, we've given each persona a backstory—a "why" they migh
 * **Role:** Civil Servant & Volunteer
 * **Demographics:** Female, Early 30s, South Asian descent
 
+| Persona | Headshot (Frontal) | Profile (3/4) |
+| :--- | :---: | :---: |
+| **Mary** | <img src="./images/personas/Mary_headshot.png" alt="Mary Headshot" width="150"> | <img src="./images/personas/Mary_profile.png" alt="Mary Profile" width="150"> |
+
 > Mary is a civil servant working in urban development who also volunteers in humanitarian protests about housing policy.
 > After attending a rally, she learned that facial recognition was used to catalog demonstrators, including herself — even though the event was peaceful and legal. Since then, she’s taken an interest in researching privacy-preserving computer vision, determined to prove that security and civil rights can coexist.
 
@@ -58,18 +78,42 @@ To ground our research, we've given each persona a backstory—a "why" they migh
 * **Role:** High School Teacher
 * **Demographics:** Female, Early 40s, Latina/Hispanic descent
 
+| Persona | Headshot (Frontal) | Profile (3/4) |
+| :--- | :---: | :---: |
+| **Sherry** | <img src="./images/personas/Sherry_headshot.png" alt="Sherry Headshot" width="150"> | <img src="./images/personas/Sherry_profile.png" alt="Sherry Profile" width="150"> |
+
 > Sherry is a high school teacher and mother of two in Phoenix. Her school district recently deployed “smart cameras” in hallways to monitor attendance and safety.
 > When she noticed the system confusing students who changed hairstyles or wore cultural attire, she realized how flawed and invasive these systems can be. Sherry now helps organize parent-led forums on responsible AI use in education, aiming to balance safety with dignity.
 
 ---
 
-## Persona Image Gallery
+## The "Campaign" Test Set
 
-| Persona | Headshot (Frontal) | Profile (3/4) |
-| :--- | :---: | :---: |
-| **Gary** | ![Gary Headshot](./images/personas/Gary_headshot.png) | ![Gary Profile](./images/personas/Gary_profile.png) |
-| **Barry** | ![Barry Headshot](./images/personas/Barry_headshot.png) | ![Barry Profile](./images/personas/Barry_profile.png) |
-| **Larry** | ![Larry Headshot](./images/personas/Larry_headshot.png) | ![Larry Profile](./images/personas/Larry_profile.png) |
-| **Carrie** | ![Carrie Headshot](./images/personas/Carrie_headshot.png) | ![Carrie Profile](./images/personas/Carrie_profile.png) |
-| **Mary** | ![Mary Headshot](./images/personas/Mary_headshot.png) | ![Mary Profile](./images/personas/Mary_profile.png) |
-| **Sherry** | ![Sherry Headshot](./images/personas/Sherry_headshot.png) | ![Sherry Profile](./images/personas/Sherry_profile.png) |
+To scientifically measure the fuzzer's effectiveness, we use a controlled dataset built from our 6 Personas. This provides a consistent, reproducible baseline for every test.
+
+## Core Image Standards
+
+All "campaign" images are high-resolution, photorealistic, full-body photos. Subjects are in a neutral, forward-facing pose with perfect studio lighting against a solid, neutral gray background.
+
+## The "Magic Color" Mask
+
+All target "wearable" items (scarves, shirts, etc.) are rendered in a solid, untextured, vibrant matte green: #00FF00. This "green-screen" color acts as a perfect, reliable mask, telling the fuzzer exactly where to apply its patterns.
+
+## Test Campaigns
+
+We test each persona across three distinct campaigns to understand how a pattern's location affects detection and recognition models.
+
+### Campaign 1: Non-Occluding (HCB-Attack)
+
+    Goal: Test patterns that are adjacent to the face but do not cover it.
+    Wearables: Scarf (low), Shawl, Neck Gaiter (low).
+
+### Campaign 2: Disjoint Mask (Person-Detection)
+
+    Goal: Test patterns that are completely separate from the face, isolating the effect on person-detection.
+    Wearables: T-Shirt (all personas), Dress (females only).
+
+### Campaign 3: Occluding (Degraded-Condition)
+
+    Goal: Test patterns that intentionally obscure key facial features.
+    Wearables: Bandana (outlaw-style), Headband (over-brows), Neck Gaiter (high), Hoodie (up), Balaclava.
