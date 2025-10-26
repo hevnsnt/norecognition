@@ -228,16 +228,5 @@ This report analyzes how a pattern is "winning." Instead of just "it worked," it
 My goal is simple: to build a wardrobe that protects my privacy — and yours. This project is a research tool for auditing computer vision systems. The goal is to discover and document vulnerabilities in detection models to help developers build more robust, fair, and secure systems. The adversarial patterns are a byproduct of this research, offered to the public to promote awareness and discussion about privacy in an age of ubiquitous surveillance.
 
 
-# 🗺️ Roadmap: v0.5 Proposals
-**Facial Recognition Matching Pipeline**
-  * **TODO:** Implement a 1:N matching pipeline (e.g., using ArcFace) to test if a pattern causes a misidentification (matching the wrong person) in addition to a detection failure.
-
-**Feature Enhancements**
-  * improve detection if state exists but user does not pass --resume
-  * Refactor Fuzz class
-  * Improve Log parsing to be less fragile
-  * Improve resolution of Anomaly Preview (yes I know it looks like Minecraft, I am resource constrained ok)
-
-**Distant future expanded Evaluation Harness**
-* TODO: Add support for other common open-source detectors (e.g., MTCNN, RetinaFace from face_detection lib) to test the generality of found patterns.
-* TODO: Build a harness for testing against closed-source cloud APIs (e.g., Azure, AWS Rekognition) to audit commercial systems.
+# 🗺️ Roadmap Proposals
+A detailed, evolving roadmap (subject to change) is tracked in [`./roadmap.md`](./roadmap.md).*
