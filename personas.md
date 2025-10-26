@@ -142,41 +142,48 @@ I will be providing you a series of persona types. Each persona will have a name
     Campaign, Persona, and Wearable (e.g., "CP1-Gary-Scarf," "CP3-Barry-Hoodie," etc.).
     
     
-    "Magic Color": All specified wearable items must be a solid, untextured, vibrant matte green-screen color: HEX #00FF00. This color must
-    have no shadows, reflections, or textures. For each persona I give you, I will provide certain types of accessories I want the person 
-    to be wearing as well as campaign. I want you to generate one image of the same persona for each of the following "Campaigns."
+    "Magic Color": All specified wearable items must be a solid, untextured, vibrant matte green-screen color: HEX 
+    #00FF00. This color must have no shadows, reflections, or textures. For each persona I give you, I will provide
+    certain types of accessories I want the person to be wearing as well as campaign. I want you to generate one image
+    of the same persona for each of the following "Campaigns."
     
     Campaign 1: HCB-Attack (Non-Occluding)
-    Goal: The subject's face is 100% visible (exception: "Mary's" sunglasses). The #00FF00 green item is adjacent to the face but
-    does not cover the chin, mouth, or nose.
+    Goal: The subject's face is 100% visible (exception: "Mary's" sunglasses). The #00FF00 green item is adjacent to
+    the face but does not cover the chin, mouth, or nose.
     
     1. Scarf: A #00FF00 green scarf wrapped low around the neck, clearly visible below the chin.
-    2. Shawl: A #00FF00 green shawl draped over both shoulders. The fabric is visible next to the cheeks and neck but does not occlude them. 
-    This should include the entire full body including legs and feet (the subject should be wearing shoes)
-    3. Neck Gaiter (low): A #00FF00 green neck gaiter worn down around the neck, bunched up like a thick collar, 100% below the chin. This 
-    should include the entire full body including legs and feet (the subject should be wearing shoes)
+    2. Shawl: A #00FF00 green shawl draped over both shoulders. The fabric is visible next to the cheeks and neck but
+    does not occlude them. This should include the entire full body including legs and feet (the subject should be
+    wearing shoes)
+    3. Neck Gaiter (low): A #00FF00 green neck gaiter worn down around the neck, bunched up like a thick collar, 100%
+    below the chin. This should include the entire full body including legs and feet (the subject should be wearing shoes)
     
     
     Campaign 2: Person-Detection (Disjoint Mask)
-    Goal: The subject's face is 100% visible (exception: "Mary's" sunglasses). The #00FF00 green item is on the torso, completely separate from the face.
-    5. T-Shirt: A solid #00FF00 green crew-neck t-shirt. This should include the entire full body including legs and feet (the subject should be wearing shoes)
+    Goal: The subject's face is 100% visible (exception: "Mary's" sunglasses). The #00FF00 green item is on the torso,
+    completely separate from the face.
+    5. T-Shirt: A solid #00FF00 green crew-neck t-shirt. This should include the entire full body including legs and feet
+    (the subject should be wearing shoes)
     6. Dress: A solid #00FF00 green dress. (Generate for females only: Carrie, Mary, Sherry).
     
     Campaign 3: Degraded-Condition (Occluding)
     Goal: The #00FF00 green item intentionally covers parts of the face, creating an occluded image.
     
-    7. Bandana (Face): A #00FF00 green bandana worn "outlaw style," tied at the back of the head. It is pulled up to cover the nose, mouth, 
-    and jaw, stopping just below the eyes. The shirt should be a black t-shirt. This should include the entire full body including legs and 
-    feet (the subject should be wearing shoes)
-    8. Headband: A #00FF00 green bandana folded and worn as a "fandana" or headband, tied around the forehead the knot is not visible. It must 
-    cover the hairline and occlude the eyebrows, but the eyes should be visible.
-    9. Neck Gaiter (high): A #00FF00 green neck gaiter worn as a face mask, pulled up to cover the mouth and nose, stopping just below the eyes.
-    10. Hoodie: A #00FF00 green hoodie with the hood pulled up. The hood should be deep, casting a light shadow over the forehead (but not the 
-    eyes) and completely covering the ears, hairline, and sides of the face.
+    7. Bandana (Face): A #00FF00 green bandana worn "outlaw style," tied at the back of the head. It is pulled up to
+    cover the nose, mouth, and jaw, stopping just below the eyes. The shirt should be a black t-shirt. This should include
+    the entire full body including legs and feet (the subject should be wearing shoes)
+    8. Headband: A #00FF00 green bandana folded and worn as a "fandana" or headband, tied around the forehead the knot is
+    not visible. It must cover the hairline and occlude the eyebrows, but the eyes should be visible.
+    9. Neck Gaiter (high): A #00FF00 green neck gaiter worn as a face mask, pulled up to cover the mouth and nose, stopping
+    just below the eyes.
+    10. Hoodie: A #00FF00 green hoodie with the hood pulled up. The hood should be deep, casting a light shadow over the
+    forehead (but not the eyes) and completely covering the ears, hairline, and sides of the face.
     11. Cowl / Balaclava (high): A #00FF00 green cowl worn as a balaclava, exposing only the eyes.
     
-    Final Output: Please provide the full set of images, clearly labeled by Campaign, Persona, and Wearable (e.g., "CP1-Gary-Scarf," "CP3-Barry-Hoodie," etc.). 
-    Please generate ALL the images (1-11) as they have been described, name them correctly, and provide them to me in a zip file for downloading.
+    Final Output: Please provide the full set of images, clearly labeled by Campaign, Persona, and Wearable 
+    (e.g., "CP1-Gary-Scarf," "CP3-Barry-Hoodie," etc.). 
+    Please generate ALL the images (1-11) as they have been described, name them correctly, and provide them 
+    to me in a zip file for downloading.
     
     
     Please ask me any clarifying questions (if you have any) or let me know if you are ready for the first persona 
