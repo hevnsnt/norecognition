@@ -224,7 +224,7 @@ This is the most granular report. It identifies the "golden" test cases: the exa
 ![Top 25 Vulnerabilities Report](./images/reports/1_3_top_vulnerabilities_by_image_and_recipe.png)
 
 **6. Anomaly Type Distribution**
-This report analyzes how a pattern is "winning." Instead of just "it worked," it shows if a pattern is causing the AI to find extra people (EXTRA_PERSONS_DETECTED) or lose the person entirely (PERSON_LOST). This helps us understand what part of the AI's logic is being exploited.
+This report analyzes how a pattern is "winning." Instead of just "it worked," it shows if a pattern is causing the AI to find extra people (`EXTRA_PERSONS_DETECTED`) or lose the person entirely (`PERSON_LOST`). This helps us understand what part of the AI's logic is being exploited.
 ![Anomaly Type Distribution Report](./images/reports/1_1_pattern_anomaly_type_distribution.png)
 
 <h2 id="ethics-and-intent">📜 Ethics and Intent</h2>
