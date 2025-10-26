@@ -2,15 +2,15 @@
 
 ## **Executive Summary**
 
-This report provides a comprehensive analysis and final recommendation for scaling your GPU-accelerated fuzzer. The primary objectives are to achieve a significant performance increase from the baseline of 534 tests/minute, complete a 5-billion-test campaign in under two months, and remain within a $10,000 hardware budget.
+This report provides a comprehensive analysis and final recommendation for scaling the GPU-accelerated fuzzer. The primary objectives are to achieve a significant performance increase from the baseline of 534 tests/minute, complete a 5-billion-test campaign in under two months, and remain within a $10,000 hardware budget.
 
-This analysis now incorporates a pivotal new option: the acquisition of two NVIDIA DGX Spark units and a corresponding software refactor of your fuzzer. This creates a strategic choice between two distinct paths:
+This analysis incorporates a pivotal new option: the acquisition of two NVIDIA DGX Spark units and a corresponding software refactor of the fuzzer. This creates a strategic choice between two distinct paths:
 
 1. **The Evolutionary Path:** A traditional hardware upgrade, building a powerful multi-GPU workstation to run the existing fuzzer code without modification.  
 2. **The Revolutionary Path:** A hardware-software co-design approach, investing in a next-generation DGX Spark cluster and refactoring the fuzzer to unlock its full architectural potential.
 
 The findings are unequivocal. While a traditional workstation offers a notable performance boost, it fails to meet the required two-month completion timeline. The DGX Spark, when paired with the proposed software optimizations, represents a paradigm shift in performance.  
-Therefore, the primary recommendation is to **invest in a two-node NVIDIA DGX Spark cluster and undertake a targeted refactoring of the fuzzer's parallelization engine.** This strategy is projected to achieve a test rate of approximately **105,000 tests per minute**, completing the 5-billion-test campaign in just **33 days**. This solution fits squarely within the $10,000 budget, dramatically surpasses your performance and timeline goals, and provides a powerful, future-proof on-premise platform for future AI development.
+Therefore, the primary recommendation is to **invest in a two-node NVIDIA DGX Spark cluster and undertake a targeted refactoring of the fuzzer's parallelization engine.** This strategy is projected to achieve a test rate of approximately **105,000 tests per minute**, completing the 5-billion-test campaign in just **33 days**. This solution fits squarely within the $10,000 budget, dramatically surpasses the performance and timeline goals, and provides a powerful, future-proof on-premise platform for future improvement without addititonal investment.
 
 ## **Analysis of the Fuzzer's Computational Demands & Architectural Implications**
 
@@ -26,7 +26,7 @@ The initial bottleneck, pattern generation, is handled by libraries such as CuPy
 
 #### **Model Inference (ONNX Runtime): The Power of Specialized Cores**
 
-The second bottleneck involves inference using an ONNX (Open Neural Network Exchange) model with your InsightFace and YOLO models. On NVIDIA hardware, this is accelerated by specialized **Tensor Cores**. The Blackwell architecture, found in both the RTX 50-series and the DGX Spark, introduces 5th-generation Tensor Cores with native support for new, lower-precision **FP4 and FP6 data formats**. Quantizing your ONNX models to take advantage of FP4 can dramatically increase inference throughput with negligible accuracy loss.
+The second bottleneck involves inference using an ONNX (Open Neural Network Exchange) model with the implemented InsightFace and YOLO models. On NVIDIA hardware, this is accelerated by specialized **Tensor Cores**. The Blackwell architecture, found in both the RTX 50-series and the DGX Spark, introduces 5th-generation Tensor Cores with native support for new, lower-precision **FP4 and FP6 data formats**. Quantizing the ONNX models to take advantage of FP4 can dramatically increase inference throughput with negligible accuracy loss.
 
 ### **System Architecture Implications of the Multi-Process Model**
 
@@ -34,7 +34,7 @@ The fuzzer's design as a "multi-process model with persistent workers" describes
 
 ## **The Strategic Inflection Point:**  **Hardware-Software Co-Design**
 
-The introduction of the NVIDIA DGX Spark presents more than just another hardware option; it represents a fundamental shift in system architecture that necessitates a corresponding shift in software design. Your current fuzzer is expertly crafted for systems with discrete memory, where the CPU's RAM and the GPU's VRAM are separate pools of memory connected by a PCIe bus. Its use of Python's multiprocessing is a classic and effective way to parallelize work in such an environment, optimized by passing small JSON "recipes" to minimize the overhead of copying data between isolated process memories.
+The introduction of the NVIDIA DGX Spark presents more than just another hardware option; it represents a fundamental shift in system architecture that necessitates a corresponding shift in software design. The current fuzzer is expertly crafted for systems with discrete memory, where the CPU's RAM and the GPU's VRAM are separate pools of memory connected by a PCIe bus. Its use of Python's multiprocessing is a classic and effective way to parallelize work in such an environment, optimized by passing small JSON "recipes" to minimize the overhead of copying data between isolated process memories.
 
 The DGX Spark, however, is built on a completely different paradigm: a **Unified Memory Architecture (UMA)**.
 
@@ -142,14 +142,14 @@ Key architectural advantages include:
 
 * **Unified Memory Architecture (UMA):** Each unit has 128GB of memory shared coherently between the CPU and GPU, eliminating the performance-killing need to copy data between separate memory pools.  
 * **High-Speed Interconnect:** Each DGX Spark includes a ConnectX-7 network interface, allowing two units to be linked together to function as a single, cohesive 256GB cluster with near-linear performance scaling.17  
-* **Advanced AI Acceleration:** The Blackwell GPU features 5th-generation Tensor Cores with native FP4 support, ideal for accelerating your ONNX inference workload.
+* **Advanced AI Acceleration:** The Blackwell GPU features 5th-generation Tensor Cores with native FP4 support, ideal for accelerating the ONNX inference workload.
 
 ### **The Refactoring Mandate: From multiprocessing to Ray**
 
 To unlock the performance of this cluster, the fuzzer's parallelization engine must be migrated from Python's multiprocessing to a modern distributed computing framework like **Ray**.
 
-* **The Problem with multiprocessing:** The current architecture relies on serializing and copying data between isolated process memories, which creates a significant data-transfer bottleneck, even with your optimizations.  
-* **The Ray Solution:** Ray is designed for distributed systems and excels on unified memory architectures. By converting your AnalysisWorker class into a **Ray Actor** and placing your baseline images into Ray's shared-memory object store, I achieve **"zero-copy" data sharing**. Workers receive a *reference* to the data, not a copy, completely eliminating the serialization overhead and dramatically reducing the latency of each test.
+* **The Problem with multiprocessing:** The current architecture relies on serializing and copying data between isolated process memories, which creates a significant data-transfer bottleneck, even with optimizations.  
+* **The Ray Solution:** Ray is designed for distributed systems and excels on unified memory architectures. By converting the AnalysisWorker class into a **Ray Actor** and placing the baseline images into Ray's shared-memory object store, I achieve **"zero-copy" data sharing**. Workers receive a *reference* to the data, not a copy, completely eliminating the serialization overhead and dramatically reducing the latency of each test.
 
 ### **The Refactoring Effort**
 
