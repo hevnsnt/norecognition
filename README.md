@@ -205,9 +205,8 @@ If you are interested in accelerating this research, please consider [supporting
 To scientifically track progress and validate results, the fuzzer includes a powerful reporting suite that analyzes the entire history of the fuzzer's test runs. This moves our findings beyond single anecdotes to identify statistically significant trends. While the reporting suite is fully functional, our current focus is on scaling fuzzer throughput. The statistical relevance of these reports will grow as we launch longer, multi-epoch research campaigns.
 
 <h2 id="call-for-help">⚠️ Call for help ⚠️</h2>
-## 
 
-This project's progress is **severely limited by computational resources**. We are actively seeking sponsors or partners who can provide access to high-performance GPU hardware. To conduct a deep, multi-month analysis, our next research goal is to run a **5 Billion test suite**. This level of rigorous testing is currently impossible, as it would require decades with our present hardware. We are actively seeking sponsors or partners who can provide access to high-performance GPUs to make this research feasible.
+This project's progress is **severely limited by computational resources**. We are actively seeking sponsors or partners who can provide access to high-performance GPU hardware. To conduct a deep, multi-month analysis, our next research goal is to run at least **5 Billion test `evolved` test patterns**. This level of rigorous testing is currently impossible, as it would require decades with our present hardware. We are actively seeking sponsors or partners who can provide access to high-performance GPUs to make this research feasible.
 
 ### Current Status: 🐢 Slow & Steady
 
