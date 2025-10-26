@@ -134,7 +134,7 @@ This isn't just a random pattern generator. It's a purpose-built research tool d
 
 ---
 
-## 🎨 The Adversarial Patterns 🎨
+<h2 id="the-adversarial-patterns">🎨 The Adversarial Patterns 🎨</h2>
 
 The fuzzer selects from a diverse library of pattern generators. This list is constantly expanding.
 
@@ -183,7 +183,7 @@ The fuzzer selects from a diverse library of pattern generators. This list is co
     * `blackout_patches` (solid negative space)
 ---
 
-## 🛠️ Project Statistics and Reports 🛠️
+<h2 id="project-statistics-and-reports">🛠️ Project Statistics and Reports 🛠️</h2>
 
 This repository currently contains research artifacts and documentation related to the Adversarial Fabric Fuzzer project. The core fuzzer code, model integrations, and data generation routines are not publicly released at this stage.
 
@@ -195,7 +195,7 @@ Running continuously for 3 months (approximated as 90 days) at the current rate,
 If you are interested in accelerating this research, please consider [supporting the project on Kickstarter](https://kickstarter.com).
 -->
 
-## Research Reporting
+<h2 id="research-reporting">Research Reporting</h2>
 
 To scientifically track progress and validate results, the fuzzer includes a powerful reporting suite that analyzes the entire history of the fuzzer's test runs. This moves our findings beyond single anecdotes to identify statistically significant trends. While the reporting suite is fully functional, our current focus is on scaling fuzzer throughput. The statistical relevance of these reports will grow as we launch longer, multi-epoch research campaigns.
 
@@ -225,9 +225,8 @@ This is the most granular report. It identifies the "golden" test cases: the exa
 This report analyzes how a pattern is "winning." Instead of just "it worked," it shows if a pattern is causing the AI to find extra people (EXTRA_PERSONS_DETECTED) or lose the person entirely (PERSON_LOST). This helps us understand what part of the AI's logic is being exploited.
 ![Anomaly Type Distribution Report](./images/reports/1_1_pattern_anomaly_type_distribution.png)
 
-## 📜 Ethics and Intent
+<h2 id="ethics-and-intent">📜 Ethics and Intent</h2>
 My goal is simple: to build a wardrobe that protects my privacy — and yours. This project is a research tool for auditing computer vision systems. The goal is to discover and document vulnerabilities in detection models to help developers build more robust, fair, and secure systems. The adversarial patterns are a byproduct of this research, offered to the public to promote awareness and discussion about privacy in an age of ubiquitous surveillance.
 
-
-## 🗺️ Roadmap Proposals
+<h2 id="roadmap-proposals">🗺️ Roadmap Proposals</h2>
 A detailed, evolving roadmap (subject to change) is tracked in [`./roadmap.md`](./roadmap.md).
