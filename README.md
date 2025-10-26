@@ -231,4 +231,5 @@ This report analyzes how a pattern is "winning." Instead of just "it worked," it
 My goal is simple: to build a wardrobe that protects my privacy — and yours. This project is a research tool for auditing computer vision systems. The goal is to discover and document vulnerabilities in detection models to help developers build more robust, fair, and secure systems. The adversarial patterns are a byproduct of this research, offered to the public to promote awareness and discussion about privacy in an age of ubiquitous surveillance.
 
 <h2 id="roadmap-proposals">🗺️ Roadmap Proposals</h2>
-A detailed, evolving roadmap (subject to change) is tracked in [`./roadmap.md`](./roadmap.md).
+
+A detailed, evolving roadmap (subject to change) is tracked in [`roadmap.md`](./roadmap.md)
