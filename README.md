@@ -11,7 +11,7 @@
 
 # Fabrics that FIGHT facial recognition
 
-> **Join the first scientific effort to build reproducible, testable adversarial textiles and open source software that gives privacy back to people.**
+> **Join the first scientific effort to build reproducible, testable adversarial textiles that gives privacy back to people.**
 >
 > ⚠️⚠️⚠️ This project's progress is **severely limited by computational resources**. **[Please see how you can help.](#call-for-help)**
 
