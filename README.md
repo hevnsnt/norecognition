@@ -212,13 +212,13 @@ This project's progress is **severely limited by computational resources**. We a
 
 * **Current Test Rate:** ~534 tests/minute
 * **Test Target:** 5 Billion tests
-* **Time to Target:** ~17.8 Years**
+* **Time to Target:** ~17.8 Years (womp)
 
 ### Desired Status: 🚀 Full Throttle
 
 * **Required Hardware:** 2x **NVIDIA DGX Spark** (or equivalent 4x A100 80GB)
 * **New Test Rate:** ~**48,000 tests/minute** (~45x increase)
-* **Time to Target:** **~3 Months**
+* **Time to Target:** **~3 Months** 🎉YAY🎉
 
 ### Can You Help Us Bridge the Gap? 🤝
 
