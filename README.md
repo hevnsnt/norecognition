@@ -210,7 +210,7 @@ This project's progress is **severely limited by computational resources**. We a
 
 * **Current Test Rate:** ~534 tests/minute
 * **Test Target:** 5 Billion tests
-* **Time to Target:** ~17.8 Years (womp)
+* **Time to Target:** ~17.8 Years (*womp*)
 
 ### Desired Status: 🚀 Full Throttle
 
