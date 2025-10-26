@@ -6,7 +6,7 @@
 
 * **Fuzzer Core Refinement:**  
   * Address the technical debt mentioned in the README's proposals.  
-  * **Refactor the monolithic `Fuzz` class** in `classy_fuzz.py` into more logical, maintainable modules (e.g., `TUI_Manager`, `StateManager`, `WorkerPool_Manager`).  
+  * ~~**Refactor the monolithic `Fuzz` class** in `classy_fuzz.py` into more logical, maintainable modules (e.g., `TUI_Manager`, `StateManager`, `WorkerPool_Manager`).~~ [complete]  
   * **Improve the TUI `Anomaly Preview` resolution** (as noted in the README) to make real-time analysis more useful.  
   * ~~**Strengthen the `--resume` logic** to be more robust.~~  [complete]
 * **Surgical Pattern Expansion:**  
