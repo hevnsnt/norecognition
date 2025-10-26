@@ -67,7 +67,7 @@ To ground our research, we've given each persona a backstory—a "why" they migh
 
 | Persona | Headshot (Frontal) | Profile (3/4) |
 | :--- | :---: | :---: |
-| **Gary** | ![Gary Headshot](./images/personas/Gary_headshot.png) | ![Gary Profile](./images/personas/Gary_profile.png) |
+| **Gary** | ![Gary Headshot](./images/personas/Gary_headshot.png) | ![Gary Profile](./images/personas/Gary_Profile.png) |
 | **Barry** | ![Barry Headshot](./images/personas/Barry_headshot.png) | ![Barry Profile](./images/personas/Barry_profile.png) |
 | **Larry** | ![Larry Headshot](./images/personas/Larry_headshot.png) | ![Larry Profile](./images/personas/Larry_profile.png) |
 | **Carrie** | ![Carrie Headshot](./images/personas/Carrie_headshot.png) | ![Carrie Profile](./images/personas/Carrie_profile.png) |
