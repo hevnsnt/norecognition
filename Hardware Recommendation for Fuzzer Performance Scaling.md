@@ -94,7 +94,7 @@ The following table provides a side-by-side comparison of the component selectio
 
 ## **Cloud GPU Rental Solutions: A Scalable Alternative**
 
-While on-premise hardware offers long-term value, cloud GPU rental platforms provide an alternative model based on operational expenditure, offering immense scalability and access to the most powerful hardware available without a large upfront capital investment. This section evaluates the viability of this approach for the specified fuzzing campaign.1
+While on-premise hardware offers long-term value, cloud GPU rental platforms provide an alternative model based on operational expenditure, offering immense scalability and access to the most powerful hardware available without a large upfront capital investment. This section evaluates the viability of this approach for the specified fuzzing campaign.
 
 ### **The Cloud GPU Marketplace: Hyperscalers vs. Specialists**
 
