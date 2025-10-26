@@ -1,5 +1,4 @@
 # nonRecognition — Adversarial Fuzzer
-[![Status](https://img.shields.io/badge/status-research-orange.svg)]()
 ![Research](https://img.shields.io/badge/type-research-blue.svg)
 ![AI Security](https://img.shields.io/badge/focus-AI%20security-red.svg)
 ![Privacy](https://img.shields.io/badge/goal-privacy-green.svg)
