@@ -203,7 +203,6 @@ This project's progress is **severely limited by computational resources**. Our 
 * **Required Hardware:** Research workstation (2x NVIDIA DGX Spark node cluster **or** Workstation with 4x NVIDIA GeForce RTX 5070 Ti GPUs) 
 * **Goal Test Rate:** ~**100,000 tests/minute** (~140x increase)
 * **Time to Target:** **~2 Months** 🎉YAY🎉
-*An overwhelming performance advantage resulting in drastically shorter project completion times. For a hypothetical 1-billion-test campaign, the custom build would complete the task in approximately 9.3 days, consuming only ~$50 in electricity costs. For comparision Two NVIDIA DGX Sparks would require 6 months (323 days) and consume ~$600 in electricity for the same task.*
 
 ### Can You Help Us Bridge the Gap? 🤝
 
