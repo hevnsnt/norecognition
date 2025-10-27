@@ -101,7 +101,7 @@ Each image below represents a unique adversarial pattern generated and then appl
 This isn't just a random pattern generator. It's a purpose-built research tool designed to find *robust* vulnerabilities in *modern* AI models.
 
 ### ⚙️ Core Features ⚙️
-* **Hardware-Agnostic HPC:** The fuzzer's pattern engine is a "write-once, run-anywhere" system. It auto-detects the best available compute backend at runtime and uses optimized code paths for:
+* **Hardware-Agnostic HPC:** The fuzzer's pattern engine is a "write-once, run-anywhere" system. It has been tested on Apple Silicon and Windows 11 with NVidia CUDA GPUs. It auto-detects the best available compute backend at runtime and uses optimized code paths for:
     * **NVIDIA CUDA** (via cuPy)
     * **Apple Silicon Metal** (via mlx)
     * **JIT-Compiled CPU** (via numba)
