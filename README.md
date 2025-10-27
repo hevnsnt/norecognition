@@ -217,43 +217,34 @@ This repository currently contains research artifacts and documentation related 
 
 As of v0.5, this project has introduced a completely overhauled and improved reporting pipeline to better describe our research progress. To scientifically track progress and validate results, the fuzzer includes a powerful reporting suite that analyzes the entire history of the fuzzer's test runs. This moves our findings beyond single anecdotes to identify statistically significant trends. The statistical relevance of these reports will grow as longer, multi-epoch research campaigns are completed.
 
-**Fuzzer Performance Report**
-This chart tracks the fuzzer's raw throughput. It's our "speedometer," showing how many tests we can run per minute.
+**Fuzzer Performance Report**: This chart tracks the fuzzer's raw throughput. It's our "speedometer," showing how many tests we can run per minute.
 ![Epoch 7 Performance Report](./images/reports/epoch_7_performance_report.png)
 
 ### 📈 Pattern Effectiveness Analysis
-**1. Pattern Success Rate (The "Leaderboard")**
-This is the primary "leaderboard" for individual patterns. It calculates the raw success rate (Anomalies / Total Runs) for every pattern that has been run a significant number of times (e.g., >10 runs). This tells us which patterns, like recursive_face_tile, are the most effective "building blocks."
+**1. Pattern Success Rate (The "Leaderboard")**: This is the primary "leaderboard" for individual patterns. It calculates the raw success rate (Anomalies / Total Runs) for every pattern that has been run a significant number of times (e.g., >10 runs). This tells us which patterns, like recursive_face_tile, are the most effective "building blocks."
 ![Pattern Success Rate](./images/reports/2_1_pattern_success_rate_full_history.png)
 
-**2. Synergistic Pattern Combinations**
-This report is where the genetic algorithm's power becomes visible. It answers: "Are combinations of patterns more effective than single patterns?" It looks for "synergy," where two or more patterns layered together (e.g., pixel_sort_glitch+repeating_texture_object+recursive_face_tile) have a much higher success rate than they would individually.
+**2. Synergistic Pattern Combinations**: This report is where the genetic algorithm's power becomes visible. It answers: "Are combinations of patterns more effective than single patterns?" It looks for "synergy," where two or more patterns layered together (e.g., pixel_sort_glitch+repeating_texture_object+recursive_face_tile) have a much higher success rate than they would individually.
 ![Synergistic Pattern Combinations](./images/reports/2_2_pattern_synergy_report_full_history.png)
 
-**3. Pattern Anomaly Type Distribution**
-This report analyzes how a pattern is "winning." Instead of just "it worked," this heatmap shows if a pattern (e.g., recursive_face_tile) is more likely to cause the AI to find extra faces (EXTRA_FACE) or lose the person entirely (Person Lost).
+**3. Pattern Anomaly Type Distribution**: This report analyzes how a pattern is "winning." Instead of just "it worked," this heatmap shows if a pattern (e.g., recursive_face_tile) is more likely to cause the AI to find extra faces (EXTRA_FACE) or lose the person entirely (Person Lost).
 ![Pattern Anomaly Type](./images/reports/1_1_pattern_anomaly_type_distribution.png)
 
 ### 🎯 Target Vulnerability Analysis
-**4. Target Image Vulnerability**
-This report answers: "Which of our test images is the 'weakest' or most vulnerable target?" By tracking the total number of anomalies per image, we can identify which poses, lighting conditions, or facial structures (like Woman_Wearing_Shawl.png) are most easily confused by adversarial patterns.
+**4. Target Image Vulnerability**: This report answers: "Which of our test images is the 'weakest' or most vulnerable target?" By tracking the total number of anomalies per image, we can identify which poses, lighting conditions, or facial structures (like Woman_Wearing_Shawl.png) are most easily confused by adversarial patterns.
 ![Target Image Vulnerability](./images/reports/1_2_target_vulnerability_full_history.png)
 
-**5. Top Specific Vulnerabilities**
-This is the most granular report. It identifies the "golden" test cases: the exact pattern recipe (e.g., recursive_face_tile) on a specific image (e.g., Woman_Wearing_Shawl.png) that failed most often. This shows us which vulnerabilities are highly repeatable and are the best candidates for physical printing and real-world testing.
+**5. Top Specific Vulnerabilities**: This is the most granular report. It identifies the "golden" test cases: the exact pattern recipe (e.g., recursive_face_tile) on a specific image (e.g., Woman_Wearing_Shawl.png) that failed most often. This shows us which vulnerabilities are highly repeatable and are the best candidates for physical printing and real-world testing.
 ![Specific Vulnerabilities](./images/reports/1_3_top_vulnerabilities_by_image_and_recipe.png)
 
-**6. Image Anomaly Type Distribution**
-This report is the companion to the pattern report. It answers: "How do different images tend to fail?" This shows if certain images (e.g., Man_Wearing_Hat.png) are vulnerable to EXTRA_FACE anomalies, while others (e.g., full_body_shawl_6.png) are more likely to cause Person Lost anomalies.
+**6. Image Anomaly Type Distribution**: This report is the companion to the pattern report. It answers: "How do different images tend to fail?" This shows if certain images (e.g., Man_Wearing_Hat.png) are vulnerable to EXTRA_FACE anomalies, while others (e.g., full_body_shawl_6.png) are more likely to cause Person Lost anomalies.
 ![Image Anomaly Type Distribution](./images/reports/1_4_image_anomaly_type_distribution.png)
 
 ### 🤖 Fuzzer Performance & Strategy
-**7. Priority Queue Growth**
-This chart tracks the fuzzer's learning progress. It answers: "Is the fuzzer still finding new, unique vulnerabilities?" A rising line shows that the genetic algorithm is continuing to discover new successful anomaly types, while a flat line would indicate it has saturated its findings.
+**7. Priority Queue Growth**: This chart tracks the fuzzer's learning progress. It answers: "Is the fuzzer still finding new, unique vulnerabilities?" A rising line shows that the genetic algorithm is continuing to discover new successful anomaly types, while a flat line would indicate it has saturated its findings.
 *(this report is still waiting on updated v0.5 results)*
 
-**8. Fuzzer Strategy Effectiveness**
-This report validates our genetic algorithm. It answers: "Are the fuzzer's 'evolved' test cases (from mutation/crossover) more effective than the initial 'unknown' or random tests?" This chart shows the raw success rate based on a test case's origin, proving which strategies are most effective.
+**8. Fuzzer Strategy Effectiveness**: This report validates our genetic algorithm. It answers: "Are the fuzzer's 'evolved' test cases (from mutation/crossover) more effective than the initial 'unknown' or random tests?" This chart shows the raw success rate based on a test case's origin, proving which strategies are most effective.
 *(this report is still waiting on updated v0.5 results)*
 
 <h2 id="ethics-and-intent">📜 Ethics and Intent</h2>
