@@ -1,8 +1,10 @@
-# nonRecognition — Adversarial Fuzzer
 ![Research](https://img.shields.io/badge/type-research-blue.svg)
 ![AI Security](https://img.shields.io/badge/focus-AI%20security-red.svg)
 ![Privacy](https://img.shields.io/badge/goal-privacy-green.svg)
 
+This is more than just a toolkit—it’s a lifeline for anyone who understands that privacy isn’t a luxury, it’s survival. Around the world, families are being uprooted simply because a surveillance camera decided they were a threat. Our project is here to give people the power to push back. We’re scientifically testing and evolving wearable patterns that, when printed on fabric and worn, can disrupt or prevent facial recognition systems from identifying the wearer.
+
+Whether you’re an everyday person who just wants to walk down the street unseen, a DEF CON hacker who knows the stakes of constant surveillance, or someone whose freedom literally depends on staying off a government watch list—you’ll find a reason to care here. Dive in, and let’s make privacy a fundamental right again.
 <p align="center">
   <img src="./images/nonrecognition_banner.png" alt="Adversarial Fabrics on Kickstarter" style="max-width:100%;height:auto;border-radius:8px;">
 </p>
