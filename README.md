@@ -6,6 +6,7 @@
 <p align="center">
   <img src="./images/nonrecognition_banner.png" alt="Adversarial Fabrics on Kickstarter" style="max-width:100%;height:auto;border-radius:8px;">
 </p>
+Could the pattern on your scarf make you invisible to an AI camera? Could a headband prevent facial recognition? This project is the scientific search to find out. I wrote a powerful tool (a "fuzzer") to automatically generate and test millions of AI adversarial patterns, looking for designs that confuse AI surveillance and give privacy back to people. Simply put, I already have positive results.
 
 # Fabrics that FIGHT facial recognition
 
@@ -201,6 +202,8 @@ This project's progress is **severely limited by computational resources**. Our 
 * **Required Hardware:** Research workstation (2x NVIDIA DGX Spark node cluster **or** Workstation with 4x NVIDIA GeForce RTX 5070 Ti GPUs) 
 * **Goal Test Rate:** ~**100,000 tests/minute** (~140x increase)
 * **Time to Target:** **~2 Months** 🎉YAY🎉
+
+Want to read more on our justification and decision matrix on testing hardware? [Hardware Recommendation for Fuzzer Performance Scaling.md](./Hardware%20Recommendation%20for%20Fuzzer%20Performance%20Scaling.md)
 
 ### Can You Help Us Bridge the Gap? 🤝
 
