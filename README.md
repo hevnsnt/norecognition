@@ -221,7 +221,7 @@ As of v0.5, this project has introduced a completely overhauled and improved rep
 This chart tracks the fuzzer's raw throughput. It's our "speedometer," showing how many tests we can run per minute.
 ![Epoch 7 Performance Report](./images/reports/epoch_7_performance_report.png)
 
-### 📈 Pattern Effectiveness Analysis**
+### 📈 Pattern Effectiveness Analysis
 **1. Pattern Success Rate (The "Leaderboard")**
 This is the primary "leaderboard" for individual patterns. It calculates the raw success rate (Anomalies / Total Runs) for every pattern that has been run a significant number of times (e.g., >10 runs). This tells us which patterns, like recursive_face_tile, are the most effective "building blocks."
 ![Pattern Success Rate](./images/reports/2_1_pattern_success_rate_full_history.png)
@@ -246,7 +246,6 @@ This is the most granular report. It identifies the "golden" test cases: the exa
 6. Image Anomaly Type Distribution
 This report is the companion to the pattern report. It answers: "How do different images tend to fail?" This shows if certain images (e.g., Man_Wearing_Hat.png) are vulnerable to EXTRA_FACE anomalies, while others (e.g., full_body_shawl_6.png) are more likely to cause Person Lost anomalies.
 ![Image Anomaly Type Distribution](./images/reports/1_4_image_anomaly_type_distribution.png)
-
 
 ### 🤖 Fuzzer Performance & Strategy
 7. Priority Queue Growth
