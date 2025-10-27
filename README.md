@@ -243,18 +243,18 @@ This report answers: "Which of our test images is the 'weakest' or most vulnerab
 This is the most granular report. It identifies the "golden" test cases: the exact pattern recipe (e.g., recursive_face_tile) on a specific image (e.g., Woman_Wearing_Shawl.png) that failed most often. This shows us which vulnerabilities are highly repeatable and are the best candidates for physical printing and real-world testing.
 ![Specific Vulnerabilities](./images/reports/1_3_top_vulnerabilities_by_image_and_recipe.png)
 
-6. Image Anomaly Type Distribution
+**6. Image Anomaly Type Distribution**
 This report is the companion to the pattern report. It answers: "How do different images tend to fail?" This shows if certain images (e.g., Man_Wearing_Hat.png) are vulnerable to EXTRA_FACE anomalies, while others (e.g., full_body_shawl_6.png) are more likely to cause Person Lost anomalies.
 ![Image Anomaly Type Distribution](./images/reports/1_4_image_anomaly_type_distribution.png)
 
 ### 🤖 Fuzzer Performance & Strategy
-7. Priority Queue Growth
+**7. Priority Queue Growth**
 This chart tracks the fuzzer's learning progress. It answers: "Is the fuzzer still finding new, unique vulnerabilities?" A rising line shows that the genetic algorithm is continuing to discover new successful anomaly types, while a flat line would indicate it has saturated its findings.
-*(this report is still waiting on new results)*
+*(this report is still waiting on updated v0.5 results)*
 
-8. Fuzzer Strategy Effectiveness
+**8. Fuzzer Strategy Effectiveness**
 This report validates our genetic algorithm. It answers: "Are the fuzzer's 'evolved' test cases (from mutation/crossover) more effective than the initial 'unknown' or random tests?" This chart shows the raw success rate based on a test case's origin, proving which strategies are most effective.
-*(this report is still waiting on new results)*
+*(this report is still waiting on updated v0.5 results)*
 
 <h2 id="ethics-and-intent">📜 Ethics and Intent</h2>
 My goal is simple: to build a wardrobe that protects my privacy — and yours. This project is a research tool for auditing computer vision systems. The goal is to discover and document vulnerabilities in detection models to help developers build more robust, fair, and secure systems. The adversarial patterns are a byproduct of this research, offered to the public to promote awareness and discussion about privacy in an age of ubiquitous surveillance.
