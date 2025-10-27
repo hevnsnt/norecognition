@@ -213,16 +213,15 @@ If you or your organization can provide access to the hardware or cloud credits 
 
 <h2 id="research-reporting">Research Reporting</h2>
 
-This repository currently contains research artifacts and documentation related to the Adversarial Fabric Fuzzer project. The core fuzzer code, model integrations, and data generation routines are not publicly released at this stage. At this time, the fuzzer is used privately for controlled testing and scientific evaluation. This research is **SEVERELY resource-constrained**. The fuzzer is designed for massive parallelization, but is currently running on limited hardware, achieving a rate of ~535 tests per minute (as shown in the performance report below).
+This repository currently contains research artifacts and documentation related to the Adversarial Fabric Fuzzer project. The core fuzzer code, model integrations, and data generation routines are not publicly released at this stage. At this time, the fuzzer is used privately for controlled testing and scientific evaluation. This research is **SEVERELY resource-constrained**. The fuzzer is designed for massive parallelization, but is currently running on limited hardware, achieving an overall rate of ~535 tests per minute (varies based on the complexity of patterns).
 
-To scientifically track progress and validate results, the fuzzer includes a powerful reporting suite that analyzes the entire history of the fuzzer's test runs. This moves our findings beyond single anecdotes to identify statistically significant trends. While the reporting suite is fully functional, our current focus is on scaling fuzzer throughput. The statistical relevance of these reports will grow as we launch longer, multi-epoch research campaigns.
+As of v0.5, this project has introduced a completely overhauled and improved reporting pipeline to better describe our research progress. To scientifically track progress and validate results, the fuzzer includes a powerful reporting suite that analyzes the entire history of the fuzzer's test runs. This moves our findings beyond single anecdotes to identify statistically significant trends. While the reporting suite is fully functional, our current focus is on scaling fuzzer throughput. The statistical relevance of these reports will grow as we launch longer, multi-epoch research campaigns.
 
 **Fuzzer Performance Report**
 This chart tracks the fuzzer's raw throughput. It's our "speedometer," showing how many tests we can run per minute.
 ![Epoch 7 Performance Report](./images/reports/epoch_7_performance_report.png)
 
 ### 📈 Pattern Effectiveness Analysis**
-
 **1. Pattern Success Rate (The "Leaderboard")**
 This is the primary "leaderboard" for individual patterns. It calculates the raw success rate (Anomalies / Total Runs) for every pattern that has been run a significant number of times (e.g., >10 runs). This tells us which patterns, like recursive_face_tile, are the most effective "building blocks."
 ![Pattern Success Rate](./images/reports/2_1_pattern_success_rate_full_history.png)
@@ -236,7 +235,6 @@ This report analyzes how a pattern is "winning." Instead of just "it worked," th
 ![Pattern Anomaly Type](./images/reports/1_1_pattern_anomaly_type_distribution.png)
 
 ### 🎯 Target Vulnerability Analysis
-
 **4. Target Image Vulnerability**
 This report answers: "Which of our test images is the 'weakest' or most vulnerable target?" By tracking the total number of anomalies per image, we can identify which poses, lighting conditions, or facial structures (like Woman_Wearing_Shawl.png) are most easily confused by adversarial patterns.
 ![Target Image Vulnerability](./images/reports/1_2_target_vulnerability_full_history.png)
@@ -250,42 +248,14 @@ This report is the companion to the pattern report. It answers: "How do differen
 ![Image Anomaly Type Distribution](./images/reports/1_4_image_anomaly_type_distribution.png)
 
 
-🤖 Fuzzer Performance & Strategy
-
+### 🤖 Fuzzer Performance & Strategy
 7. Priority Queue Growth
 This chart tracks the fuzzer's learning progress. It answers: "Is the fuzzer still finding new, unique vulnerabilities?" A rising line shows that the genetic algorithm is continuing to discover new successful anomaly types, while a flat line would indicate it has saturated its findings.
-
+*(this report is still waiting on new results)*
 
 8. Fuzzer Strategy Effectiveness
 This report validates our genetic algorithm. It answers: "Are the fuzzer's 'evolved' test cases (from mutation/crossover) more effective than the initial 'unknown' or random tests?" This chart shows the raw success rate based on a test case's origin, proving which strategies are most effective.
-
-
-
-Here are recent reports generated:
-
-**1. Fuzzer Performance Report**
-This chart tracks the fuzzer's raw throughput. It's our "speedometer," showing how many tests we can run per minute.
-![Epoch 2 Performance Report](./images/reports/epoch_2_performance_report.png)
-
-**2. Target Image Vulnerability**
-This report answers: "Which of our test images is the 'weakest' or most vulnerable target?" By tracking the total number of anomalies per image, we can identify which poses, lighting conditions, or facial structures are most easily confused by adversarial patterns.
-![Target Vulnerability Report](./images/reports/1_2_target_vulnerability_full_history.png)
-
-**3. Pattern Success Rate (The "Leaderboard")**
-This is the primary "leaderboard" for individual patterns. It calculates the raw success rate (Anomalies / Total Runs) for every pattern that has been run a significant number of times. This tells us which patterns are the most effective "building blocks."
-![Pattern Success Rate Report](./images/reports/2_1_pattern_success_rate_full_history.png)
-
-**4. Synergistic Pattern Combinations**
-This report is where the genetic algorithm's power becomes visible. It answers: "Are combinations of patterns more effective than single patterns?" It looks for "synergy," where two or more patterns layered together (e.g., `fft_noise+tiled_logo`) have a much higher success rate than they would individually.
-![Pattern Synergy Report](./images/reports/2_2_pattern_synergy_report_full_history.png)
-
-**5. Top Specific Vulnerabilities**
-This is the most granular report. It identifies the "golden" test cases: the exact pattern recipe on a specific image that failed most often. This shows us which vulnerabilities are highly repeatable and are the best candidates for physical printing and real-world testing.
-![Top 25 Vulnerabilities Report](./images/reports/1_3_top_vulnerabilities_by_image_and_recipe.png)
-
-**6. Anomaly Type Distribution**
-This report analyzes how a pattern is "winning." Instead of just "it worked," it shows if a pattern is causing the AI to find extra people (`EXTRA_PERSONS_DETECTED`) or lose the person entirely (`PERSON_LOST`). This helps us understand what part of the AI's logic is being exploited.
-![Anomaly Type Distribution Report](./images/reports/1_1_pattern_anomaly_type_distribution.png)
+*(this report is still waiting on new results)*
 
 <h2 id="ethics-and-intent">📜 Ethics and Intent</h2>
 My goal is simple: to build a wardrobe that protects my privacy — and yours. This project is a research tool for auditing computer vision systems. The goal is to discover and document vulnerabilities in detection models to help developers build more robust, fair, and secure systems. The adversarial patterns are a byproduct of this research, offered to the public to promote awareness and discussion about privacy in an age of ubiquitous surveillance.
