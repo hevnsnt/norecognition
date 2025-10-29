@@ -46,7 +46,8 @@ Whether you’re an everyday person who just wants to walk down the street unsee
 
 I'm a hacker. I see technology differently. For years, I've been fascinated by how machines interpret our world and us: how algorithms decide who is seen, tracked, and recognized, often with unsettling consequences for personal privacy.
 
-I believe fabrics to confuse these systems can be created. My goal is to build a **reproducible, science-driven process** to design and test these adversarial textiles. I rigorously test generated patterns against multiple models in real-world conditions to create a wardrobe that protects my privacy... and yours. I already have positive results.
+I believe fabrics can be engineered to confuse modern vision systems. The plan is simple: build a reproducible, science-first pipeline that designs, tests, and refines adversarial textiles. Every generated pattern is validated against multiple detection models and then tested in real-world conditions. Results so far are positive.
+
 
 ### Wait, Hasn't This Been Done Before?
 
