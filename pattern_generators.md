@@ -1,6 +1,6 @@
 # **👾 Anti-Facial Recognition Pattern Generators (patterns.py)**
 
-This module contains a comprehensive library of procedural and image-based pattern generators designed to create disruptive, obfuscating, and adversarial camouflage masks. These patterns leverage high-contrast geometry, visual saliency attacks, color space manipulation, and perceptual glitches, and are highly optimized using NumPy, Numba, CuPy, and MLX backends.
+This module contains a comprehensive library of procedural and image-based pattern generators designed to create disruptive, obfuscating, and adversarial camouflage masks. These patterns leverage high-contrast geometry, visual saliency attacks, color space manipulation, and perceptual glitches, and are highly optimized using NumPy, Numba, CuPy, and MLX backends for high performance.
 
 ## **1\. Structural & Biometric Attacks**
 
@@ -8,12 +8,12 @@ These patterns directly target the features and processes used by facial recogni
 
 | Key | Description | Technique |
 | :---- | :---- | :---- |
-| faceid\_structured\_light | Simulated Apple Face ID Structured Light. Projects a dense grid of simulated IR dots. Supports Full mode (entire face, pre-mask behavior) and Mask mode (focused on periocular region, post-iOS 15.4 behavior). Optimized for high-density coordinate generation on GPU/Numba. | Structured Light Simulation, Hardware Attack, Biometric |
+| faceid\_structured\_light | Simulated Apple Face ID Structured Light. Projects a dense grid of simulated IR dots. Supports Full mode and Mask mode (periocular focus). Optimized for high-density coordinate generation on GPU/Numba. | Structured Light Simulation, Hardware Attack, Biometric |
 | hyperface\_like | Generates a high-contrast, blocky Hyperface-style pattern using geometric shapes or lines, often incorporating concentric circles over detected features (eyes, mouth). | Structural, Geometric, Landmark-Based |
-| dazzle\_surgical\_lines | Draws thick, high-contrast lines connecting key facial landmarks (eyes, nose, brows, cheeks) to visually break up feature continuity, inspired by surgical marking guides. | Landmark Disruption, CV Dazzle |
-| key\_feature\_blackout | Applies solid black or white censor bars/patches specifically over the eyes and mouth using detected bounding boxes for maximum feature obscuration. | Negative Space, Feature Attack |
-| saliency\_eye\_attack | Densely stamps or tiles random eye features across the entire mask area, overloading the recognition system's saliency map and feature extractors. | Saliency Attack, Feature Overload |
-| ir\_led\_attack | Simulates the blinding effect (glare and bloom) caused by a cluster of bright Infrared LEDs, designed to disrupt IR-based depth sensors. This is a basic attack compared to faceid\_structured\_light | Sensor Attack, IR Simulation |
+| dazzle\_surgical\_lines | Draws thick, high-contrast lines connecting key facial landmarks (eyes, nose, brows, cheeks) to visually break up feature continuity. | Landmark Disruption, CV Dazzle |
+| key\_feature\_blackout | Applies solid black or white censor bars/patches specifically over the eyes and mouth using detected bounding boxes. | Negative Space, Feature Attack |
+| saliency\_eye\_attack | Densely stamps or tiles random eye features across the entire mask area, overloading the recognition system's saliency map. | Saliency Attack, Feature Overload |
+| ir\_led\_attack | Simulates the glare and bloom caused by a cluster of bright Infrared LEDs, designed to disrupt IR-based depth sensors. This is a basic test compared to faceid\_structured\_light | Sensor Attack, IR Simulation |
 
 ## **2\. Geometric & Noise Attacks**
 
@@ -65,13 +65,23 @@ These patterns incorporate recognizable symbols, dense text, or complex textures
 
 | Key | Description | Technique |
 | :---- | :---- | :---- |
-| camouflage | Tiles an external camouflage texture (loaded from workers) seamlessly across the mask. | Texture, Obfuscation |
-| repeating\_texture\_object | Tiles a small, user-uploaded image (like a logo or object) repeatedly, with random scaling and jitter. | Texture, Repetition |
+| camouflage | Tiles an external camouflage texture (loaded from `texture` directory) seamlessly across the mask. | Texture, Obfuscation |
+| repeating\_texture\_object | Tiles a small, image like a logo or object (loaded from `texture` directory) repeatedly, with random scaling and jitter. | Texture, Repetition |
 | warped\_face | Warps a user-uploaded image of a face using sin/cos waves and maps it to the mask area. | Texture, Distortion |
-| pop\_art\_collage | Creates a collage using abstract line art and shapes, layered over a vibrant, multi-colored background. | Texture, Stylistic |
+| pop\_art\_collage | Creates a collage using abstract line art and shapes (loaded from `texture` directory), layered over a vibrant, multi-colored background. | Texture, Stylistic |
 | random\_text | Overlays dense, randomly generated alphanumeric strings across the mask. | Symbolic, Noise |
 | qr\_code | Tiles a randomly generated QR code pattern across the masked area. | Symbolic, Structural |
 | ascii\_face | Stamps simplified faces constructed from ASCII characters (e.g., (o\_O)). | Symbolic, Text |
 | trypophobia | Generates a pattern of dense, high-contrast circular "holes." | Psychological, Geometric |
-| animal\_print | Procedurally generates a realistic animal print (e.g., leopard/jaguar rosettes). | Texture |
+| animal\_print | Procedurally generates a realistic animal print (e.g., leopard/jaguar rosettes loaded from `texture` directory). | Texture, Algorithmic |
+| bad\_words | Overlays words flagged as potentially inappropriate (loaded via workers) across the mask area. | Symbolic, Content Attack |
+| web\_attack\_strings | Overlays strings known to trigger security alerts (e.g., SQL injection fragments) across the mask area. | Symbolic, Content Attack |
 
+## **6\. Utility and Legacy**
+
+These patterns are present in the core pattern list but serve general utility or are specialized forms of other attacks.
+
+| Key | Description | Technique |
+| :---- | :---- | :---- |
+| blackout\_patches | Applies solid black shapes (rectangles, circles) randomly across the mask to create large areas of negative space. | Negative Space, Obfuscation |
+| interference\_lines | Generates two sets of high-contrast, slightly angled lines that intersect, creating a strong visual Moire or interference pattern. | Structural, Interference |
