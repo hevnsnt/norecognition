@@ -4,7 +4,7 @@
 
 Early fuzzer versions (v0.1-v0.5) relied on randomized, synthetic images. While useful for broad discovery, this approach lacked scientific rigor. It was impossible to know if an anomaly was a true pattern vulnerability or just a flaw in that specific synthetic image.
 
-v0.6 will introduce a fixed, high-quality, and diverse dataset of 6 personas. This change is the most critical step in moving from a simple generator to a scientific research tool.
+v0.6 introduced a fixed, high-quality, and diverse dataset of 6 personas. This change is the most critical step in moving from a simple generator to a scientific research tool.
 
 ### Why a Fixed Dataset?
 
