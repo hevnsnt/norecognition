@@ -228,7 +228,7 @@ As of v0.5, this project has introduced a completely overhauled and improved rep
 **1. Pattern Success Rate (The "Leaderboard")**: This is the primary "leaderboard" for individual patterns. It calculates the raw success rate (Anomalies / Total Runs) for every pattern that has been run a significant number of times (e.g., >10 runs). This tells us which patterns, like recursive_face_tile, are the most effective "building blocks."
 ![Pattern Success Rate](./images/reports/2_1_pattern_success_rate_full_history.png)
 
-**2. Synergistic Pattern Combinations**: This report is where the genetic algorithm's power becomes visible. It answers: "Are combinations of patterns more effective than single patterns?" It looks for "synergy," where two or more patterns layered together (e.g., pixel_sort_glitch+repeating_texture_object+recursive_face_tile) have a much higher success rate than they would individually.
+**2. Synergistic Pattern Combinations**: This report is where the genetic algorithm's power becomes visible. It answers: "Are combinations of patterns more effective than single patterns?" It looks for "synergy," where two or more patterns layered together (e.g., `pixel_sort_glitch` + `repeating_texture_object` + `recursive_face_tile`) have a much higher success rate than they would individually.
 ![Synergistic Pattern Combinations](./images/reports/2_2_pattern_synergy_report_full_history.png)
 
 **3. Pattern Anomaly Type Distribution**: This report analyzes how a pattern is "winning." Instead of just "it worked," this heatmap shows if a pattern (e.g., recursive_face_tile) is more likely to cause the AI to find extra faces (EXTRA_FACE) or lose the person entirely (Person Lost).
