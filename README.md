@@ -142,55 +142,6 @@ This isn't just a random pattern generator. It's a purpose-built research tool d
 
 ---
 
-<h2 id="the-adversarial-patterns">🎨 The Adversarial Patterns 🎨</h2>
-
-The fuzzer selects from a diverse library of pattern generators. This list is constantly expanding.
-
-* **Geometric & Noise:**
-    * `simple_shapes`
-    * `fractal_noise`
-    * `perlin_noise`
-    * `hf_noise` (High-Freq Static)
-    * `checkerboard`
-    * `gradient`
-    * `op_art_chevrons`
-    * `tiled_logo`
-    * `fft_noise`
-* **Feature-Based & Saliency:**
-    * `feature_collage` (stamps random facial features)
-    * `saliency_eye_attack` (densely stamps *only* eyes)
-    * `recursive_face_tile` (tiles the user's own face)
-    * `ascii_face` (draws text-based faces)
-    * `animal_print` (procedural leopard/jaguar spots)
-    * `trypophobia` (clusters of small, high-contrast holes)
-    * `pop_art_collage` (line-art based facial features)
-* **Surgical & Landmark-Based:**
-    * `landmark_noise` (applies noise/blur *only* to key points)
-    * `swapped_landmarks` (pastes the mouth over the eye, etc.)
-    * `adversarial_patch` (places a small "sticker" on a key feature)
-* **Camouflage & Texture:**
-    * `camouflage` (uses textures derived from nature)
-    * `repeating_texture_object`
-    * `warped_face` (uses a full face as a warped texture)
-* **Structural & Dazzle:**
-    * `hyperface_like` (high-contrast hyperface-like blocky pattern)
-    * `dazzle_camouflage`(CV Dazzle-like pattern)
-    * `interference_lines` (Moire-like patterns)
-    * `3d_wireframe` (projects 3D cubes)
-* **Glitch & Sensor Attacks:**
-    * `vortex` (twisting distortion)
-    * `optical_flow` (liquify-style warp)
-    * `photonegative_patch`
-    * `colorspace_jitter` (noise in Cr/Cb channels only)
-    * `selective_blur`
-    * `pixel_sort_glitch`
-* **Other:**
-    * `random_text`
-    * `qr_code`
-    * `ir_led_attack` (simulates IR glare/bloom)
-    * `blackout_patches` (solid negative space)
----
-
 <h2 id="call-for-help">⚠️ Call for help ⚠️</h2>
 
 This project's progress is **severely limited by computational resources**. Our primary goal is to discover the most effective adversarial patterns, which I estimate will require testing at least **5 Billion** *evolved* patterns. This level of rigorous testing *is currently impossible*, it would require decades with our present hardware. I are actively seeking sponsors or partners who can provide access to high-performance GPUs to make this research feasible.
