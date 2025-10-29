@@ -31,7 +31,7 @@ All images used for training, baselining, and active fuzzing do not depict real 
 | :--- | :---: | :---: |
 | **Gary** | <img src="./images/personas/Gary_headshot.png" alt="Gary Headshot" width="150"> | <img src="./images/personas/Gary_profile.png" alt="Gary Profile" width="150"> |
 
-> Gary owns a few convenience stores in Kansas City. After a facial-recognition system at a nearby chain falsely matched him to a theft, he spent weeks clearing his name.
+> Gary owns a few convenience stores in Kansas City. After a facial-recognition system at a nearby competitor chain falsely matched him to a theft, he spent weeks clearing his name.
 > That experience shook his trust in “smart security.”
 > Now he’s hunting for ways to avoid being mistaken for someone else again.
 > AI-resistant clothing isn’t fashion to him—it’s insurance against another algorithm deciding who he is.
