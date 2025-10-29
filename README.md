@@ -46,7 +46,7 @@ Whether you’re an everyday person who just wants to walk down the street unsee
 
 I'm a hacker. I see technology differently. For years, I've been fascinated by how machines interpret our world and us: how algorithms decide who is seen, tracked, and recognized, often with unsettling consequences for personal privacy.
 
-I believe we can engineer fabrics to confuse these systems. My goal is to build a **reproducible, science-driven process** to design and test these adversarial textiles. I test them rigorously against multiple models in real-world conditions to create a wardrobe that protects my privacy... and yours.
+I believe fabrics to confuse these systems can be created. My goal is to build a **reproducible, science-driven process** to design and test these adversarial textiles. I test them rigorously against multiple models in real-world conditions to create a wardrobe that protects my privacy... and yours.
 
 ### Wait, Hasn't This Been Done Before?
 
@@ -193,7 +193,7 @@ The fuzzer selects from a diverse library of pattern generators. This list is co
 
 <h2 id="call-for-help">⚠️ Call for help ⚠️</h2>
 
-This project's progress is **severely limited by computational resources**. Our primary goal is to discover the most effective adversarial patterns, which we estimate will require testing at least **5 Billion** *evolved* patterns. This level of rigorous testing *is currently impossible*, it would require decades with our present hardware. We are actively seeking sponsors or partners who can provide access to high-performance GPUs to make this research feasible.
+This project's progress is **severely limited by computational resources**. Our primary goal is to discover the most effective adversarial patterns, which I estimate will require testing at least **5 Billion** *evolved* patterns. This level of rigorous testing *is currently impossible*, it would require decades with our present hardware. I are actively seeking sponsors or partners who can provide access to high-performance GPUs to make this research feasible.
 
 ### Current Status: 🐢 Slow & Steady
 
@@ -211,7 +211,7 @@ Want to read more on our justification and decision matrix on testing hardware? 
 
 ### Can You Help Us Bridge the Gap? 🤝
 
-If you or your organization can provide access to the hardware or cloud credits needed to unlock this project's potential, we would love to talk.
+If you or your organization can provide access to the hardware or cloud credits needed to unlock this project's potential, I would love to talk.
 
 **Please reach out by emailing [bill@seckc.org].**
 
@@ -221,7 +221,7 @@ This repository currently contains research artifacts and documentation related 
 
 As of v0.5, this project has introduced a completely overhauled and improved reporting pipeline to better describe our research progress. To scientifically track progress and validate results, the fuzzer includes a powerful reporting suite that analyzes the entire history of the fuzzer's test runs. This moves our findings beyond single anecdotes to identify statistically significant trends. The statistical relevance of these reports will grow as longer, multi-epoch research campaigns are completed.
 
-**Fuzzer Performance Report**: This chart tracks the fuzzer's raw throughput. It's our "speedometer," showing how many tests we can run per minute.
+**Fuzzer Performance Report**: This chart tracks the fuzzer's raw throughput. It's our "speedometer," showing how many tests run per minute.
 ![Epoch 7 Performance Report](./images/reports/epoch_7_performance_report.png)
 
 ### 📈 Pattern Effectiveness Analysis
@@ -235,7 +235,7 @@ As of v0.5, this project has introduced a completely overhauled and improved rep
 ![Pattern Anomaly Type](./images/reports/1_1_pattern_anomaly_type_distribution.png)
 
 ### 🎯 Target Vulnerability Analysis
-**4. Target Image Vulnerability**: This report answers: "Which of our test images is the 'weakest' or most vulnerable target?" By tracking the total number of anomalies per image, we can identify which poses, lighting conditions, or facial structures (like Woman_Wearing_Shawl.png) are most easily confused by adversarial patterns.
+**4. Target Image Vulnerability**: This report answers: "Which of our test images is the 'weakest' or most vulnerable target?" By tracking the total number of anomalies per image, it can identify which poses, lighting conditions, or facial structures (like Woman_Wearing_Shawl.png) are most easily confused by adversarial patterns.
 ![Target Image Vulnerability](./images/reports/1_2_target_vulnerability_full_history.png)
 
 **5. Top Specific Vulnerabilities**: This is the most granular report. It identifies the "golden" test cases: the exact pattern recipe (e.g., recursive_face_tile) on a specific image (e.g., Woman_Wearing_Shawl.png) that failed most often. This shows us which vulnerabilities are highly repeatable and are the best candidates for physical printing and real-world testing.
