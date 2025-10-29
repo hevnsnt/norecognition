@@ -129,6 +129,7 @@ This isn't just a random pattern generator. It's a purpose-built research tool d
     * `dazzle_camouflage` / `hyperface_like:` Use landmark locations to draw disruptive lines through key features.
     * `swapped_landmarks:` Pastes the mouth over the eye, etc.
     * `saliency_eye_attack:` Stamps dozens of eyes to confuse the model's bounding-box and non-maximum suppression (NMS) logic.
+    > For a full list of patterns used, please see [`pattern_generators.md`](./pattern_generators.md)
 
 * **Built for Scale and Research-Grade Reporting:**
     * **Massively Parallel:** Uses Python's `multiprocessing` (with a robust spawn context) to run tests across all available CPU cores, managing the per-worker GPU/model resources.
