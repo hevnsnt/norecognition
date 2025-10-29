@@ -13,7 +13,7 @@ These patterns directly target the features and processes used by facial recogni
 | dazzle\_surgical\_lines | Draws thick, high-contrast lines connecting key facial landmarks (eyes, nose, brows, cheeks) to visually break up feature continuity, inspired by surgical marking guides. | Landmark Disruption, CV Dazzle |
 | key\_feature\_blackout | Applies solid black or white censor bars/patches specifically over the eyes and mouth using detected bounding boxes for maximum feature obscuration. | Negative Space, Feature Attack |
 | saliency\_eye\_attack | Densely stamps or tiles random eye features across the entire mask area, overloading the recognition system's saliency map and feature extractors. | Saliency Attack, Feature Overload |
-| ir\_led\_attack | Simulates the blinding effect (glare and bloom) caused by a cluster of bright Infrared LEDs, designed to disrupt IR-based depth sensors. | Sensor Attack, IR Simulation |
+| ir\_led\_attack | Simulates the blinding effect (glare and bloom) caused by a cluster of bright Infrared LEDs, designed to disrupt IR-based depth sensors. This is a basic attack compared to faceid\_structured\_light | Sensor Attack, IR Simulation |
 
 ## **2\. Geometric & Noise Attacks**
 
