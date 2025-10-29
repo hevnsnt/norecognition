@@ -110,18 +110,18 @@ This isn't just a random pattern generator. It's a purpose-built research tool d
     * **Apple Silicon Metal** (via mlx)
     * **JIT-Compiled CPU** (via numba)
     * **Standard CPU** (via numpy)
-    * This allows for massive parallel throughput on any modern machine, from a MacBook Pro to a dedicated NVIDIA GPU server, with many pattern generators running natively on the GPU.
+    > This allows for massive parallel throughput on any modern machine, from a MacBook Pro to a dedicated NVIDIA GPU server, with many pattern generators running natively on the GPU.
 
 * **Targets an Ensemble of Modern Models:** This fuzzer doesn't just target one model. It validates every pattern against an *ensemble* of state-of-the-art systems simultaneously:
     * **InsightFace (`buffalo_l`):** A large, high-accuracy face detector.
     * **InsightFace (`buffalo_s`):** A smaller, faster face detector.
     * **YOLOv8n:** A modern, real-time object detector (used for person detection).
-    * An anomaly is registered if it fools the models in a significant way (e.g., fooling *both* face models, or causing a *dramatic* drop in confidence).
+    > An anomaly is registered if it fools the models in a significant way (e.g., fooling *both* face models, or causing a *dramatic* drop in confidence).
 
 * **Genetic Algorithm for "Evolved" Patterns:** The fuzzer learns. When it finds a pattern that causes a failure (an "anomaly"), it saves that pattern's "recipe" to a `PRIORITY_TESTS` list. In the next epoch, it uses these successful recipes as parents for a **genetic algorithm**:
     * **Mutation:** It randomly adds, removes, or swaps pattern layers.
     * **Crossover:** It splices two successful parent recipes together to create a new child.
-    * This allows the fuzzer to "evolve" increasingly complex and effective patterns over time.
+    > This allows the fuzzer to "evolve" increasingly complex and effective patterns over time.
 
 * **Landmark-Aware "Surgical" Attacks:** The pattern library goes far beyond simple noise. It includes "surgical" attacks that target specific parts of the AI's "brain" by first finding the baseline facial landmarks:
     * `adversarial_patch:` Places a small, high-contrast "sticker" on a key feature like the nose, cheek, or forehead.
