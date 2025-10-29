@@ -65,7 +65,7 @@ My project, **nonRecognition**, is a research-focused program to transform those
 
 To do this, **nonRecogition** is focused on two critical components:
 
-1.  **A Custom Fuzzer and Testing Suite:** A high-performance fuzzer to generate, test, and scientifically analyze an infinite number of designs against an ensemble of modern recognition systems.
+1.  **A Custom Fuzzer and Testing Suite:** A high-performance, self-learning fuzzer that gets smarter as it runs, generating, testing, and scientifically analyzing an infinite range of designs against an ensemble of modern recognition systems.
 2.  **Develop Adversarial Textiles:** Physically printed, sustainable materials optimized to confound the most advanced facial recognition models (not just rudimentary detectors) and tested in real-life conditions.
 
 ---
