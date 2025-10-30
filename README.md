@@ -160,7 +160,14 @@ This project's progress is **severely limited by computational resources**. Our 
 * **Goal Test Rate:** ~**100,000 tests/minute** (~140x increase)
 * **Time to Target:** **~2 Months** 🎉YAY🎉
 
-Want to read more on our justification and decision matrix on testing hardware? [Hardware Recommendation for Fuzzer Performance Scaling.md](./Hardware%20Recommendation%20for%20Fuzzer%20Performance%20Scaling.md)
+### What we need
+
+We need approximately **$20,000** to push this research forward. This funding will be strategically allocated to:
+* Acquire essential hardware (e.g., two NVIDIA DGX Spark nodes).
+* Generate high-quality, real-world images through professional photography.
+* Begin our first production run of testing fabrics.
+
+Want to read more about our justification and decision matrix for testing hardware? [Hardware Recommendation for Fuzzer Performance Scaling.md](./Hardware%20Recommendation%20for%20Fuzzer%20Performance%20Scaling.md)
 
 ### Can You Help Us Bridge the Gap? 🤝
 
