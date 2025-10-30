@@ -146,7 +146,7 @@ This isn't just a random pattern generator. It's a purpose-built research tool d
 
 <h2 id="call-for-help">⚠️ Call for help ⚠️</h2>
 
-This project's progress is **severely limited by computational resources**. Our primary goal is to discover the most effective adversarial patterns, which I estimate will require testing at least **5 Billion** *evolved* patterns. This level of rigorous testing *is currently impossible*, it would require decades with our present hardware. I are actively seeking sponsors or partners who can provide access to high-performance GPUs to make this research feasible.
+This project's progress is **severely limited by computational resources**. Our primary goal is to discover the most effective adversarial patterns, which I estimate will require testing at least **5 Billion** *evolved* patterns. This level of rigorous testing *is currently impossible*, it would require decades with our present hardware. I am actively seeking sponsors or partners who can provide access to high-performance GPUs to make this research feasible.
 
 ### Current Status: 🐢 Slow & Steady
 
