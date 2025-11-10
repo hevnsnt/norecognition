@@ -64,9 +64,9 @@ This project stands on the shoulders of those giants. My work continues that evo
 
 I’m [Bill Swearingen](https://about.me/billswearingen). Having spent decades in cybersecurity and hacking fields (co-founder of [**SecKC**](https://seckc.org), speaker at [**BlackHat**](https://blackhat.com) & [**DEF CON**](https://defcon.org)) understanding and uncovering how complex systems fail, I’m applying that mindset to this problem.
 
-My project, **nonRecognition**, is a research-focused program to transform those intriguing concepts into **robust, repeatable, and verifiable solutions**. I am trying to answer one hard question: *Can physical fabrics truly defeat state-of-the-art facial recognition in real-world conditions?*
+My project, **noRecognition**, is a research-focused program to transform those intriguing concepts into **robust, repeatable, and verifiable solutions**. I am trying to answer one hard question: *Can physical fabrics truly defeat state-of-the-art facial recognition in real-world conditions?*
 
-To do this, **nonRecogition** is focused on two critical components:
+To do this, **noRecogition** is focused on two critical components:
 
 1.  **A Custom Fuzzer and Testing Suite:** A high-performance, self-learning fuzzer that gets smarter as it runs, generating, testing, and scientifically analyzing an infinite range of designs against an ensemble of modern recognition systems.
 2.  **Develop Adversarial Textiles:** Physically printed, sustainable materials optimized to confound the most advanced facial recognition models (not just rudimentary detectors) and tested in real-life conditions.
@@ -161,7 +161,7 @@ This isn't just a random pattern generator. It's a purpose-built research tool d
 
 ## Distributed Testing Network (Beta)
 
-As of **v0.9.8**, the **nonRecognition** project has evolved beyond a single-machine research tool. The fuzzer now operates as a **distributed testing network**, where multiple machines around the world can contribute compute power simultaneously to accelerate the search for effective adversarial patterns.
+As of **v0.9.8**, the **noRecognition** project has evolved beyond a single-machine research tool. The fuzzer now operates as a **distributed testing network**, where multiple machines around the world can contribute compute power simultaneously to accelerate the search for effective adversarial patterns.
 
 ### How It Works
 
