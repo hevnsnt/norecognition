@@ -112,6 +112,17 @@ All images used for training, baselining, and active fuzzing do not depict real 
 
 To scientifically measure the fuzzer's effectiveness, a controlled dataset built from our 6 Personas is used. This provides a consistent, reproducible baseline for every test.
 
+### Distributed Testing (v0.9.8)
+
+As of **v0.9.8**, these persona images are tested across a **distributed network of workers** around the world. The system coordinates testing so that:
+
+* All workers test patterns against the same 6 personas, ensuring consistency
+* Baseline ground truth for each persona is calculated once and shared with all workers
+* Results from all distributed workers are aggregated in real-time
+* Pattern effectiveness is measured across thousands of tests from multiple machines
+
+This distributed approach dramatically accelerates the research while maintaining scientific rigor. You can watch the live progress at [**norecognition.org**](https://norecognition.org).
+
 ## Core Image Standards
 
 All "campaign" images are high-resolution, photorealistic, full-body photos. Subjects are in a neutral, forward-facing pose with perfect studio lighting against a solid, neutral gray background.

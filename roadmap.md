@@ -1,6 +1,53 @@
 ## **🗺️ Roadmap to v1.0**
 
-### **v0.6: Persona** (in progress)**
+---
+
+## **COMPLETED MILESTONES**
+
+### **v0.7-v0.9.8: Distributed Testing Network & Facial Recognition** ✅ **COMPLETED**
+
+**Theme:** Transform the project from a single-machine research tool into a distributed testing network. Implement facial recognition testing and real-world validation infrastructure.
+
+**Major Achievements:**
+
+* **Distributed Architecture (v0.9.8):**
+  * Successfully deployed distributed testing network where multiple machines contribute simultaneously
+  * Built work distribution system that coordinates testing across global contributors
+  * Results aggregated in real-time from all distributed workers
+  * Currently running in **private beta** with select contributors
+
+* **Live Dashboard & Reporting:**
+  * Launched live results dashboard at **[norecognition.org](https://norecognition.org)**
+  * Real-time statistics showing test progress across distributed network
+  * Pattern effectiveness leaderboards updated as discoveries are made
+  * Public anomaly gallery displaying successful adversarial patterns
+  * Contributor tracking and statistics
+
+* **Facial Recognition Testing (v0.7):**
+  * Implemented 1:N matching pipeline using facial embeddings
+  * Created persona identity database with ground truth embeddings
+  * Added new anomaly detection types:
+    * **RECOGNITION_FAILURE**: Face detected but not recognized
+    * **MISIDENTIFICATION**: Face incorrectly matched to wrong persona
+    * **FACE_ENSEMBLE**: All models fooled simultaneously (highest priority)
+
+* **Enhanced Testing & Analysis (v0.8):**
+  * Expanded to multi-model ensemble validation
+  * Pattern count increased to **61 adversarial patterns**
+  * Improved genetic algorithm for pattern evolution
+  * Enhanced digital robustness testing
+
+* **Infrastructure & Security:**
+  * Zero-trust security architecture for distributed workers
+  * Robust worker pairing and authentication system
+  * Automatic tier benchmarking based on hardware capabilities
+  * Rate limiting and protection mechanisms
+
+**Status:** Private beta testing ongoing. Public distributed client release planned for v1.0.
+
+---
+
+### **v0.6: Persona** ✅ **COMPLETED**
 **Theme:** Move from random synthetic data to a fixed, high-quality, and diverse dataset. This establishes the **scientific baseline** for all future tests.
 
 * **Persona Dataset Integration:**  
@@ -143,73 +190,58 @@ Code Name: Seed (The concept planted that everything else grew from)
 ---
 # Future Roadmap
 
-### **v0.7: Introducing Facial Recognition (1:N Matching)**
+### **v1.0: Public Release & Physical Validation**
 
-**Theme:** Graduate the fuzzer from *detection* failure to *recognition* failure. This addresses the core goal of defeating "facial recognition," not just "person detection."
+**Theme:** Open the distributed network to the public and validate patterns in real-world physical testing.
 
-* **1:N Matching Pipeline:**  
-  * Implement the **Facial Recognition Matching Pipeline** as proposed in the README.  
-  * Integrate a model like **ArcFace** to generate feature embeddings for detected faces.  
-* **Persona Identity Database:**  
-  * Create a "gallery" database containing the "ground truth" facial embeddings for the 6 personas.  
-  * The fuzzer will now match detected faces *against* this gallery.  
-* **New Anomaly Types:**  
-  * Upgrade the fuzzer's analysis logic (`_check_for_anomalies` in `classy_fuzz.py`) to understand new failure states:  
-    1. **`RECOGNITION_FAILURE`**: A face is detected, but its embedding does *not* match the correct persona in the gallery (below a confidence threshold).  
-    2. **`MISIDENTIFICATION`**: A face is detected, and its embedding *incorrectly* matches the *wrong* persona in the gallery.
+* **Public Distributed Client Release:**
+  * Release the distributed worker client to the public
+  * Allow anyone to contribute compute resources to the research
+  * Comprehensive documentation for setting up and running workers
+  * Tiered contribution system to accommodate different hardware capabilities
 
----
+* **Physical Test Harness (P-Harness):**
+  * Develop "Physical Test Harness" for real-world validation
+  * Use webcam to test physically printed fabrics in real-time
+  * Implement Digital-to-Physical (D2P) feedback loop
+  * Correlate digital success rates with physical test results
 
-### **v0.8: Intelligent Evolution & Deeper Analysis**
+* **Cloud API Auditing:**
+  * Test high-priority anomaly patterns against cloud APIs
+  * Audit AWS Rekognition, Azure Face API, and other commercial systems
+  * Identify patterns that fool both local models AND cloud services
+  * Rate-limited, user-opt-in basis for ethical testing
 
-**Theme:** Refine the new recognition testing, make the genetic algorithm "smarter," and expand the model ensemble.
+* **Comprehensive Research Report:**
+  * Generate comprehensive PDF/HTML research report summarizing findings
+  * Detection vs. Recognition success rates across all models
+  * Digital vs. Physical (D2P) correlation analysis
+  * Cloud API audit results
+  * Identify Top 3-5 "Golden" Patterns with print-ready files
 
-* **Goal-Oriented Genetic Algorithm:**  
-  * Upgrade the genetic algorithm to be **goal-oriented**.  
-  * Allow the user to specify an evolutionary goal (e.g., `fuzz-for: detection-failure` vs. `fuzz-for: misidentification`). The fuzzer will then prioritize "parent" patterns that successfully caused that specific anomaly type.  
-* **New Recognition Reports:**  
-  * Expand `plot_reports.py` to visualize 1:N matching failures.  
-  * Key reports to add:  
-    * **Recognition Failure Rate %** (by pattern, by persona).  
-    * **Confusion Matrix** (which persona was most often mistaken for whom?).  
-* **Model Ensemble Expansion (Open Source):**  
-  * Begin implementing the "Distant future" roadmap item.  
-  * Add other common open-source *detectors* (e.g., **MTCNN**, **RetinaFace**) to the *baseline* analysis. A pattern is now considered *more robust* if it fools InsightFace *and* RetinaFace.
-
----
-
-### **v0.9: The "Real-World" & Cloud Audit Release**
-
-**Theme:** Bridge the gap between digital simulation and physical reality. Test patterns against the true "state-of-the-art" (closed-source cloud APIs).
-
-* **Physical Test Harness (P-Harness):**  
-  * Develop a new "Physical Test Harness" script (`p_harness.py`).  
-  * This script will use a webcam (`cv2.VideoCapture`) to run the *full detection and recognition pipeline* (from v0.7-v0.8) in real-time on a physically printed fabric.  
-  * This provides the crucial **Digital-to-Physical (D2P)** feedback loop.  
-* **Cloud API Auditing:**  
-  * Implement the "Distant future" roadmap item for auditing cloud APIs.  
-  * Create a module that (on a rate-limited, user-opt-in basis) sends high-priority anomaly images to endpoints like **AWS Rekognition** and **Azure Face API**.  
-  * A "High Priority Anomaly" is now one that fools *both* local models *and* a cloud API.  
-* **Digital-to-Physical (D2P) Correlation Report:**  
-  * Create a new report that correlates digital success rates with physical test results. This is the most important report for the project's mission.  
-  * It answers: "Which patterns (e.g., `fractal_noise`) are highly effective in *both* digital and physical tests?"
+* **Code Stability & Documentation:**
+  * Final refactoring and code cleanup
+  * Complete documentation with type hinting and docstrings
+  * "Getting Started" guide for researchers to reproduce results
+  * Published research paper documenting methodology and findings
 
 ---
 
-### **v1.0: "Research-Ready" Release**
+### **Beyond v1.0: Future Research Directions**
 
-**Theme:** Package the entire project as a stable, reproducible, and well-documented research tool.
+* **Advanced Pattern Evolution:**
+  * Goal-oriented genetic algorithm allowing users to specify evolutionary targets
+  * Multi-objective optimization (e.g., fool detection AND recognition simultaneously)
+  * Confusion matrix analysis (which personas are mistaken for each other)
 
-* **Code Stability & Documentation:**  
-  * A final, major refactoring pass to clean up all code. Split `classy_fuzz.py` into its final modular form.  
-  * Implement full code documentation (docstrings, type hinting) and write a "Getting Started" guide so other researchers can *exactly* reproduce your results.  
-* **Final "Golden Set" Epoch:**  
-  * Run a final, large-scale (e.g., 100M+ tests) fuzzing campaign using the full v0.9 ensemble (local models, cloud APIs, and physical harness validation).  
-  * Identify the **Top 3-5 "Golden" Patterns** that are verifiably robust against the widest range of models.  
-* **Comprehensive Research Report:**  
-  * Finalize `plot_reports.py` to generate a single, comprehensive PDF or HTML "Research Report" that summarizes the project's findings, including:  
-    * Detection vs. Recognition success rates.  
-    * Digital vs. Physical (D2P) correlation.  
-    * Cloud API audit results.  
-    * The v1.0 "Golden" patterns and their print-ready files.
+* **Expanded Model Ensemble:**
+  * Add additional open-source detectors (MTCNN, RetinaFace, etc.)
+  * Test against diverse commercial and proprietary systems
+  * Cross-model robustness validation
+
+* **Fabric Manufacturing Pipeline:**
+  * Partner with fabric manufacturers for production runs
+  * Optimize patterns for different printing techniques (sublimation, screen printing, etc.)
+  * Develop sustainable, washable fabric formulations
+  * Create publicly available pattern catalog
 

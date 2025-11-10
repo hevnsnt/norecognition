@@ -36,6 +36,8 @@ Whether you’re an everyday person who just wants to walk down the street unsee
 - [The Mission](#the-mission)
 - [Fuzzer in Action](#fuzzer-in-action)
 - [What Makes This Fuzzer Different?](#what-makes-this-fuzzer-different)
+- [Distributed Testing Network](#distributed-testing-network-beta)
+- [Live Results Dashboard](#live-results-dashboard)
 - [The Adversarial Patterns](#the-adversarial-patterns)
 - [Call for help](#call-for-help)
 - [Research Reporting](#research-reporting)
@@ -69,14 +71,16 @@ To do this, **nonRecogition** is focused on two critical components:
 
 ---
 ## Fuzzer in Action
-To illustrate this process, here's a glimpse into the fuzzer at work. The fuzzer automatically tests facial detection resilience by taking baseline images, generating and overlaying diverse adversarial patterns, then running them through multiple detection and recognition models to identify failures or anomalies. These results feed into evolutionary mutation routines for future epochs, refining how patterns evolve to reveal weaknesses in recognition systems. 
+To illustrate this process, here's a glimpse into the fuzzer at work. The fuzzer automatically tests facial detection resilience by taking baseline images, generating and overlaying diverse adversarial patterns, then running them through multiple detection and recognition models to identify failures or anomalies. These results feed into evolutionary mutation routines for future epochs, refining how patterns evolve to reveal weaknesses in recognition systems.
 <p align="center">
   <img src="./images/v05_fuzzer_working.gif" alt="Fuzzer Working" width="1024">
 </p>
 
-The fuzzer features a full-screen Terminal User Interface (TUI) for real-time analysis. This TUI provides live-updating panels for overall stats, epoch progress, a detailed anomaly log, and an in-terminal image preview of the most recent anomaly found. You'll notice the *Anomaly Preview* is a low-resolution, "pixel-art" style image. This is an intentional feature. The image is rendered inside the terminal using text characters and is resized to a small character width for performance. *Another thing to Note: In this example you can see the mutation and evolution engines working (increased anomalies) over each epoch as the fuzzer "learns" what works!* ✨COOL✨ 
+The fuzzer features a full-screen Terminal User Interface (TUI) for real-time analysis. This TUI provides live-updating panels for overall stats, epoch progress, a detailed anomaly log, and an in-terminal image preview of the most recent anomaly found. You'll notice the *Anomaly Preview* is a low-resolution, "pixel-art" style image. This is an intentional feature. The image is rendered inside the terminal using text characters and is resized to a small character width for performance. *Another thing to Note: In this example you can see the mutation and evolution engines working (increased anomalies) over each epoch as the fuzzer "learns" what works!* ✨COOL✨
 
->(Note: This sample is only a fraction of our input models and while some show analysis anomalies, it purposefully does not include any bypass techniques. Version v0.6 (in release candidate testing now) will standardize all testing on a fixed, diverse set of persona images, which are described in detail in [`personas.md`](./personas.md)).
+As of **v0.9.8**, the fuzzer now runs as a **distributed testing network** with multiple machines contributing compute power simultaneously. All results are aggregated in real-time and displayed on a live dashboard at [**norecognition.org**](https://norecognition.org), where you can watch the research progress unfold.
+
+>(Note: This sample is only a fraction of our input models and while some show analysis anomalies, it purposefully does not include any bypass techniques. Version v0.9.8 standardizes all testing on a fixed, diverse set of persona images, which are described in detail in [`personas.md`](./personas.md)).
 
 Each image below represents a unique adversarial pattern generated and then applied to a facial region, ready for testing against advanced recognition models. These are just a few of the thousands the system evaluates per epoch to find those elusive "failure patterns." 
 
@@ -105,6 +109,8 @@ Each image below represents a unique adversarial pattern generated and then appl
 This isn't just a random pattern generator. It's a purpose-built research tool designed to find *robust* vulnerabilities in *modern* AI models.
 
 ### ⚙️ Core Features ⚙️
+* **Distributed Testing Network (v0.9.8):** The fuzzer now operates as a coordinated network where multiple machines around the world contribute compute power simultaneously. Results from all contributors are aggregated in real-time, dramatically accelerating research progress. See the live dashboard at [**norecognition.org**](https://norecognition.org) to watch the network in action.
+
 * **Hardware-Agnostic HPC:** The fuzzer's pattern engine is a "write-once, run-anywhere" system. It has been tested on Apple Silicon and Windows 11 with NVidia CUDA GPUs. It auto-detects the best available compute backend at runtime and uses optimized code paths for:
     * **NVIDIA CUDA** (via cuPy)
     * **Apple Silicon Metal** (via mlx)
@@ -123,13 +129,13 @@ This isn't just a random pattern generator. It's a purpose-built research tool d
     * **Crossover:** It splices two successful parent recipes together to create a new child.
     > This allows the fuzzer to "evolve" increasingly complex and effective patterns over time.
 
-* **Landmark-Aware "Surgical" Attacks:** The pattern library goes far beyond simple noise. It includes "surgical" attacks that target specific parts of the AI's "brain" by first finding the baseline facial landmarks:
+* **Landmark-Aware "Surgical" Attacks:** The pattern library (now **61 unique patterns** as of v0.9.8) goes far beyond simple noise. It includes "surgical" attacks that target specific parts of the AI's "brain" by first finding the baseline facial landmarks:
     * `adversarial_patch:` Places a small, high-contrast "sticker" on a key feature like the nose, cheek, or forehead.
     * `landmark_noise:` Applies noise/blur only to the detected eyes, nose, and mouth.
     * `dazzle_camouflage` / `hyperface_like:` Use landmark locations to draw disruptive lines through key features.
     * `swapped_landmarks:` Pastes the mouth over the eye, etc.
     * `saliency_eye_attack:` Stamps dozens of eyes to confuse the model's bounding-box and non-maximum suppression (NMS) logic.
-    > For a full list of patterns used, please see [`pattern_generators.md`](./pattern_generators.md)
+    > For a full list of all 61 patterns, please see [`pattern_generators.md`](./pattern_generators.md)
 
 * **Built for Scale and Research-Grade Reporting:**
     * **Massively Parallel:** Uses Python's `multiprocessing` (with a robust spawn context) to run tests across all available CPU cores, managing the per-worker GPU/model resources.
@@ -143,35 +149,83 @@ This isn't just a random pattern generator. It's a purpose-built research tool d
 
 ---
 
+## Distributed Testing Network (Beta)
+
+As of **v0.9.8**, the **nonRecognition** project has evolved beyond a single-machine research tool. The fuzzer now operates as a **distributed testing network**, where multiple machines around the world can contribute compute power simultaneously to accelerate the search for effective adversarial patterns.
+
+### How It Works
+
+The distributed network coordinates testing across many machines:
+* **Work Distribution:** The system generates batches of test cases and distributes them to available workers based on their computing capabilities
+* **Parallel Processing:** Each worker processes patterns locally using their own hardware (GPU, CPU, etc.)
+* **Result Aggregation:** All discoveries are submitted back to the central system and aggregated in real-time
+* **Live Tracking:** Progress, pattern success rates, and anomaly discoveries are displayed on the live dashboard
+
+### Join the Beta Testing
+
+The distributed client is currently in **private beta testing** with a select group of contributors. If you have compute resources you'd like to contribute to this research and would like to participate in beta testing, **please contact me at [bill@seckc.org](mailto:bill@seckc.org)**.
+
+I'm particularly interested in hearing from:
+* Researchers with access to GPU clusters or high-performance workstations
+* Organizations interested in privacy research
+* Individuals passionate about fighting surveillance technology
+
+---
+
+## Live Results Dashboard
+
+All testing progress is now visible in real-time at **[norecognition.org](https://norecognition.org)**.
+
+### What You Can See:
+
+* **Real-Time Statistics:** Watch as tests complete and anomalies are discovered across the distributed network
+* **Pattern Leaderboard:** See which adversarial patterns are most effective at fooling facial recognition systems
+* **Anomaly Gallery:** View the latest discoveries - patterns that successfully confused the AI models
+* **Contributor Stats:** Track contributions from the distributed testing network
+
+The dashboard updates live as workers around the world submit their test results, giving you a window into the ongoing research process. Visit [**norecognition.org**](https://norecognition.org) to see the current state of the research.
+
+---
+
 <h2 id="call-for-help">⚠️ Call for help ⚠️</h2>
 
-This project's progress is **severely limited by computational resources**. Our primary goal is to discover the most effective adversarial patterns, which I estimate will require testing at least **5 Billion** *evolved* patterns. This level of rigorous testing *is currently impossible*, it would require decades with our present hardware. I are actively seeking sponsors or partners who can provide access to high-performance GPUs to make this research feasible.
+This project's progress is **severely limited by computational resources**. Our primary goal is to discover the most effective adversarial patterns, which I estimate will require testing at least **5 Billion** *evolved* patterns. While the new **distributed testing network (v0.9.8)** has significantly accelerated our progress, we still need more computing power to reach our research goals in a reasonable timeframe.
 
-### Current Status: 🐢 Slow & Steady
+### Progress Update: Distributed Network Helping! 📈
 
-* **Current Test Rate:** ~534 tests/minute
+* **Previous Status (single machine):** ~534 tests/minute → 17.8 years to target
+* **Current Status (v0.9.8 distributed beta):** Growing network of contributors → Progress accelerating
 * **Test Target:** 5 Billion tests
-* **Time to Target:** ~17.8 Years (*womp*)
+* **What We Still Need:** More distributed workers and/or dedicated GPU clusters
+
+The distributed network is proving the concept works, but we need to scale it further to achieve breakthrough results.
 
 ### Desired Status: Full Throttle 🚀🚀🚀
 
-* **Required Hardware:** Research workstation (2x NVIDIA DGX Spark node cluster **or** Workstation with 4x NVIDIA GeForce RTX 5070 Ti GPUs) 
-* **Goal Test Rate:** ~**100,000 tests/minute** (~140x increase)
+* **Required Hardware:** Research workstation (2x NVIDIA DGX Spark node cluster **or** Workstation with 4x NVIDIA GeForce RTX 5070 Ti GPUs)
+* **Goal Test Rate:** ~**100,000 tests/minute** (~140x increase over original)
 * **Time to Target:** **~2 Months** 🎉YAY🎉
 
 Want to read more on our justification and decision matrix on testing hardware? [Hardware Recommendation for Fuzzer Performance Scaling.md](./Hardware%20Recommendation%20for%20Fuzzer%20Performance%20Scaling.md)
 
 ### Can You Help Us Bridge the Gap? 🤝
 
-If you or your organization can provide access to the hardware or cloud credits needed to unlock this project's potential, I would love to talk.
+There are several ways to contribute:
 
-**Please reach out by emailing [bill@seckc.org].**
+1. **Join the Distributed Beta:** Have compute resources? Contact me to become a beta tester
+2. **Hardware Sponsorship:** Provide access to GPU clusters or high-performance workstations
+3. **Cloud Credits:** Sponsor compute time on cloud platforms
+4. **Financial Support:** Help fund dedicated hardware for the research
+
+**Please reach out by emailing [bill@seckc.org](mailto:bill@seckc.org).**
 
 <h2 id="research-reporting">Research Reporting</h2>
 
-This repository currently contains research artifacts and documentation related to the Adversarial Fabric Fuzzer project. The core fuzzer code, model integrations, and data generation routines are not publicly released at this stage. At this time, the fuzzer is used privately for controlled testing and scientific evaluation. This research is **SEVERELY resource-constrained**. The fuzzer is designed for massive parallelization, but is currently running on limited hardware, achieving an overall rate of ~535 tests per minute (varies based on the complexity of patterns).
+This repository currently contains research artifacts and documentation related to the Adversarial Fabric Fuzzer project. The core fuzzer code, model integrations, and data generation routines are not publicly released at this stage. At this time, the fuzzer is used privately for controlled testing and scientific evaluation.
 
-As of v0.5, this project has introduced a completely overhauled and improved reporting pipeline to better describe our research progress. To scientifically track progress and validate results, the fuzzer includes a powerful reporting suite that analyzes the entire history of the fuzzer's test runs. This moves our findings beyond single anecdotes to identify statistically significant trends. The statistical relevance of these reports will grow as longer, multi-epoch research campaigns are completed.
+As of **v0.9.8**, the project now operates as a **distributed testing network** with multiple contributors running workers simultaneously. All results are aggregated in real-time and displayed on the live dashboard at [**norecognition.org**](https://norecognition.org). This distributed architecture has significantly accelerated research progress compared to the original single-machine approach.
+
+The fuzzer includes a powerful reporting suite that analyzes the entire history of test runs across all distributed workers. This moves our findings beyond single anecdotes to identify statistically significant trends. The statistical relevance of these reports continues to grow as more tests are completed across the distributed network.
 
 **Fuzzer Performance Report**: This chart tracks the fuzzer's raw throughput. It's our "speedometer," showing how many tests run per minute.
 ![Epoch 7 Performance Report](./images/reports/epoch_7_performance_report.png)

@@ -2,6 +2,17 @@
 
 This module contains a comprehensive library of procedural and image-based pattern generators designed to create disruptive, obfuscating, and adversarial camouflage masks. These patterns leverage high-contrast geometry, visual saliency attacks, color space manipulation, and perceptual glitches, and are highly optimized using NumPy, Numba, CuPy, and MLX backends for high performance.
 
+## **Pattern Library Status (v0.9.8)**
+
+As of **version 0.9.8**, the pattern library includes **61 unique adversarial patterns** tested across the distributed network. Pattern effectiveness is continuously measured and updated in real-time:
+
+* **Live Leaderboard:** See which patterns are most effective at [**norecognition.org**](https://norecognition.org)
+* **Success Rates:** Each pattern's effectiveness is tracked across thousands of tests from distributed workers
+* **Combination Analysis:** The system identifies which pattern combinations (layered together) are most effective
+* **Real-Time Updates:** Pattern statistics update as new test results arrive from workers around the world
+
+The patterns below represent the core library used in the distributed testing network.
+
 ## **1\. Structural & Biometric Attacks**
 
 These patterns directly target the features and processes used by facial recognition systems, including key biometric landmarks and depth/IR capture mechanisms.
