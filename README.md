@@ -113,9 +113,19 @@ These are the **9 most recent anomaly patterns** discovered by the distributed t
 <!-- RECENT_ANOMALIES_START -->
 <table align="center" style="border-collapse:collapse; border-spacing:0; padding:0; margin:0;">
   <tr>
-    <td colspan="3" style="text-align:center; padding:10px;">
-      <em>🤖 Automated updates in progress... Recent anomaly images will appear here soon.</em>
-    </td>
+    <td style="padding:0; margin:0;"><a href="https://storage.googleapis.com/nonrecognition-assets/public/anomalies/anomaly_20251110_094724_115a194362e1.png"><img src="https://storage.googleapis.com/nonrecognition-assets/public/anomalies/anomaly_20251110_094724_115a194362e1.png" alt="anomaly_20251110_094724_115a194362e1.png" width="200" style="display:block; margin:0; padding:0;"></a></td>
+    <td style="padding:0; margin:0;"><a href="https://storage.googleapis.com/nonrecognition-assets/public/anomalies/anomaly_20251110_094252_5d4f32575df7.png"><img src="https://storage.googleapis.com/nonrecognition-assets/public/anomalies/anomaly_20251110_094252_5d4f32575df7.png" alt="anomaly_20251110_094252_5d4f32575df7.png" width="200" style="display:block; margin:0; padding:0;"></a></td>
+    <td style="padding:0; margin:0;"><a href="https://storage.googleapis.com/nonrecognition-assets/public/anomalies/anomaly_20251110_093750_cf172598fec6.png"><img src="https://storage.googleapis.com/nonrecognition-assets/public/anomalies/anomaly_20251110_093750_cf172598fec6.png" alt="anomaly_20251110_093750_cf172598fec6.png" width="200" style="display:block; margin:0; padding:0;"></a></td>
+  </tr>
+  <tr>
+    <td style="padding:0; margin:0;"><a href="https://storage.googleapis.com/nonrecognition-assets/public/anomalies/anomaly_20251110_093152_57a78af3576f.png"><img src="https://storage.googleapis.com/nonrecognition-assets/public/anomalies/anomaly_20251110_093152_57a78af3576f.png" alt="anomaly_20251110_093152_57a78af3576f.png" width="200" style="display:block; margin:0; padding:0;"></a></td>
+    <td style="padding:0; margin:0;"><a href="https://storage.googleapis.com/nonrecognition-assets/public/anomalies/anomaly_20251110_092545_9cd4ee1429f0.png"><img src="https://storage.googleapis.com/nonrecognition-assets/public/anomalies/anomaly_20251110_092545_9cd4ee1429f0.png" alt="anomaly_20251110_092545_9cd4ee1429f0.png" width="200" style="display:block; margin:0; padding:0;"></a></td>
+    <td style="padding:0; margin:0;"><a href="https://storage.googleapis.com/nonrecognition-assets/public/anomalies/anomaly_20251110_092000_301433fa57e2.png"><img src="https://storage.googleapis.com/nonrecognition-assets/public/anomalies/anomaly_20251110_092000_301433fa57e2.png" alt="anomaly_20251110_092000_301433fa57e2.png" width="200" style="display:block; margin:0; padding:0;"></a></td>
+  </tr>
+  <tr>
+    <td style="padding:0; margin:0;"><a href="https://storage.googleapis.com/nonrecognition-assets/public/anomalies/anomaly_20251110_091238_37545bb98a6d.png"><img src="https://storage.googleapis.com/nonrecognition-assets/public/anomalies/anomaly_20251110_091238_37545bb98a6d.png" alt="anomaly_20251110_091238_37545bb98a6d.png" width="200" style="display:block; margin:0; padding:0;"></a></td>
+    <td style="padding:0; margin:0;"><a href="https://storage.googleapis.com/nonrecognition-assets/public/anomalies/anomaly_20251110_090642_89d878ccf829.png"><img src="https://storage.googleapis.com/nonrecognition-assets/public/anomalies/anomaly_20251110_090642_89d878ccf829.png" alt="anomaly_20251110_090642_89d878ccf829.png" width="200" style="display:block; margin:0; padding:0;"></a></td>
+    <td style="padding:0; margin:0;"><a href="https://storage.googleapis.com/nonrecognition-assets/public/anomalies/anomaly_20251110_085851_f1350ed26c0d.png"><img src="https://storage.googleapis.com/nonrecognition-assets/public/anomalies/anomaly_20251110_085851_f1350ed26c0d.png" alt="anomaly_20251110_085851_f1350ed26c0d.png" width="200" style="display:block; margin:0; padding:0;"></a></td>
   </tr>
 </table>
 <!-- RECENT_ANOMALIES_END -->
