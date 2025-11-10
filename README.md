@@ -48,7 +48,8 @@ Whether you’re an everyday person who just wants to walk down the street unsee
 
 I'm a hacker. I see technology differently. For years, I've been fascinated by how machines interpret our world and us: how algorithms decide who is seen, tracked, and recognized, often with unsettling consequences for personal privacy.
 
-I believe fabrics to confuse these systems can be created. My goal is to build a **reproducible, science-driven process** to design and test these adversarial textiles. I test them rigorously against multiple models in real-world conditions to create a wardrobe that protects my privacy... and yours.
+I believe fabrics can be engineered to confuse modern vision systems. The plan is simple: build a reproducible, science-first pipeline that designs, tests, and refines adversarial textiles. Every generated pattern is validated against multiple detection models and then tested in real-world conditions. Results so far are positive.
+
 
 ### Wait, Hasn't This Been Done Before?
 
@@ -66,7 +67,7 @@ My project, **nonRecognition**, is a research-focused program to transform those
 
 To do this, **nonRecogition** is focused on two critical components:
 
-1.  **A Custom Fuzzer and Testing Suite:** A high-performance fuzzer to generate, test, and scientifically analyze an infinite number of designs against an ensemble of modern recognition systems.
+1.  **A Custom Fuzzer and Testing Suite:** A high-performance, self-learning fuzzer that gets smarter as it runs, generating, testing, and scientifically analyzing an infinite range of designs against an ensemble of modern recognition systems.
 2.  **Develop Adversarial Textiles:** Physically printed, sustainable materials optimized to confound the most advanced facial recognition models (not just rudimentary detectors) and tested in real-life conditions.
 
 ---
@@ -206,7 +207,14 @@ The distributed network is proving the concept works, but we need to scale it fu
 * **Goal Test Rate:** ~**100,000 tests/minute** (~140x increase over original)
 * **Time to Target:** **~2 Months** 🎉YAY🎉
 
-Want to read more on our justification and decision matrix on testing hardware? [Hardware Recommendation for Fuzzer Performance Scaling.md](./Hardware%20Recommendation%20for%20Fuzzer%20Performance%20Scaling.md)
+### What we need
+
+We need approximately **$20,000** to push this research forward. This funding will be strategically allocated to:
+* Acquire essential hardware (e.g., two NVIDIA DGX Spark nodes).
+* Generate high-quality, real-world images through professional photography.
+* Begin our first production run of testing fabrics.
+
+Want to read more about our justification and decision matrix for testing hardware? [Hardware Recommendation for Fuzzer Performance Scaling.md](./Hardware%20Recommendation%20for%20Fuzzer%20Performance%20Scaling.md)
 
 ### Can You Help Us Bridge the Gap? 🤝
 
@@ -227,35 +235,44 @@ As of **v0.9.8**, the project now operates as a **distributed testing network** 
 
 The fuzzer includes a powerful reporting suite that analyzes the entire history of test runs across all distributed workers. This moves our findings beyond single anecdotes to identify statistically significant trends. The statistical relevance of these reports continues to grow as more tests are completed across the distributed network.
 
-**Fuzzer Performance Report**: This chart tracks the fuzzer's raw throughput. It's our "speedometer," showing how many tests run per minute.
-![Epoch 7 Performance Report](./images/reports/epoch_7_performance_report.png)
+**1. Fuzzer Performance Trend**: This chart is our "speedometer" and answers: "Is the fuzzer getting faster or slower with each epoch?"
+![Epoch Performance Report](./images/reports/3_2_epoch_performance_trend.png)
 
 ### 📈 Pattern Effectiveness Analysis
-**1. Pattern Success Rate (The "Leaderboard")**: This is the primary "leaderboard" for individual patterns. It calculates the raw success rate (Anomalies / Total Runs) for every pattern that has been run a significant number of times (e.g., >10 runs). This tells us which patterns, like recursive_face_tile, are the most effective "building blocks."
+**2. Pattern Success Rate (The "Leaderboard")**: This is the primary "leaderboard" for individual patterns. It answers: "What is the % success rate of 'fractal_noise' over all runs?"
 ![Pattern Success Rate](./images/reports/2_1_pattern_success_rate_full_history.png)
 
-**2. Synergistic Pattern Combinations**: This report is where the genetic algorithm's power becomes visible. It answers: "Are combinations of patterns more effective than single patterns?" It looks for "synergy," where two or more patterns layered together (e.g., `pixel_sort_glitch` + `repeating_texture_object` + `recursive_face_tile`) have a much higher success rate than they would individually.
+**3. Synergistic Pattern Combinations**: This report shows the power of the genetic algorithm, answering: "Are combined patterns (e.g., 'fractal+dazzle') more effective?"
 ![Synergistic Pattern Combinations](./images/reports/2_2_pattern_synergy_report_full_history.png)
 
-**3. Pattern Anomaly Type Distribution**: This report analyzes how a pattern is "winning." Instead of just "it worked," this heatmap shows if a pattern (e.g., recursive_face_tile) is more likely to cause the AI to find extra faces (EXTRA_FACE) or lose the person entirely (Person Lost).
+**4. Pattern Anomaly Type Distribution**: This report analyzes *how* a pattern is "winning." It answers: "What type of anomaly does 'fractal_noise' tend to cause?"
 ![Pattern Anomaly Type](./images/reports/1_1_pattern_anomaly_type_distribution.png)
 
+**5. Recipe Latency Report**: This report identifies computational bottlenecks by answering: "Which recipes are the most computationally expensive?"
+![Recipe Latency Report](./images/reports/4_3_recipe_latency_report.png)
+
+**6. Mask-to-Face Overlap (IoU) vs. Success**: This report analyzes the physical placement of patterns, answering: "Does success depend on *how much* of the face is covered?"
+![Mask-to-Face IoU vs. Success Rate](./images/reports/5_1_iou_vs_success_rate.png)
+
 ### 🎯 Target Vulnerability Analysis
-**4. Target Image Vulnerability**: This report answers: "Which of our test images is the 'weakest' or most vulnerable target?" By tracking the total number of anomalies per image, it can identify which poses, lighting conditions, or facial structures (like Woman_Wearing_Shawl.png) are most easily confused by adversarial patterns.
+**7. Target Image Vulnerability**: This report answers: "Which of my input images is the 'weakest' or most vulnerable target?" This helps identify which poses, lighting, or facial structures are most easily confused.
 ![Target Image Vulnerability](./images/reports/1_2_target_vulnerability_full_history.png)
 
-**5. Top Specific Vulnerabilities**: This is the most granular report. It identifies the "golden" test cases: the exact pattern recipe (e.g., recursive_face_tile) on a specific image (e.g., Woman_Wearing_Shawl.png) that failed most often. This shows us which vulnerabilities are highly repeatable and are the best candidates for physical printing and real-world testing.
+**8. Top Specific Vulnerabilities**: This is the most granular report. It identifies the "golden" test cases by answering: "What is the most successful pattern against a specific image?"
 ![Specific Vulnerabilities](./images/reports/1_3_top_vulnerabilities_by_image_and_recipe.png)
 
-**6. Image Anomaly Type Distribution**: This report is the companion to the pattern report. It answers: "How do different images tend to fail?" This shows if certain images (e.g., Man_Wearing_Hat.png) are vulnerable to EXTRA_FACE anomalies, while others (e.g., full_body_shawl_6.png) are more likely to cause Person Lost anomalies.
+**9. Image Anomaly Type Distribution**: This is the companion to the pattern report. It answers: "How do different images tend to fail?" (e.g., are some images prone to *extra* faces, while others cause *lost* faces?)
 ![Image Anomaly Type Distribution](./images/reports/1_4_image_anomaly_type_distribution.png)
 
 ### 🤖 Fuzzer Performance & Strategy
-**7. Priority Queue Growth**: This chart tracks the fuzzer's learning progress. It answers: "Is the fuzzer still finding new, unique vulnerabilities?" A rising line shows that the genetic algorithm is continuing to discover new successful anomaly types, while a flat line would indicate it has saturated its findings.
-*(this report is still waiting on updated v0.5 results)*
+**10. Priority Queue Growth**: This chart tracks the fuzzer's learning progress. It answers: "Is the fuzzer's discovery of *new* vulnerabilities slowing down?"
+![Priority Queue Growth](./images/reports/3_1_priority_queue_growth.png)
 
-**8. Fuzzer Strategy Effectiveness**: This report validates our genetic algorithm. It answers: "Are the fuzzer's 'evolved' test cases (from mutation/crossover) more effective than the initial 'unknown' or random tests?" This chart shows the raw success rate based on a test case's origin, proving which strategies are most effective.
-*(this report is still waiting on updated v0.5 results)*
+**11. Deduplication Effect**: This new report shows the gap between *total* anomalies found and *unique* ones added to the queue. It answers: "How effective is the fuzzer's deduplication?"
+![Deduplication Effect](./images/reports/3_1b_deduplication_effect.png)
+
+**12. Fuzzer Strategy Effectiveness**: This report validates our genetic algorithm. It answers: "Is our genetic algorithm better than random guessing?" (e.g., are 'evolved' tests more successful than 'random' ones?)
+![Fuzzer Strategy Effectiveness](./images/reports/5_2_fuzzer_strategy_effectiveness.png)
 
 <h2 id="ethics-and-intent">📜 Ethics and Intent</h2>
 My goal is simple: to build a wardrobe that protects my privacy — and yours. This project is a research tool for auditing computer vision systems. The goal is to discover and document vulnerabilities in detection models to help developers build more robust, fair, and secure systems. The adversarial patterns are a byproduct of this research, offered to the public to promote awareness and discussion about privacy in an age of ubiquitous surveillance.
