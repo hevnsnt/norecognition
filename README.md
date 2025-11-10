@@ -35,6 +35,7 @@ Whether you’re an everyday person who just wants to walk down the street unsee
 
 - [The Mission](#the-mission)
 - [Fuzzer in Action](#fuzzer-in-action)
+- [Latest Discoveries](#-latest-discoveries-from-the-distributed-network)
 - [What Makes This Fuzzer Different?](#what-makes-this-fuzzer-different)
 - [Distributed Testing Network](#distributed-testing-network-beta)
 - [Live Results Dashboard](#live-results-dashboard)
@@ -102,6 +103,22 @@ Each image below represents a unique adversarial pattern generated and then appl
     <td style="padding:0; margin:0;"><a href="./images/pattern_samples/Man_Hat_Hide_Face_hyperface_like+landmark_noise+checkerboard_seed9167792_sample240500.jpg"><img src="./images/pattern_samples/Man_Hat_Hide_Face_hyperface_like+landmark_noise+checkerboard_seed9167792_sample240500.jpg" width="200" style="display:block; margin:0; padding:0;"></a></td>
   </tr>
 </table>
+
+---
+
+## 🔥 Latest Discoveries from the Distributed Network
+
+These are the **9 most recent anomaly patterns** discovered by the distributed testing network. These patterns successfully confused the AI models and are automatically updated every 6 hours as new discoveries are made. See all discoveries live at [**norecognition.org**](https://norecognition.org).
+
+<!-- RECENT_ANOMALIES_START -->
+<table align="center" style="border-collapse:collapse; border-spacing:0; padding:0; margin:0;">
+  <tr>
+    <td colspan="3" style="text-align:center; padding:10px;">
+      <em>🤖 Automated updates in progress... Recent anomaly images will appear here soon.</em>
+    </td>
+  </tr>
+</table>
+<!-- RECENT_ANOMALIES_END -->
 
 ---
 
