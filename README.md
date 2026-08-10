@@ -9,6 +9,8 @@
 # This repository is significantly out of date, and deprecated
 All current research is now posted at [noRecognition.org](https://norecognition.org)
 
+---
+
 Could the pattern on your scarf make you invisible to an AI camera? Could a headband block facial recognition? This project is the scientific search to find out. I built a fuzzer that generates and tests millions of adversarial patterns, designs that confuse AI surveillance and give privacy back to people.
 
 Privacy isn’t a luxury; it is a fundamental right. Around the world, people are being targeted because a camera decided they looked suspicious. Our goal is to push back, creating wearable patterns that, when printed on fabric, can disrupt or prevent facial recognition entirely.
